@@ -124,7 +124,7 @@
                     var features = this.$store.state.feature_items;
                     _.forEach(features, function(value, key) {
                       
-                        if( _.includes([2], key) ) {
+                        if( _.includes([2,5], key) ) {
                             value.masonry_class = "grid-item--height2";
                         }
                         else if ( _.includes([5], key) ){
