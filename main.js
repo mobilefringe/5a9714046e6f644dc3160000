@@ -103,6 +103,19 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                     {
                         name: "header.events",
                         href: "/events",
+                        sub_menu: [{
+                                name: "header.stores",
+                                href: "/stores"
+                            },
+                            {
+                                name: "header.centre_map",
+                                href: "/map"
+                            },
+                            {
+                                name: "header.restaurants",
+                                href: "/restaurants"
+                            }
+                        ]
                     },
                     {
                         name: "header.guest_services",
