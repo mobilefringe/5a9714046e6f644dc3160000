@@ -109,11 +109,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                             },
                             {
                                 name: "header.blog",
-                                href: "/map"
-                            },
-                            {
-                                name: "header.restaurants",
-                                href: "/restaurants"
+                                href: "/blog"
                             }
                         ]
                     },
