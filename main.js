@@ -108,7 +108,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                                 href: "/events"
                             },
                             {
-                                name: "header.centre_map",
+                                name: "header.blog",
                                 href: "/map"
                             },
                             {
