@@ -104,7 +104,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                         name: "header.events",
                         href: "/events",
                         sub_menu: [{
-                                name: "header.stores",
+                                name: "header.events",
                                 href: "/stores"
                             },
                             {
