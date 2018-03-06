@@ -121,6 +121,10 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                                 href: "/pages/bonniedoon-services"
                             },
                             {
+                                name: "header.gift_card",
+                                href: "/pages/bonniedoon-gift-cards"
+                            }
+                            {
                                 name: "header.community",
                                 href: "/pages/bonniedoon-community-support"
                             },
@@ -128,10 +132,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                                 name: "header.green_initiatives",
                                 href: "/pages/bonniedoon-green-initiatives"
                             },
-                            {
-                                name: "header.gift_card",
-                                href: "/pages/bonniedoon-gift-cards"
-                            }
+                            
                         ]
                     },
                     {
