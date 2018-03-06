@@ -89,6 +89,10 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                             {
                                 name: "header.centre_map",
                                 href: "/map"
+                            },
+                            {
+                                name: "header.restaurants",
+                                href: "/map"
                             }
                         ]
                     },
