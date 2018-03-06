@@ -101,7 +101,7 @@ require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vu
                         href: "/promotions",
                     },
                     {
-                        name: "header.events",
+                        name: "header.news_events",
                         href: "/events",
                         sub_menu: [{
                                 name: "header.events",
