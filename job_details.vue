@@ -99,7 +99,7 @@
                     if(this.currentJob != null) {
                         console.log(this.currentJob.store);
                         if (this.currentJob.store != null && this.currentJob.store != undefined && _.includes(this.currentJob.store.image_url, 'missing')) {
-                            this.currentJob.store.image_url = "http://via.placeholder.com/400x400/757575";
+                            this.currentJob.store.image_url = this.property.default_logo_url;
                         }
                         else if (this.currentJob.store == null || this.currentJob.store == undefined) {
                             this.currentJob.store = {};
