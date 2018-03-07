@@ -170,11 +170,11 @@
                             'length': 150
                         });
                         if (value.store != null && value.store != undefined && _.includes(value.store.image_url, 'missing')) {
-                            value.store.image_url = this.property.default_logo_url;
+                            value.store.image_url = vm.property.default_logo_url;
                         }
                         else if (value.store == null || value.store == undefined) {
                             value.store = {};
-                            value.store.image_url =  this.property.default_logo_url;
+                            value.store.image_url =  vm.property.default_logo_url;
                         }
                         // if (_.includes(value.image_url, 'missing')) {
                         //     value.image_url = "http://via.placeholder.com/400x400/757575";
