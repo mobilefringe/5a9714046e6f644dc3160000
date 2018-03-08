@@ -942,7 +942,7 @@ strong, .bold {
 }
 .footer_nav {
     #primary_nav ul .menu_item {
-        
+        padding: 20px 0 10px;
     }
 }
 /* HOME PAGE */
