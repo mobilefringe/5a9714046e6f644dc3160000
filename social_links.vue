@@ -6,7 +6,7 @@
         <a href="https://www.youtube.com/BramaleaCityCentre" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
         <a href="https://www.pinterest.ca/BCCStyle" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
         <a href="https://plus.google.com/104350008624406111130/about" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-        <a> <i class="fa fa-snapchat-ghost"></i></a>
+        <a> <i class="fa fa-snapchat-ghost" :data-lightbox="photo.name" :data-title="photo.name"></i></a>
          
     </div>
     
