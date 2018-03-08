@@ -144,7 +144,7 @@ a{
 }
 
 a {
-    color: inherit;
+    color: $accent;
     text-decoration: none;
     &:hover {
         text-decoration: underline;
