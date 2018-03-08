@@ -12,7 +12,7 @@
     
 </template>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "lightbox"], function(Vue, Vuex, moment, tz, VueMoment) {
+    define(["Vue", "vuex", "lightbox"], function(Vue, Vuex, moment, tz, VueMoment) {
         Vue.use(Lightbox);
         return Vue.component("social-links", {
             template: template, // the variable template will be injected,
