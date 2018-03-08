@@ -940,6 +940,11 @@ strong, .bold {
 .footer_conduct p, .footer_terms p {
     font-size: 0.75rem;
 }
+.footer_nav {
+    #primary_nav ul .menu_item {
+        
+    }
+}
 /* HOME PAGE */
 // .flexslider {
 //     margin-bottom: 0;
