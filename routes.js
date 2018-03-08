@@ -152,8 +152,8 @@ define([], function() {
             redirect: '/404',
             children: [{
                 path: '',
-                component: view('photos'),
-                name: 'photos'
+                component: view('restaurants'),
+                name: 'restaurants'
             }]
         },
         {
