@@ -69,7 +69,7 @@
 <script>
     define(["Vue", "vuex", "vue-select", "jquery", "smooth-zoom", "vue!png-map", "vue!search-component", "vue-lazy-load"], function(Vue, Vuex, VueSelect, $, smoothZoom, PNGMapComponent, SearchComponent,VueLazyload) {
         Vue.use(VueLazyload);
-        return Vue.component("stores-component", {
+        return Vue.component("restaurants", {
             template: template, // the variable template will be injected
             data: function() {
                 return {
