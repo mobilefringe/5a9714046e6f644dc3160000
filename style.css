@@ -2955,7 +2955,15 @@ gallery:after{
     }
 }
 button[disabled].contest_btn {
-    
+    &:hover {
+        cursor: pointer;
+        color: $accent;
+        &:after {
+          left: -10%;
+          width: 120%;
+        }
+            
+    }
 }
 
 #contact_us_container {
