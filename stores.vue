@@ -72,7 +72,6 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    listMode: "alphabetical",
                     selectedCat: null,
                     filteredStores: null,
                     dataloaded: false,
