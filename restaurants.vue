@@ -126,13 +126,14 @@
 
                 ]),
                 allStores() {
-                    console.log(this.processedStores);
                     var stores = this.processedStores;
                     stores.map(store => {
                        if (_.includes(store.store_front_url_abs, 'missing')) {
                             store.store_front_url_abs = this.property.default_logo_url;
                         }
                     });
+                    
+                    console.log(this.processedStores);
                     return this.processedStores;
                 },
                 allCatergories() {
