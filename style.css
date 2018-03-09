@@ -1916,8 +1916,8 @@ strong, .bold {
     &:hover {
         cursor: pointer;
         &:after {
-          width: 100%;
-          left: 0;
+            width: 100%;
+            left: 0;
         }
     }
 }
