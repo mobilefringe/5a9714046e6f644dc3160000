@@ -116,14 +116,6 @@
                     }
                 },
             },
-            mounted() {
-                // this.filteredStores = this.allStores;
-                this.$nextTick(function() {
-                    window.addEventListener('resize', this.getWindowWidth);
-                    //Init
-                    this.getWindowWidth();
-                });
-            },
             methods: {
                 loadData: async function() {
                     try {
@@ -141,9 +133,6 @@
                 },
                 addLandmark(store) {
                     this.svgMapRef.addMarker(store);
-                },
-                getWindowWidth(event) {
-                    this.windowWidth = window.innerWidth;
                 },
                 onOptionSelect(option) {
                     this.search_result = "";
