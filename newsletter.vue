@@ -149,10 +149,11 @@
                                 //     }
                                 // });
                                 $.ajax({
-                                    url: form.target.action ,
+                                    url: 'https://createsend.com//t/getsecuresubscribelink' ,
                                     type: "POST",
                                     data: $(form.target).serialize(),
                                     success: function(data) {
+                                        form.preventDefault();
                                         vm.formSuccess = true;
                                         console.log("SUCCESS", data);
                                     },
