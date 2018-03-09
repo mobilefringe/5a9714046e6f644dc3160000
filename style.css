@@ -2955,7 +2955,7 @@ gallery:after{
         //     color: $accent;
         // }
         cursor: pointer;
-        color: #5bcaff;
+        color: $accent;
         &:after {
           left: -10%;
           width: 120%;
