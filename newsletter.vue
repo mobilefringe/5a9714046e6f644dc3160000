@@ -10,7 +10,7 @@
         <div class="site_container">
             <div class="row"> 
                 <div class="col-md-12 contact_contents">
-                        <form class="form-horizontal js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A6C853307DE1968F369EC40BE733D4D5F8458A5E09D247F6F2E7016EB4DAFD16534D29AAD20BB67ACEC9E0FEFEEEEA5A2" @submit.prevent="validateBeforeSubmit">
+                        <form class="form-horizontal js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A6C853307DE1968F369EC40BE733D4D5F8458A5E09D247F6F2E7016EB4DAFD16534D29AAD20BB67ACEC9E0FEFEEEEA5A2" @submit.prevent="validateBeforeSubmit">
                         <div class="form-group ">
                             <div class="col-sm-6 col-xs-12" >
                                 <label class="label" for="fieldName">{{$t("newsletter_page.name")}}</label>
