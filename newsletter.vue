@@ -19,7 +19,7 @@
                         </div>
                         <div class="form-group">
                             <div class="col-sm-6 col-xs-12">
-                                <label class="label" for="cm-fuljdi-fuljdi">{{$t("newsletter_page.email")}}</label>
+                                <label class="label" for="fieldEmail">{{$t("newsletter_page.email")}}</label>
                                 <input v-model="form_data.email" required class="form-control" name="cm-fuljdi-fuljdi" type="email" placeholder="Email" id="fieldEmail">
                             </div>
                         </div>
