@@ -149,16 +149,16 @@
                                 //     }
                                 // });
                                 $.ajax({
-                                url: url,
-                                type: "POST",
-                                data: contest_entry,
-                                success: function(data) {
-                                    vm.formSuccess = true;
-                                },
-                                error: function(data){
-                                    vm.formError = true;
-                                }
-                            });
+                                    url: url,
+                                    type: "POST",
+                                    data: contest_entry,
+                                    success: function(data) {
+                                        vm.formSuccess = true;
+                                    },
+                                    error: function(data){
+                                        vm.formError = true;
+                                    }
+                             });
                                 // + "?callback=?"
                             }
                         }
