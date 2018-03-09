@@ -1913,6 +1913,13 @@ strong, .bold {
         height: 3px;
         background: #f7f7f7;
     }
+    &:hover {
+        cursor: pointer;
+        &:after {
+          width: 100%;
+          left: 0;
+        }
+    }
 }
 
 .alpha_list {
