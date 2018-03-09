@@ -1900,6 +1900,19 @@ strong, .bold {
     line-height: 60px;
     margin-bottom: 30px;
     font-family: $font_family;
+    position: relative;
+    overflow:hidden;
+    transition: .3s;
+    &:after {
+        position: absolute;
+        transition: .3s;
+        content: '';
+        width: 0;
+        left: 50%;
+        bottom: 0;
+        height: 3px;
+        background: #f7f7f7;
+    }
 }
 
 .alpha_list {
