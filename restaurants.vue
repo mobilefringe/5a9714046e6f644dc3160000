@@ -126,7 +126,9 @@
 
                 ]),
                 allStores() {
-                    var stores = this.processedStores;
+                    var stores =_.filter( this.processedStores, function(o) {
+                            return _.indexOf(o.categories, _.toNumber(category_id)) > -1;
+                        });
                     stores.map(store => {
                        if (_.includes(store.store_front_url_abs, 'missing')) {
                             store.store_front_url_abs = this.property.default_logo_url;
