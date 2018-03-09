@@ -136,7 +136,7 @@
                                 form.preventDefault();
                                 console.log("No Error", form);
                                 var vm = this;
-                                console.log($.getJSON(
+                                $.getJSON(
                                     form.target.action ,
                                     $(form.target).serialize(),
                                     function (data) {
@@ -147,7 +147,7 @@
                                         vm.formSuccess = true;
                                         console.log("SUCCESS");
                                     }
-                                }));
+                                });
                                 // + "?callback=?"
                             }
                         }
