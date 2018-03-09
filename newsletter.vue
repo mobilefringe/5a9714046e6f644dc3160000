@@ -55,6 +55,7 @@
         </div>
     </div>
 </template>
+<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
 <style>
     .form-group label {
         display: inline-block;
