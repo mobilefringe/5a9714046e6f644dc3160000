@@ -158,6 +158,7 @@
                                     },
                                     error: function(data){
                                         vm.formError = true;
+                                        console.log("ERROR");
                                     }
                                 });
                                 // + "?callback=?"
