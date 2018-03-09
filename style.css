@@ -2928,8 +2928,8 @@ gallery:after{
     color: #FFF;
     transition: all 0.3s ease;
     position: relative;
-  overflow:hidden;
-  transition: .3s;
+    overflow:hidden;
+    transition: .3s;
     &:hover {
         background: #fff;
         color: $accent;
