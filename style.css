@@ -1902,10 +1902,10 @@ strong, .bold {
     font-family: $font_family;
     position: relative;
     overflow:hidden;
-    transition: .3s;
+    transition: .4s;
     &:after {
         position: absolute;
-        transition: .3s;
+        transition: .4s;
         content: '';
         width: 0;
         left: 50%;
