@@ -134,7 +134,7 @@
                     });
                     
                     console.log(this.processedStores);
-                    return this.processedStores;
+                    return stores;
                 },
                 allCatergories() {
                     return this.processedCategories;
