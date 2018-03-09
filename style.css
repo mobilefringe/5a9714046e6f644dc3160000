@@ -2960,7 +2960,7 @@ button[disabled].contest_btn {
         color: inherit;
         &:after {
           left:intial;
-          width: 120%;
+          width: initial%;
         }
             
     }
