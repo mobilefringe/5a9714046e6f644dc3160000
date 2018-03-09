@@ -163,6 +163,7 @@
                                         vm.formError = true;
                                         console.log("ERROR", data);
                                     }
+                                    form.preventDefault();
                                 });
                                 // + "?callback=?"
                             }
