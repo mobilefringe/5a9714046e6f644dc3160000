@@ -125,15 +125,6 @@
                         console.log("Error loading data: " + e.message);
                     }
                 },
-                changeMode(mode) {
-                    this.listMode = mode;
-                },
-                updateSVGMap(map) {
-                    this.map = map;
-                },
-                addLandmark(store) {
-                    this.svgMapRef.addMarker(store);
-                },
                 onOptionSelect(option) {
                     this.search_result = "";
                     this.$router.push("/stores/"+option.slug);
