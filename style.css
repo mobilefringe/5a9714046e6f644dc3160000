@@ -2930,6 +2930,16 @@ gallery:after{
     position: relative;
     overflow:hidden;
     transition: .3s;
+    &:after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    height: 3px;
+    background: #f7f7f7;
+  }
     &:hover {
         background: #fff;
         color: $accent;
