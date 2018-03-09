@@ -2920,7 +2920,7 @@ gallery:after{
     line-height: 20px;
 }
 .contest_btn, .contact_btn {
-    // background: $accent;
+    background: $accent;
     border: none;
     border: 3px solid $accent;
     border-radius: 0px;
