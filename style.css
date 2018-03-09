@@ -530,8 +530,10 @@ strong, .bold {
         vertical-align: middle;
         display: inline-block;
         margin-top: -10px;
-        color: #fff;
-        color: $social;
+        color: #fff; 
+        &:hover {
+            color: $social;
+        }
     }
     
     .marquee {
