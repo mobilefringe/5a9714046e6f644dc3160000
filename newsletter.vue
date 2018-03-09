@@ -142,9 +142,10 @@
                                 function (data) {
                                     if (data.Status === 400) {
                                        vm.formError = true;
+                                        console.log("SUCCESS");
                                     } else { // 200
                                         vm.formSuccess = true;
-                                        console.log("SUCCESS")
+                                        console.log("SUCCESS");
                                     }
                                 });
                                 // + "?callback=?"
