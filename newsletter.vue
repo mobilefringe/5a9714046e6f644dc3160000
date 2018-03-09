@@ -122,7 +122,7 @@
                                 console.log("No Error", form);
                                 var vm = this;
                                 $.getJSON(
-                                form.target.action + "?callback=?",
+                                form.target.action ,
                                 $(form.target).serialize(),
                                 function (data) {
                                     if (data.Status === 400) {
