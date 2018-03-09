@@ -144,17 +144,6 @@
                     cats.unshift('All');
                     return cats;
                 },
-                // filterStores() {
-                //     letter = this.selectedAlpha;
-                //     if (letter == "All") {
-                //         this.filteredStores = this.allStores;
-                //     } else {
-                //         var filtered = _.filter(this.allStores, function(o, i) {
-                //             return _.lowerCase(o.name)[0] == _.lowerCase(letter);
-                //         });
-                //         this.filteredStores = filtered;
-                //     }
-                // },
                 filterByCategory() {
                     category_id = this.selectedCat;
                     if (category_id == "All" || category_id == null || category_id == undefined) {
