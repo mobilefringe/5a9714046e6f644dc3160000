@@ -78,8 +78,6 @@
                     alphabet: ["All", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
                     filteredStores: null,
                     dataloaded: false,
-                    mobile_store: false,
-                    windowWidth: 0,
                     storeBanner : null,
                     search_result : null,
                 }
