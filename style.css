@@ -2940,18 +2940,33 @@ gallery:after{
         height: 3px;
         background: #f7f7f7;
         height: 120%;
-    left: -10%;
-    transform: skewX(15deg);
-    z-index: -1;
+        left: -10%;
+        transform: skewX(15deg);
+        z-index: -1;
     }
     &:hover {
-        background: #fff;
-        color: $accent;
-        a{
-            text-decoration:none;
-            color: $accent;
+        // background: #fff;
+        // color: $accent;
+        // a{
+        //     text-decoration:none;
+        //     color: $accent;
+        // }
+        cursor: pointer;
+        &:after {
+          width: 100%;
+          left: 0;
         }
-        
+        &:nth-of-type(4):after {
+          top: calc(100% - 3px);
+        }
+        &:nth-of-type(5) {
+          color: #5bcaff;
+        }
+        &:nth-of-type(5):after {
+          left: -10%;
+          width: 120%;
+        }
+            
     }
 }
 
