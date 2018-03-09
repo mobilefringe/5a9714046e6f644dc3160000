@@ -167,7 +167,7 @@
                     console.log(this.processedStores);
                     // http://via.placeholder.com/400x400/757575
                     var stores = this.processedStores;
-                   stores.map(store => {
+                    stores.map(store => {
                        if (_.includes(store.store_front_url_abs, 'missing')) {
                             store.store_front_url_abs = this.property.default_logo_url;
                         }
@@ -181,14 +181,6 @@
                     var cats = _.map(this.processedCategories, 'name');
                     cats.unshift('All');
                     return cats;
-                },
-                getPNGurl() {
-                    return "https://www.mallmaverick.com" + this.property.map_url;
-                },
-                svgMapRef() {
-                    return _.filter(this.$children, function(o) {
-                        return (o.$el.className == "svg-map")
-                    })[0];
                 },
                 filterStores() {
                     letter = this.selectedAlpha;
