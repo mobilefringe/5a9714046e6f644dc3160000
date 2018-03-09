@@ -154,6 +154,7 @@
                                     data: $(form.target).serialize(),
                                     success: function(data) {
                                         vm.formSuccess = true;
+                                        console.log("SUCCESS");
                                     },
                                     error: function(data){
                                         vm.formError = true;
