@@ -52,7 +52,7 @@
         <button class="js-cm-submit-button" type="submit">Subscribe</button> 
     </p>
 </form>
-    <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+    <!--<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>-->
                     
                     <div id="send_contact_success" class="alert alert-success" role="alert" v-show="formSuccess">
                         <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
