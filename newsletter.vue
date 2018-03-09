@@ -136,18 +136,29 @@
                                 form.preventDefault();
                                 console.log("No Error", form);
                                 var vm = this;
-                                $.getJSON(
-                                    form.target.action ,
-                                    $(form.target).serialize(),
-                                    function (data) {
-                                    if (data.Status === 400) {
-                                       vm.formError = true;
-                                        console.log("ERROR");
-                                    } else { // 200
-                                        vm.formSuccess = true;
-                                        console.log("SUCCESS");
-                                    }
-                                });
+                                // $.getJSON(
+                                //     form.target.action ,
+                                //     $(form.target).serialize(),
+                                //     function (data) {
+                                //     if (data.Status === 400) {
+                                //       vm.formError = true;
+                                //         console.log("ERROR");
+                                //     } else { // 200
+                                //         vm.formSuccess = true;
+                                //         console.log("SUCCESS");
+                                //     }
+                                // });
+                                $.ajax({
+                                url: url,
+                                type: "POST",
+                                data: contest_entry,
+                                success: function(data) {
+                                    vm.formSuccess = true;
+                                },
+                                error: function(data){
+                                    vm.formError = true;
+                                }
+                            });
                                 // + "?callback=?"
                             }
                         }
