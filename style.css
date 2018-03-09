@@ -1901,18 +1901,7 @@ strong, .bold {
     margin-bottom: 30px;
     font-family: $font_family;
 }
-// .directory_btn:after {
-//     content: " ";
-//     height: 5px;
-//     width: 84px;
-//     background: #fff;
-//     position: absolute;
-//     left: 50%;
-//     bottom: 10px;
-//     -webkit-transform: translate(-50%, 0%);
-//     -ms-transform: translate(-50%, 0%);
-//     transform: translate(-50%, 0%);
-// }
+
 .alpha_list {
     margin-top: 30px;
     display: -webkit-box;
