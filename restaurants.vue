@@ -133,7 +133,7 @@
                         }
                     });
                     
-                    console.log(this.processedStores);
+                    console.log(stores);
                     return stores;
                 },
                 allCatergories() {
