@@ -2957,7 +2957,7 @@ gallery:after{
 button[disabled].contest_btn {
     &:hover {
         cursor: crosshair;
-        color: $accent;
+        color: inherit;
         &:after {
           left: -10%;
           width: 120%;
