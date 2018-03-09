@@ -106,15 +106,6 @@
                     console.log(temp_repo, this.storeBanner); 
                 });
             },
-            watch: {
-                windowWidth: function() {
-                    if (this.windowWidth <= 768) {
-                        this.mobile_store = true;
-                    } else {
-                        this.mobile_store = false;
-                    }
-                },
-            },
             methods: {
                 loadData: async function() {
                     try {
