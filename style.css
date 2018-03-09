@@ -2939,6 +2939,10 @@ gallery:after{
         bottom: 0;
         height: 3px;
         background: #f7f7f7;
+        height: 120%;
+    left: -10%;
+    transform: skewX(15deg);
+    z-index: -1;
     }
     &:hover {
         background: #fff;
