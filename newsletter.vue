@@ -137,12 +137,12 @@
                                 console.log("No Error", form);
                                 var vm = this;
                                 $.getJSON(
-                                form.target.action ,
-                                $(form.target).serialize(),
-                                function (data) {
+                                    form.target.action ,
+                                    $(form.target).serialize(),
+                                    function (data) {
                                     if (data.Status === 400) {
                                        vm.formError = true;
-                                        console.log("SUCCESS");
+                                        console.log("ERROR");
                                     } else { // 200
                                         vm.formSuccess = true;
                                         console.log("SUCCESS");
