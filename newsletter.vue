@@ -37,6 +37,22 @@
          <!--                   </div>-->
          <!--               </div>-->
          <!--           </form>-->
+         
+                <form id="subForm" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A6C853307DE1968F369EC40BE733D4D5F8458A5E09D247F6F2E7016EB4DAFD16534D29AAD20BB67ACEC9E0FEFEEEEA5A2">
+    
+    <p>
+        <label for="fieldName">Name</label><br />
+        <input id="fieldName" name="cm-name" type="text" />
+    </p>
+    <p>
+        <label for="fieldEmail">Email</label><br />
+        <input id="fieldEmail" class="js-cm-email-input" name="cm-fuljdi-fuljdi" type="email" required /> 
+    </p>
+    <p>
+        <button class="js-cm-submit-button" type="submit">Subscribe</button> 
+    </p>
+</form>
+    <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
                     
                     <div id="send_contact_success" class="alert alert-success" role="alert" v-show="formSuccess">
                         <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>
