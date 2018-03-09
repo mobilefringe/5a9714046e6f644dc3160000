@@ -33,7 +33,7 @@
     					</div>
     					<div class="form-group">
                             <div class="col-xs-12">
-                                <button class="contest_btn" type="submit" :disabled="formSuccess">{{$t("newsletter_page.subscribe")}}</button>
+                                <button class="js-cm-submit-button contest_btn" type="submit" :disabled="formSuccess">{{$t("newsletter_page.subscribe")}}</button>
                             </div>
                         </div>
                     </form>
