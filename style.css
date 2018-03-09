@@ -2954,7 +2954,9 @@ gallery:after{
             
     }
 }
-
+button[disabled].contest_btn {
+    
+}
 #contact_us_container {
     background-color: #EDEDED;
     padding-bottom: 30px;
