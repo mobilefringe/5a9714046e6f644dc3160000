@@ -151,7 +151,7 @@
                                 $.ajax({
                                     url: form.target.action ,
                                     type: "POST",
-                                    data: contest_entry,
+                                    data: $(form.target).serialize(),
                                     success: function(data) {
                                         vm.formSuccess = true;
                                     },
