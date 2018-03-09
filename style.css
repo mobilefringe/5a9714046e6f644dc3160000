@@ -531,6 +531,7 @@ strong, .bold {
         display: inline-block;
         margin-top: -10px;
         color: #fff; 
+        transition: all .3s ease;
         &:hover {
             color: $social;
         }
