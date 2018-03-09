@@ -126,6 +126,7 @@
 
                 ]),
                 allStores() {
+                    var category_id = 
                     var stores =_.filter( this.processedStores, function(o) {
                         return _.indexOf(o.categories, _.toNumber(category_id)) > -1;
                     });
