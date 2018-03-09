@@ -144,6 +144,7 @@
                                        vm.formError = true;
                                     } else { // 200
                                         vm.formSuccess = true;
+                                        console.log("SUCCESS")
                                     }
                                 });
                                 // + "?callback=?"
