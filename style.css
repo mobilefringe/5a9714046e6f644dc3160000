@@ -2935,7 +2935,7 @@ gallery:after{
     z-index: 2;
     &:after {
         position: absolute;
-        transition: .3s;
+        transition: .5s;
         content: '';
         width: 0;
         left: 50%;
