@@ -2933,6 +2933,7 @@ gallery:after{
     position: relative;
     overflow:hidden;
     transition: .3s;
+    z-index: 2;
     &:after {
         position: absolute;
         transition: .3s;
