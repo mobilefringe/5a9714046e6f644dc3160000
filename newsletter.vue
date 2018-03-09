@@ -157,6 +157,7 @@
                                         console.log("SUCCESS", data);
                                     },
                                     error: function(data){
+                                        console.log(data);
                                         vm.formError = true;
                                         console.log("ERROR", data);
                                     }
