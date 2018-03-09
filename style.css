@@ -2941,7 +2941,7 @@ gallery:after{
         left: 50%;
         bottom: 0;
         height: 3px;
-        background: $accent;
+        background: #fff;
         height: 120%;
         left: -10%;
         transform: skewX(15deg);
