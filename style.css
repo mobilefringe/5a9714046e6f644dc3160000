@@ -2959,7 +2959,7 @@ button[disabled].contest_btn {
         cursor: crosshair;
         color: inherit;
         &:after {
-          left: -10%;
+          left:intial;
           width: 120%;
         }
             
