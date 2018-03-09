@@ -115,14 +115,6 @@
                     }
                 },
             },
-            mounted() {
-                // this.filteredStores = this.allStores;
-                this.$nextTick(function() {
-                    window.addEventListener('resize', this.getWindowWidth);
-                    //Init
-                    this.getWindowWidth();
-                });
-            },
             methods: {
                 loadData: async function() {
                     try {
