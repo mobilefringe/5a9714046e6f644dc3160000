@@ -149,7 +149,7 @@
                                 //     }
                                 // });
                                 $.ajax({
-                                    url: url,
+                                    url: form.target.action ,
                                     type: "POST",
                                     data: contest_entry,
                                     success: function(data) {
@@ -158,7 +158,7 @@
                                     error: function(data){
                                         vm.formError = true;
                                     }
-                             });
+                                });
                                 // + "?callback=?"
                             }
                         }
