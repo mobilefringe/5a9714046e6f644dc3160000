@@ -2954,13 +2954,6 @@ gallery:after{
         cursor: pointer;
         color: #5bcaff;
         &:after {
-          width: 100%;
-          left: 0;
-        }
-        &:nth-of-type(5) {
-          color: #5bcaff;
-        }
-        &:nth-of-type(5):after {
           left: -10%;
           width: 120%;
         }
