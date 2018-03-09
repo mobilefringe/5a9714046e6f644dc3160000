@@ -18,7 +18,7 @@
     "accessibility" : "Accessibility",
     "contact_us" : "Contact Us",
     "hours": "Hours",
-    "jobs" : "Jobs",
+    "jobs" : "Employment",
     "employment" : "Employment",
     "leasing" : "Leasing",
     "find_us" : "Find Us",
@@ -65,10 +65,10 @@
     "back_to_events" : "Back to Events"
   },
   "jobs_page": {
-    "jobs" : "Jobs",
+    "jobs" : "Employment",
     "read_more" : "Read More",
-    "no_job_message" : "There are no Jobs at this time. Please check back soon.",
-    "back_to_jobs" : "Back to Jobs"
+    "no_job_message" : "There are no Employment at this time. Please check back soon.",
+    "back_to_jobs" : "Back to Employment"
   },
   "hours_page" : {
     "hours" : "Hours",
