@@ -127,7 +127,7 @@
                         if( _.includes([1,4], key) ) {
                             value.masonry_class = "grid-item--height2";
                         }
-                        else if ( _.includes([4,7], key) ){
+                        else if ( _.includes([5], key) ){
                             value.masonry_class = "grid-item--width2";
                         }
                         else {
