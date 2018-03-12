@@ -69,7 +69,7 @@
             								        <div v-else>
             								            <a href="#" @click="toggleSubMenu(item.name); item.show_sub_menu = !item.show_sub_menu">{{$t(item.name)}}</a> 
             								            <transition name="custom-classes-transition" enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
-            								            <ul v-if="item.sub_menu" v-show="item.show_sub_menu">
+            								                <ul v-if="item.sub_menu" v-show="item.show_sub_menu">
                     								            <li v-for="sub_menu in item.sub_menu" class="dropdown_item" >
                     								                <router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>
                     								            </li>
