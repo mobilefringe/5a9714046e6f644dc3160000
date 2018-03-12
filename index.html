@@ -78,8 +78,8 @@
                     									<!--</transition>-->
                     									<b-card no-body class="mb-1" v-for="sub_menu in item.sub_menu">
                                                             <b-card-header header-tag="header" class="p-1" role="tab">
-                                                                <b-btn block @click="service.is_visible = !service.is_visible" :class="service.is_visible ? 'collapsed' : null" :aria-controls="service.id" :aria-expanded="service.is_visible ? 'true' : 'false'">
-                                                                    <i v-if="service.is_visible"  class="fa fa-caret-down"></i>
+                                                                <b-btn block @click="sub_menu.is_visible = !sub_menu.is_visible" :class="service.is_visible ? 'collapsed' : null" :aria-controls="service.id" :aria-expanded="sub_menu.is_visible ? 'true' : 'false'">
+                                                                    <i v-if="sub_menu.is_visible"  class="fa fa-caret-down"></i>
                                                                     <i v-else  class="fa fa-caret-right"></i>
                                                                     {{service.title}}
                                                                 </b-btn>
