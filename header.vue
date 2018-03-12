@@ -107,11 +107,13 @@
 <script>
     define(["Vue", "vuex", 'vue!social_links.vue', "bootstrap-vue"], function (Vue, Vuex, SocialLinks, BootstrapVue) {
         Vue.use(BootstrapVue);
-        return Vue.component("header-component", {
+        return Vue.component("social-links", {
             template: template, // the variable template will be injected,
             data: function() {
                 return {
+                    dataLoaded: false,
                     show_mobile_menu: false,
+                    property_logo: "//codecloud.cdn.speedyrails.net/sites/5a9714046e6f644dc3160000/image/png/1520457420000/whitelogo1@2x.png",
                     menu_items: [
                         {
                             name: "header.stores",
