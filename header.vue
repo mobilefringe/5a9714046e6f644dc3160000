@@ -205,13 +205,10 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'getTodayHours',
+                    'getTodayHours'
                 ]),
                 todays_hours() {
                     return this.getTodayHours;
-                },
-                allStores() {
-                    return this.processedStores;
                 }
             },
         });
