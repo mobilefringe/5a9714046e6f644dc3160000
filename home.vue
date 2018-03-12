@@ -33,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <div v-masonry transition-duration="0.3s" item-selector=".grid-item" class="show_phone" >
+            <div v-masonry transition-duration="0.3s" item-selector=".grid-item" class="visible_phone" >
                 <div v-masonry-tile class="item" >
                     <div v-for="feature in mobile_feature_items" :class="'grid-item ' + feature.masonry_class ">
                     	<div  :class="{ 'ih-item circle effect19' : feature.no_hover_class}"> 
@@ -179,6 +179,9 @@
                         }
                         else {
                             value.mobile_order = key + 1;
+                        }
+                        if(key == 6) {
+                            value.mobile_order = 5;
                         }
                     });
                     features = _.sortBy(features, [function(o) { return o.mobile_order; }]);
