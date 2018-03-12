@@ -156,7 +156,7 @@
                             value.masonry_class = " ";
                         }
                         if(key == 6) {
-                            value.mobile_order = key + 1;
+                            value.mobile_order = 5;
                         }
                         if(key > 6) {
                             value.mobile_order = key + 2;
