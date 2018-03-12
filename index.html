@@ -67,7 +67,7 @@
         										<li v-for="item in menu_items" class="menu_item">
             								        <router-link :to="item.href" v-if="item.sub_menu == undefined">{{$t(item.name)}}</router-link>
             								        <div v-else>
-            								            <a href=""></a>
+            								            <a href="">{{$t(item.name)}}</a>
             								            <ul v-if="item.sub_menu">
                 								            <li v-for="sub_menu in item.sub_menu" class="dropdown_item">
                 								                <router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>
