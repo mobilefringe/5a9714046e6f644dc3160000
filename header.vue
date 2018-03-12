@@ -44,7 +44,7 @@
         									<!--</transition>-->
         									<b-card no-body class="mb-1">
                                                 <b-card-header header-tag="header" class="p-1" role="tab">
-                                                    <b-btn block @click="item.show_sub_menu = !item.show_sub_menu" :class="item.show_sub_menu ? 'collapsed' : null" :aria-controls="item.name" :aria-expanded="item.show_sub_menu ? 'true' : 'false'">
+                                                    <b-btn block @click="item.show_sub_menu = !item.show_sub_menu" :class="item.show_sub_menu ? 'collapsed' : null" :aria-controls="$t(item.name)" :aria-expanded="item.show_sub_menu ? 'true' : 'false'">
                                                         <i v-if="item.show_sub_menu"  class="fa fa-caret-down"></i>
                                                         <i v-else  class="fa fa-caret-right"></i>
                                                         {{$t(item.name)}}
