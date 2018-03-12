@@ -158,11 +158,11 @@
                         if(key == 6) {
                             value.mobile_order = key + 1;
                         }
-                        if(key == 6) {
+                        if(key > 6) {
                             value.mobile_order = key + 1;
                         }
                         else {
-                        value.mobile_order = key + 1;
+                            value.mobile_order = key + 1;
                         }
                     });
                     features = _.sortBy(features, [function(o) { return o.mobile_order; }]);
