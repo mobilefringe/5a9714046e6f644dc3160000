@@ -34,15 +34,7 @@
     								<li v-for="(item,key) in menu_items" class="menu_item">
     							        <router-link :to="item.href" v-if="item.sub_menu == undefined">{{$t(item.name)}}</router-link>
     							        <div v-else>
-    							         <!--   <a href="#" @click="toggleSubMenu(item.name); item.show_sub_menu = !item.show_sub_menu">{{$t(item.name)}}</a> -->
-    							         <!--   <transition name="custom-classes-transition"   enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" :duration="{ leave: 700 }" >-->
-    							         <!--       <ul v-if="item.sub_menu" v-show="item.show_sub_menu" :key="key">-->
-        								 <!--           <li v-for="sub_menu in item.sub_menu" class="dropdown_item" >-->
-        								 <!--               <router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link>-->
-        								 <!--           </li>-->
-        									<!--	</ul>-->
-        									<!--</transition>-->
-        									<b-card no-body class="mb-1">
+    							            <b-card no-body class="mb-1">
                                                 <b-card-header header-tag="header" class="p-1" role="tab">
                                                     <b-btn block @click="item.show_sub_menu = !item.show_sub_menu" :class="item.show_sub_menu ? 'collapsed' : null" :aria-controls="$t(item.name)" :aria-expanded="item.show_sub_menu ? 'true' : 'false'">
                                                         {{$t(item.name)}}
