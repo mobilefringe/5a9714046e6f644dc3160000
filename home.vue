@@ -155,6 +155,9 @@
                         else {
                             value.masonry_class = " ";
                         }
+                        if(key == 6) {
+                            
+                        }
                         value.mobile_order = key + 1;
                     });
                     features = _.sortBy(features, [function(o) { return o.mobile_order; }]);
