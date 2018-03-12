@@ -52,7 +52,7 @@
                                                 </b-card-header>
                                                 <b-collapse v-model="item.show_sub_menu" :id="item.name" :visible="item.show_sub_menu" :accordion="item.name" role="tabpanel" class="accordion_body">
                                                     <b-card-body v-for="sub_menu in item.sub_menu">
-                                                        <p class="card-text">{{sub_menu.name}}</p>
+                                                        <p class="card-text">{{$t(sub_menu.name)}}</p>
                                                     </b-card-body>
                                                 </b-collapse>
                                             </b-card>
