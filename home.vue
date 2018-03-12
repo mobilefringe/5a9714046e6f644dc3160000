@@ -155,11 +155,12 @@
                         else {
                             value.masonry_class = " ";
                         }
-                        if(key == 6) {
-                            value.mobile_order = 5;
-                        }
-                        else if(key > 5) {
+                        
+                        if(key > 5) {
                             value.mobile_order = key + 2;
+                        }
+                        else if(key == 6) {
+                            value.mobile_order = 5;
                         }
                         else {
                             value.mobile_order = key + 1;
