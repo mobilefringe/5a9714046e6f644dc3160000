@@ -82,7 +82,7 @@
                         }
                         else if (this.currentEvent.store == null || this.currentEvent.store == undefined) {
                             this.currentEvent.store = {};
-                            this.currentEvent.store.image_url =  "//codecloud.cdn.speedyrails.net/sites/5a6a54eb6e6f647da51e0100/image/png/1518554684072/bonniedoonlogo.png";
+                            this.currentEvent.store.image_url =  this.property.default_logo_url;
                         }
                         var vm = this;
                         var temp_event = [];
@@ -131,7 +131,7 @@
                 updatecurrentEvent (id) {
                     this.currentEvent = this.findEventBySlug(id);
                     if (this.currentEvent === null || this.currentEvent === undefined){
-                        this.$router.replace({ name: '404'});
+                        this.$router.replace('/');
                     }
                 },
                 loadData: async function() {
