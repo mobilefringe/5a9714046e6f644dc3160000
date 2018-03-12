@@ -76,6 +76,20 @@
                     								 <!--           </li>-->
                     									<!--	</ul>-->
                     									<!--</transition>-->
+                    									<b-card no-body class="mb-1" v-for = "service in services">
+                                                            <b-card-header header-tag="header" class="p-1" role="tab">
+                                                                <b-btn block @click="service.is_visible = !service.is_visible" :class="service.is_visible ? 'collapsed' : null" :aria-controls="service.id" :aria-expanded="service.is_visible ? 'true' : 'false'">
+                                                                    <i v-if="service.is_visible"  class="fa fa-caret-down"></i>
+                                                                    <i v-else  class="fa fa-caret-right"></i>
+                                                                    {{service.title}}
+                                                                </b-btn>
+                                                            </b-card-header>
+                                                            <b-collapse v-model="service.is_visible" :id="service.id" :visible="service.is_visible" :accordion="service.id" role="tabpanel" class="accordion_body">
+                                                                <b-card-body>
+                                                                    <p class="card-text" v-html="service.text"></p>
+                                                                </b-card-body>
+                                                            </b-collapse>
+                                                        </b-card>
             								        </div>
             								        
             								    </li>
