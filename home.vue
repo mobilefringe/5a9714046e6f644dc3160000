@@ -177,7 +177,7 @@
                         if(key > 5) {
                             value.mobile_order = key + 2;
                         }
-                        else if(key == 6) {
+                        if(key == 6) {
                             value.mobile_order = 5;
                         }
                         else {
