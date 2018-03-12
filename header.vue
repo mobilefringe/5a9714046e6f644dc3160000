@@ -107,6 +107,7 @@
 <script>
     define(["Vue", "vuex", 'vue!social_links.vue', "bootstrap-vue"], function (Vue, Vuex, SocialLinks, BootstrapVue) {
         Vue.use(Lightbox);
+        Vue.use(BootstrapVue);
         return Vue.component("social-links", {
             template: template, // the variable template will be injected,
         });
