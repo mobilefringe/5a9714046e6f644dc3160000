@@ -202,20 +202,6 @@
                 }
             },
             computed: {
-                // computed property for locale which returns locale value from data store and also updates the data store with new locale information
-                locale: {
-                    get() {
-                        return this.$store.state.locale
-                    },
-                    set(value) {
-                        this.$store.commit('SET_LOCALE', {
-                            lang: value
-                        })
-                    }
-                },
-                copyright_year() {
-                    return moment().year();
-                },
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
