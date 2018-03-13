@@ -89,7 +89,17 @@
                     }
                 },
                 updatePageData (id) {
-                    
+                     this.loadData(to.params.id).then(response => {
+                        if(response == null || response == undefined) {
+                            this.$router.replace('/');
+                        }
+                        this.currentPage = response[0].data;
+                        var temp_repo = this.findRepoByName('Pages Banner');
+                        if(temp_repo) {
+                            this.pageBanner = temp_repo.images[0];
+                        }
+                        this.pageBanner = this.pageBanner;
+                    });
                 }
             }
         });
