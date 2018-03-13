@@ -88,6 +88,9 @@
                         console.log("Error loading data: " + e.message);
                     }
                 },
+                updatePageData (id) {
+                    
+                }
             }
         });
     });
