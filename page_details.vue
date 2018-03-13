@@ -55,11 +55,11 @@
                     }
                     this.pageBanner = this.pageBanner;
                 });
-                this.updatePageData(this.id);
+                this.updatePageData(to.params.id);
                 next();
             },
             created(){
-               this.updatePageData(to.params.id);
+               this.updatePageData(this.id);
             },
             computed: {
                 ...Vuex.mapGetters([
