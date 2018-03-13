@@ -26,7 +26,7 @@
     				</div>
     				<div class="mobile_nav_container visible_phone">
     				    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
-    						<nav id="mobile_nav" v-show="show_mobile_menu">
+    						<nav id="mobile_nav" v-if="show_mobile_menu">
     							<ul>
     								<div class="mobile_menu_site_logo">
     									<router-link to="/"><img :src="property_logo" alt="Property Logo"/></router-link>
