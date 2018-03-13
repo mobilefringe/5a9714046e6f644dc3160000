@@ -36,7 +36,8 @@
             },
             {
                 "name": "header.fashionicity",
-                "href": "https://bccfashionicity.com/"
+                "href": "https://bccfashionicity.com/",
+                "external": true
             }
         ]
     },
