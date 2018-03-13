@@ -55,12 +55,11 @@
                     }
                     this.pageBanner = this.pageBanner;
                 });
+                this.updatePageData(this.id);
                 next();
             },
             created(){
-                this.loadData(this.id).then(response => {
-                    this.updatePageData(this.id)
-                });
+               this.updatePageData(to.params.id);
             },
             computed: {
                 ...Vuex.mapGetters([
