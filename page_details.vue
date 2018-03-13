@@ -44,8 +44,9 @@
             },
             props:['id', 'locale'],
             beforeRouteUpdate(to, from, next) {
-                this.updatePageData(to.params.id);
                 next();
+                this.updatePageData(to.params.id);
+                
             },
             created(){
                this.updatePageData(this.id);
