@@ -33,6 +33,10 @@
             {
                 "name": "header.blog",
                 "href": "/blog"
+            },
+            {
+                "name": "header.fashionicity",
+                "href": "/blog"
             }
         ]
     },
