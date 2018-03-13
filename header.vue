@@ -26,7 +26,7 @@
     				</div>
     				<div class="mobile_nav_container visible_phone">
     				    <transition name="custom-classes-transition" enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
-    						<nav id="mobile_nav" v-if="show_mobile_menu">
+    						<nav id="mobile_nav" v-show="show_mobile_menu">
     							<ul>
     								<div class="mobile_menu_site_logo">
     									<router-link to="/"><img :src="property_logo" alt="Property Logo"/></router-link>
@@ -107,91 +107,6 @@
                     show_mobile_menu: false,
                     property_logo: "//codecloud.cdn.speedyrails.net/sites/5a9714046e6f644dc3160000/image/png/1520457420000/whitelogo1@2x.png",
                     menu_items: MenuItems,
-                    // [
-                    //     {
-                    //         name: "header.stores",
-                    //         href: "/stores",
-                    //         show_sub_menu: false,
-                    //         sub_menu: [{
-                    //                 name: "header.stores",
-                    //                 href: "/stores"
-                    //             },
-                    //             {
-                    //                 name: "header.centre_map",
-                    //                 href: "/map"
-                    //             },
-                    //             {
-                    //                 name: "header.restaurants",
-                    //                 href: "/restaurants"
-                    //             }
-                    //         ]
-                    //     },
-                    //     {
-                    //         name: "header.promos",
-                    //         href: "/promotions",
-                    //         show_sub_menu: false,
-                    //     },
-                    //     {
-                    //         name: "header.news_events",
-                    //         href: "/events",
-                    //         show_sub_menu: false,
-                    //         sub_menu: [{
-                    //                 name: "header.events",
-                    //                 href: "/events"
-                    //             },
-                    //             {
-                    //                 name: "header.blog",
-                    //                 href: "/blog"
-                    //             }
-                    //         ]
-                    //     },
-                    //     {
-                    //         name: "header.services",
-                    //         href: "/pages/bramaleacitycentre-services",
-                    //         show_sub_menu: false,
-                    //         sub_menu: [{
-                    //                 name: "header.services ",
-                    //                 href: "/pages/bramaleacitycentre-services"
-                    //             },
-                    //             {
-                    //                 name: "header.gift_card",
-                    //                 href: "/pages/bramaleacitycentre-gift-cards"
-                    //             },
-                    //             {
-                    //                 name: "header.accessibility",
-                    //                 href: "/pages/bramaleacitycentre-accessibilty"
-                    //             }
-                                
-                    //         ]
-                    //     },
-                    //     {
-                    //         name: "header.contact_us",
-                    //         href: "/contact_us",
-                    //         show_sub_menu: false,
-                    //         sub_menu: [
-                    //             {
-                    //                 name: "header.contact_us",
-                    //                 href: "/contact_us"
-                    //             },
-                    //             {
-                    //                 name: "header.hours",
-                    //                 href: "/hours"
-                    //             },
-                    //             {
-                    //                 name: "header.employment",
-                    //                 href: "/jobs"
-                    //             },
-                    //             {
-                    //                 name: "header.leasing",
-                    //                 href: "/pages/bramaleacitycentre-leasing"
-                    //             },
-                    //             {
-                    //                 name: "header.newsletter",
-                    //                 href: "/newsletter"
-                    //             }
-                    //         ],
-                    //     }
-                    // ],
                 }
             },
             watch: {
