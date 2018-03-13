@@ -1,70 +1,85 @@
 [
-    {
-        "name": "header.stores",
-        "href": "/stores",
-        "sub_menu": [{
-                "name": "header.stores",
-                "href": "/stores"
-            },
-            {
-                "name": "header.centre_map",
-                "href": "/map"
-            }
-        ]
-    },
-    {
-        "name": "header.promos",
-        "href": "/promotions"
-    },
-    {
-        "name": "header.events",
-        "href": "/events"
-    },
-    {
-        "name": "header.guest_services",
-        "href": "/pages/bonniedoon-services",
-        "sub_menu": [{
-                "name": "header.services ",
-                "href": "/pages/bonniedoon-services"
-            },
-            {
-                "name": "header.community",
-                "href": "/pages/bonniedoon-community-support"
-            },
-            {
-                "name": "header.green_initiatives",
-                "href": "/pages/bonniedoon-green-initiatives"
-            },
-            {
-                "name": "header.gift_card",
-                "href": "/pages/bonniedoon-gift-cards"
-            }
-        ]
-    },
-    {
-        "name": "header.contact_us",
-        "href": "/contact_us",
-        "sub_menu": [
-            {
-                "name": "header.contact_us",
-                "href": "/contact_us"
-            },
-            {
-                "name": "header.hours",
-                "href": "/hours"
-            },
-            {
-                "name": "header.jobs",
-                "href": "/jobs"
-            },
-            {
-                "name": "header.find_us",
-                "href": "/find_us"
-            },
-            {
-                "name": "header.newsletter",
-                "href": "/newsletter"
-            }
-        ]
-    }
-]
+                    {
+                        name: "header.stores",
+                        href: "/stores",
+                        show_sub_menu: false,
+                        sub_menu: [{
+                                name: "header.stores",
+                                href: "/stores"
+                            },
+                            {
+                                name: "header.centre_map",
+                                href: "/map"
+                            },
+                            {
+                                name: "header.restaurants",
+                                href: "/restaurants"
+                            }
+                        ]
+                    },
+                    {
+                        name: "header.promos",
+                        href: "/promotions",
+                        show_sub_menu: false,
+                    },
+                    {
+                        name: "header.news_events",
+                        href: "/events",
+                        show_sub_menu: false,
+                        sub_menu: [{
+                                name: "header.events",
+                                href: "/events"
+                            },
+                            {
+                                name: "header.blog",
+                                href: "/blog"
+                            }
+                        ]
+                    },
+                    {
+                        name: "header.services",
+                        href: "/pages/bramaleacitycentre-services",
+                        show_sub_menu: false,
+                        sub_menu: [{
+                                name: "header.services ",
+                                href: "/pages/bramaleacitycentre-services"
+                            },
+                            {
+                                name: "header.gift_card",
+                                href: "/pages/bramaleacitycentre-gift-cards"
+                            },
+                            {
+                                name: "header.accessibility",
+                                href: "/pages/bramaleacitycentre-accessibilty"
+                            }
+                            
+                        ]
+                    },
+                    {
+                        name: "header.contact_us",
+                        href: "/contact_us",
+                        show_sub_menu: false,
+                        sub_menu: [
+                            {
+                                name: "header.contact_us",
+                                href: "/contact_us"
+                            },
+                            {
+                                name: "header.hours",
+                                href: "/hours"
+                            },
+                            {
+                                name: "header.employment",
+                                href: "/jobs"
+                            },
+                            {
+                                name: "header.leasing",
+                                href: "/pages/bramaleacitycentre-leasing"
+                            },
+                            {
+                                name: "header.newsletter",
+                                href: "/newsletter"
+                            }
+                        ],
+                    }
+                ]
