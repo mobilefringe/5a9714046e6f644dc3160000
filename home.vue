@@ -11,7 +11,7 @@
 				</slick>
 			</div>
 		</div>
-		<div class="banner_div show_phone">
+		<div class="banner_div visible_phone">
 			<div class="home-banner-container">
 				<slick ref="slick" :options="slickOptions">
 					<div class="" v-for="banner in banners" v-if="banners">
