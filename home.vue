@@ -119,7 +119,7 @@
                     // bramaleacitycentre-mobile-hero-banners
                     var temp_repo = this.findRepoBySlug('bramaleacitycentre-mobile-hero-banners');
                     if(temp_repo) {
-                        this.promoBanner = temp_repo.images[0];
+                        this.mobile_banners = temp_repo.images[0];
                     }
                 });
             },
