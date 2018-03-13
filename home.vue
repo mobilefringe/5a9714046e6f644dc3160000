@@ -100,7 +100,8 @@
                     show_popup: false,
                     popup: null,
                     formData : {},
-                    instaFeed: null
+                    instaFeed: null,
+                    mobile_banners: null
                 }
             },
             created () {
