@@ -89,7 +89,7 @@
                     }
                 },
                 updatePageData (id) {
-                     this.loadData(to.params.id).then(response => {
+                    this.loadData(id).then(response => {
                         if(response == null || response == undefined) {
                             this.$router.replace('/');
                         }
