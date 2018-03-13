@@ -76,7 +76,7 @@
                         this.currentPage = response[0].data;
                         
                         //Add custom banners for indivial pages 
-                        if( _.includes(id, 'giftcard'))
+                        if( _.includes(id, 'gift-cards'))
                         var temp_repo = this.findRepoByName('Pages Banner');
                         if(temp_repo) {
                             this.pageBanner = temp_repo.images[0];
