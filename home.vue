@@ -1,6 +1,6 @@
 <template>
 	<div class="row page_content" v-if="dataLoaded">
-		<div class="banner_div">
+		<div class="banner_div hidden_phone">
 			<div class="home-banner-container">
 				<slick ref="slick" :options="slickOptions">
 					<div class="" v-for="banner in banners" v-if="banners">
