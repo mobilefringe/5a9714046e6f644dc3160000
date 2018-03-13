@@ -4,8 +4,6 @@
 			<div class="home-banner-container">
 				<slick ref="slick" :options="slickOptions">
 					<div class="" v-for="banner in banners" v-if="banners">
-						<!--<img :src="banner.image_url" class="banner_img" alt="">-->
-						<!--<div class="home-banner" v-bind:style="{ backgroundImage: 'url(' + banner.image_url + ')' }"></div>-->
 						<div class="home-banner" v-lazy:background-image="banner.image_url"></div>
 					</div>
 				</slick>
