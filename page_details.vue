@@ -74,6 +74,8 @@
                             this.$router.replace('/');
                         }
                         this.currentPage = response[0].data;
+                        
+                        //Custom banners for indivial pages 
                         var temp_repo = this.findRepoByName('Pages Banner');
                         if(temp_repo) {
                             this.pageBanner = temp_repo.images[0];
