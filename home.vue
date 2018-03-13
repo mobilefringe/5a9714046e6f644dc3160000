@@ -149,6 +149,7 @@
                     'property',
                     'timezone',
                     'processedStores'
+                    'findRepoBySlug'
                 ]),
                 banners () {
                     return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
