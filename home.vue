@@ -114,6 +114,8 @@
                     var social_feed = socialFeed.social.instagram;
                     this.instaFeed = _.slice(social_feed, [0], [4]);
                     console.log("locale created", this.locale);
+                    
+                    // bramaleacitycentre-mobile-hero-banners
                 });
             },
             watch : {
