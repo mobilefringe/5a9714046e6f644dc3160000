@@ -116,7 +116,7 @@
                     console.log("locale created", this.locale);
                     
                     // bramaleacitycentre-mobile-hero-banners
-                    var temp_repo = this.findRepoByName('Jobs Banner');
+                    var temp_repo = this.findRepoBySlug('Jobs Banner');
                     if(temp_repo) {
                         this.promoBanner = temp_repo.images[0];
                     }
