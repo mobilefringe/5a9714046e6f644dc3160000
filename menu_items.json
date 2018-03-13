@@ -20,7 +20,7 @@
     {
         "name": "header.promos",
         "href": "/promotions",
-        "show_sub_menu": false,
+        "show_sub_menu": false
     },
     {
         "name": "header.news_events",
