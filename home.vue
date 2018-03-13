@@ -146,6 +146,9 @@
                 banners () {
                     return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
                 },
+                mobile_banners () {
+                    return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
+                },
                 feature_items () {
                     // return this.$store.state.feature_items;
                     var features = this.$store.state.feature_items;
