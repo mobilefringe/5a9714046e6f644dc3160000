@@ -161,7 +161,6 @@
                 events() {
                     var vm = this;
                     var temp_promo = [];
-                    var temp_job = [];
                     _.forEach(this.processedEvents, function(value, key) {
                         today = moment().tz(vm.timezone);
                         webDate = moment(value.show_on_web_date).tz(vm.timezone)
