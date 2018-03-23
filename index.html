@@ -31,51 +31,51 @@
 	</head>
 	<body>
 	    {%raw-%} 
-		<div id="app" v-cloak>
-			<loader v-if="!dataLoaded"></loader>
-			<div class="main_content_container" v-if="dataLoaded">
-			    <header-component></header-component>
-				<transition name="custom-classes-transition" enter-active-class="fadeIn">
-					<router-view class="router_content" :locale="locale"></router-view>
-				</transition>
-				<div class="home_subscription hidden_phone">
-                    <div class="subscribeBlog content_container">
-                         <h4 class="caps">{{$t("footer.stay_uptodate")}}</h4> 
-                         <div id="newsletterBlogForm">
-                            <label for="fieldEmail" style="display:none"></label>
-                            <input id="fieldEmail" name="cm-tkyhii-tkyhii" class="form-control" type="email" v-model="newsletter_email" :placeholder="$t('footer.enter_email')" required/> 
-                            <router-link class="" data-i18n="general.submit" :to="'/newsletter?email='+ newsletter_email"><i class="fa fa-arrow-right"></i></router-link>
-                            
-                            <span id="success_subscribe" class="hidden_now">{{$t("footer.subscribe_thankyou")}}</span>
-                         </div>
+    		<div id="app" v-cloak>
+    			<loader v-if="!dataLoaded"></loader>
+    			<div class="main_content_container" v-if="dataLoaded">
+    			    <header-component></header-component>
+    				<transition name="custom-classes-transition" enter-active-class="fadeIn">
+    					<router-view class="router_content" :locale="locale"></router-view>
+    				</transition>
+    				<div class="home_subscription hidden_phone">
+                        <div class="subscribeBlog content_container">
+                             <h4 class="caps">{{$t("footer.stay_uptodate")}}</h4> 
+                             <div id="newsletterBlogForm">
+                                <label for="fieldEmail" style="display:none"></label>
+                                <input id="fieldEmail" name="cm-tkyhii-tkyhii" class="form-control" type="email" v-model="newsletter_email" :placeholder="$t('footer.enter_email')" required/> 
+                                <router-link class="" data-i18n="general.submit" :to="'/newsletter?email='+ newsletter_email"><i class="fa fa-arrow-right"></i></router-link>
+                                
+                                <span id="success_subscribe" class="hidden_now">{{$t("footer.subscribe_thankyou")}}</span>
+                             </div>
+                        </div>
                     </div>
-                </div>
-				<div class="footer">
-					<div class="site_container">
-						<div class="site_logo visible_phone">
-							<router-link to="/"><img :src="property_logo" alt="Property Logo"/></router-link>
-						</div>
-						<div class="footer_nav hidden_phone">
-						    <nav id="primary_nav">
-								<ul>
-								    <li v-for="item in menu_items" class="menu_item">
-								        <router-link :to="item.href">{{$t(item.name)}}</router-link>
-								    </li>
-								</ul>
-							</nav>
-					    </div>
-						<div class="footer_social">
-                            <social-links></social-links>
-						</div>
-						<div class="footer_terms">
-							<p>&copy; {{copyright_year}}<span class="caps"> {{property.name}}</span> {{$t("footer.all_rights")}}<router-link to="/pages/bonniedoon-privacy-policy"> {{$t("footer.privacy_policy")}} </router-link> <span class="hidden_phone">|</span><br class="visible_phone"/><span> {{$t("footer.powered_by")}}<a href="//www.mallmaverick.com" target="_blank"> Mall Maverick</a></span></p>
-							<!--<p>Powered by <a href="//www.mallmaverick.com" target="_blank">Mall Maverick</a></p>-->
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class='modal-backdrop custom_backdrop hidden_now' id="popup_backdrop"></div>
+    				<div class="footer">
+    					<div class="site_container">
+    						<div class="site_logo visible_phone">
+    							<router-link to="/"><img :src="property_logo" alt="Property Logo"/></router-link>
+    						</div>
+    						<div class="footer_nav hidden_phone">
+    						    <nav id="primary_nav">
+    								<ul>
+    								    <li v-for="item in menu_items" class="menu_item">
+    								        <router-link :to="item.href">{{$t(item.name)}}</router-link>
+    								    </li>
+    								</ul>
+    							</nav>
+    					    </div>
+    						<div class="footer_social">
+                                <social-links></social-links>
+    						</div>
+    						<div class="footer_terms">
+    							<p>&copy; {{copyright_year}}<span class="caps"> {{property.name}}</span> {{$t("footer.all_rights")}}<router-link to="/pages/bonniedoon-privacy-policy"> {{$t("footer.privacy_policy")}} </router-link> <span class="hidden_phone">|</span><br class="visible_phone"/><span> {{$t("footer.powered_by")}}<a href="//www.mallmaverick.com" target="_blank"> Mall Maverick</a></span></p>
+    							<!--<p>Powered by <a href="//www.mallmaverick.com" target="_blank">Mall Maverick</a></p>-->
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<div class='modal-backdrop custom_backdrop hidden_now' id="popup_backdrop"></div>
 		{%endraw-%} 
 		<script src="https://unpkg.com/babel-polyfill@6.26.0/dist/polyfill.min.js"></script>
 		<script src="https://unpkg.com/es6-shim@0.35.3/es6-shim.min.js"></script>
