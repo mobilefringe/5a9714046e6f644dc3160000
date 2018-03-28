@@ -119,12 +119,12 @@
 
                 ]),
                 allStores() {
-                    // var stores = this.processedStores;
-                    // stores.map(store => {
-                    //   if (_.includes(store.store_front_url_abs, 'missing')) {
-                    //         store.store_front_url_abs = this.property.default_logo_url;
-                    //     }
-                    // });
+                    var stores = this.processedStores;
+                    stores.map(store => {
+                      if (_.includes(store.store_front_url_abs, 'missing')) {
+                            store.store_front_url_abs = this.property.default_logo_url;
+                        }
+                    });
                     return this.processedStores;
                 },
                 allCatergories() {
