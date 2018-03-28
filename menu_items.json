@@ -30,10 +30,6 @@
                 "name": "header.events",
                 "href": "/events"
             },
-            {
-                "name": "header.blog",
-                "href": "/blog"
-            }
         ]
     },
     {
