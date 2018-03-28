@@ -29,7 +29,7 @@
         "sub_menu": [{
                 "name": "header.events",
                 "href": "/events"
-            },
+            }
         ]
     },
     {
