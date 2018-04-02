@@ -26,14 +26,8 @@
                         
                         <h3 class="hours_heading text-left">{{$t("hours_page.holiday_hours")}}</h3>
                         <div id="holidays_hours_container" class="hours_container">
-                            <div class="hours_div text-left"  v-for="hour in reducedHolidays">
-                                <span>
-                                    <span v-if="locale=='en-ca'">{{hour.holiday_name}}</span>
-                                    <span v-else>{{hour.holiday_name_2}}</span>
-                                    ({{hour.holiday_date | moment("MMM D YYYY", timezone)}})
-                                </span>
-                                <span>{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
-                            </div>
+                            BCC is open on the following Statutory Holidays 11am – 6pm
+*Not all retailers may open during stat holidays. Please verify holiday hours with individual stores.
                         </div>
                         
                         <div class="padding_top_20"></div>
