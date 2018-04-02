@@ -38,13 +38,13 @@
                                     Canada Day
                                 </li>
                                 <li>
-                                    Thanksgiving Day
+                                    Labour Day
                                 </li>
                                 <li>
-                                    Family Day
+                                    Thanksgiving Day
                                 </li>
                             </ul>
-                            New Year’s Day
+                            
 
 
 
