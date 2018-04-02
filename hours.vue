@@ -27,6 +27,12 @@
                         <h3 class="hours_heading text-left">{{$t("hours_page.holiday_hours")}}</h3>
                         <div id="holidays_hours_container" class="hours_container">
                             BCC is open on the following Statutory Holidays 11am – 6pm <br/>
+                            New Year’s Day
+Family Day
+Victoria Day
+Canada Day
+Labour Day
+Thanksgiving Day
                             *Not all retailers may open during stat holidays. Please verify holiday hours with individual stores.
                         </div>
                         
