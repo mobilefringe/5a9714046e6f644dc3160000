@@ -15,7 +15,7 @@
     					<div class="header_social">
     					    <social-links></social-links>
     					</div>
-    					<router-link id="signup" to="/newsletter">{{$t("header.sign_up")}}</router-link>
+    					<router-link id="signup" to="/pine_club">{{$t("header.sign_up")}}</router-link>
     					<!--<span> <span @click="changeLocale('en-ca')"> en</span> | <span @click="changeLocale('fr-ca')">fr</span></span>-->
     				</div>
     				<div id="menu-icon" @click="show_mobile_menu = !show_mobile_menu" :class="{ open: show_mobile_menu}">
