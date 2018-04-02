@@ -27,8 +27,13 @@
                         <h3 class="hours_heading text-left">{{$t("hours_page.holiday_hours")}}</h3>
                         <div id="holidays_hours_container" class="hours_container">
                             BCC is open on the following Statutory Holidays 11am – 6pm <br/>
+                            <ul>
+                                <li>
+                                    Family Day
+                                </li>
+                            </ul>
                             New Year’s Day
-Family Day
+
 Victoria Day
 Canada Day
 Labour Day
