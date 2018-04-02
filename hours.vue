@@ -35,7 +35,7 @@
                                     Victoria Day
                                 </li>
                                 <li>
-                                    Family Day
+                                    Canada Day
                                 </li>
                                 <li>
                                     Family Day
@@ -47,7 +47,7 @@
                             New Year’s Day
 
 
-Canada Day
+
 Labour Day
 Thanksgiving Day
                             *Not all retailers may open during stat holidays. Please verify holiday hours with individual stores.
