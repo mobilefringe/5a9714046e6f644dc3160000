@@ -29,6 +29,9 @@
                             BCC is open on the following Statutory Holidays 11am – 6pm <br/>
                             <ul>
                                 <li>
+                                    New Year’s Day
+                                </li>
+                                <li>
                                     Family Day
                                 </li>
                                 <li>
