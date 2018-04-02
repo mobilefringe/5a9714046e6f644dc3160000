@@ -51,7 +51,7 @@
                             *Not all retailers may open during stat holidays. Please verify holiday hours with individual stores.
                         </div>
                         
-                        <!--<div class="padding_top_20"></div>-->
+                        <div class="padding_top_20"></div>
                         
                         <h3 class="hours_heading text-left">{{$t("hours_page.holiday_closures")}}</h3>
                         <div id="closed_hours_container" class="hours_container">
