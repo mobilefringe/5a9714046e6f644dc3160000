@@ -32,19 +32,21 @@
                                     Family Day
                                 </li>
                                 <li>
+                                    Victoria Day
+                                </li>
+                                <li>
                                     Family Day
                                 </li>
                                 <li>
                                     Family Day
-                                </li><li>
-                                    Family Day
-                                </li><li>
+                                </li>
+                                <li>
                                     Family Day
                                 </li>
                             </ul>
                             New Year’s Day
 
-Victoria Day
+
 Canada Day
 Labour Day
 Thanksgiving Day
