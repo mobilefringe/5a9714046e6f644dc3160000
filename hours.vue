@@ -48,11 +48,6 @@
                                 </li>
                             </ul>
                             
-
-
-
-
-
                             *Not all retailers may open during stat holidays. Please verify holiday hours with individual stores.
                         </div>
                         
