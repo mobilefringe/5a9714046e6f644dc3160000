@@ -35,10 +35,10 @@
 </template>
 <style>
 	#png_map{
-	    width:1310px;
-		height: 983px;
-		min-width:1310px;
-		min-height: 983px;
+	    width:2500px;
+		height: 2500px;
+		min-width:2500px;
+		min-height: 2500px;
 	}
 </style>
 <script>
