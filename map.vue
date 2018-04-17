@@ -16,7 +16,7 @@
 		        <div class="col-sm-8">
 		        <!--<div></div>-->
 		            <div class="floor_switch pull-right" @click="focusLowerLevel">Lower Level</div>
-		            <div class="floor_switch" @click="focusUpperLevel">Upper Level</div>
+		            <div class="floor_switch  pull-right" @click="focusUpperLevel">Upper Level</div>
 		        </div>
 		    </div>
 			<div class="col-sm-4   padding_top_20">
