@@ -13,10 +13,10 @@
 		        <div class="col-sm-4">
 		            
 		        </div>
-		        <div class="col-sm-8">
+		        <div class="col-sm-8 floor_switch_container" >
 		        <!--<div></div>-->
-		            <div class="floor_switch pull-right" @click="focusUpperLevel" :class="{active: upperActive}">Upper Level</div>
-		            <div class="floor_switch pull-right" @click="focusLowerLevel" :class="{active: lowerActive}">Lower Level</div>
+		            <div class="floor_switch" @click="focusUpperLevel" :class="{active: upperActive}">Upper Level</div>
+		            <div class="floor_switch" @click="focusLowerLevel" :class="{active: lowerActive}">Lower Level</div>
 		        </div>
 		    </div>
 			<div class="col-sm-4   padding_top_20">
