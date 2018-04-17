@@ -14,6 +14,7 @@
 		            
 		        </div>
 		        <div class="col-sm-8">
+		        <!--<div></div>-->
 		            <div class="col-sm-6" @click="focusLowerLevel">Lower Level</div>
 		            <div class="col-sm-6" @click="focusUpperLevel">Upper Level</div>
 		        </div>
