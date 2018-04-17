@@ -205,9 +205,11 @@
                 },
                 focusLowerLevel(){
                     console.log("focusing to lowerlevel");
+                    his.svgMapRef.addMarker(store);
                 },
                 focusUpperLevel() {
                     console.log("focusing to upperlevel");
+                    his.svgMapRef.addMarker(store);
                 }
             },
             
