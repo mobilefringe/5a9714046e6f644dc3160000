@@ -205,11 +205,11 @@
                 },
                 focusLowerLevel(){
                     console.log("focusing to lowerlevel");
-                    this.svgMapRef.focusTo(1250, 1875, 50);
+                    this.svgMapRef.focusTo(1250, 1875, 0);
                 },
                 focusUpperLevel() {
                     console.log("focusing to upperlevel");
-                    this.svgMapRef.focusTo(1250, 625, 50);
+                    this.svgMapRef.focusTo(1250, 625, 0);
                 }
             },
             
