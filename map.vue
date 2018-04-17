@@ -10,8 +10,12 @@
 		</div>
 		<div class="site_container">
 		    <div class="row">
-		        <div class="col-sm-6"></div>
-		        <div class="col-sm-6"></div>
+		        <div class="col-sm-6">
+		            
+		        </div>
+		        <div class="col-sm-6">
+		            <div></div>
+		        </div>
 		    </div>
 			<div class="col-sm-4   padding_top_20">
                 <div class="map_directory text-center hidden_phone">
