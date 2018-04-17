@@ -10,10 +10,10 @@
 		</div>
 		<div class="site_container">
 		    <div class="row">
-		        <div class="col-sm-6">
+		        <div class="col-sm-4">
 		            
 		        </div>
-		        <div class="col-sm-6">
+		        <div class="col-sm-8">
 		            <div class="col-sm-6" @click="focusLowerLevel">Lower Level</div>
 		            <div class="col-sm-6" @click="focusUpperLevel">Upper Level</div>
 		        </div>
