@@ -27,7 +27,7 @@
             </div>
             <div class="col-sm-8">
             <div class="padding_top_20 map light_border">
-				<png-map ref="pngmap_ref" :png-map-url="getPNGurl" :initial-position="'1250 1250'" @updateMap="updatePNGMap" zoomOutToFit="YES"></png-map>
+				<png-map ref="pngmap_ref" :png-map-url="getPNGurl" :initial-position="'1250 1250'" @updateMap="updatePNGMap"></png-map>
 			</div>
             </div>
 		</div>
