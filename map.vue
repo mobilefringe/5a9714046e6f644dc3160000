@@ -203,6 +203,12 @@
                     this.search_result = "";
                     this.$router.push("/stores/"+option.slug);
                 },
+                focusLowerLevel(){
+                    
+                },
+                focusUpperLevel() {
+                    
+                }
             },
             
             beforeDestroy: function() {
