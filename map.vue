@@ -213,6 +213,7 @@
                 focusUpperLevel() {
                     console.log("focusing to upperlevel");
                     this.svgMapRef.focusTo(1250, 625, 40);
+                    this.lowerActive = false;
                 }
             },
             
