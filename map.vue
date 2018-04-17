@@ -209,12 +209,12 @@
                 focusLowerLevel(){
                     this.svgMapRef.focusTo(1250, 1875, 40);
                     this.lowerActive = true;
-                    this.uppserActive - false;
+                    this.upperActive - false;
                 },
                 focusUpperLevel() {
                     this.svgMapRef.focusTo(1250, 625, 40);
                     this.lowerActive = false;
-                    this.uppserActive - true;
+                    this.upperActive - true;
                 }
             },
             
