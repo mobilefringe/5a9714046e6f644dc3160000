@@ -9,6 +9,9 @@
 			</div>
 		</div>
 		<div class="site_container">
+		    <div class="row">
+		        
+		    </div>
 			<div class="col-sm-4   padding_top_20">
                 <div class="map_directory text-center hidden_phone">
                     <h3 class="map_title caps">{{$t("stores_page.find_store")}}</h3>
