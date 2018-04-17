@@ -14,7 +14,8 @@
 		            
 		        </div>
 		        <div class="col-sm-6">
-		            <div></div>
+		            <div>Floor One</div>
+		            <div>Floor Two</div>
 		        </div>
 		    </div>
 			<div class="col-sm-4   padding_top_20">
