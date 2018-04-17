@@ -209,6 +209,8 @@
                 focusLowerLevel(){
                     console.log("focusing to lowerlevel");
                     this.svgMapRef.focusTo(1250, 1875, 40);
+                    this.lowerActive = true;
+                    this.uppserActive - false;
                 },
                 focusUpperLevel() {
                     console.log("focusing to upperlevel");
