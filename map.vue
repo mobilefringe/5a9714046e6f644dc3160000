@@ -15,7 +15,7 @@
 		        </div>
 		        <div class="col-sm-8">
 		        <!--<div></div>-->
-		            <div class="floor_switch pull-right" @click="focusLowerLevel">Lower Level</div>
+		            <div class="floor_switch pull-right" @click="focusLowerLevel" :class="{active: lowerActive">Lower Level</div>
 		            <div class="floor_switch  pull-right" @click="focusUpperLevel">Upper Level</div>
 		        </div>
 		    </div>
@@ -207,13 +207,11 @@
                     this.$router.push("/stores/"+option.slug);
                 },
                 focusLowerLevel(){
-                    console.log("focusing to lowerlevel");
                     this.svgMapRef.focusTo(1250, 1875, 40);
                     this.lowerActive = true;
                     this.uppserActive - false;
                 },
                 focusUpperLevel() {
-                    console.log("focusing to upperlevel");
                     this.svgMapRef.focusTo(1250, 625, 40);
                     this.lowerActive = false;
                     this.uppserActive - true;
