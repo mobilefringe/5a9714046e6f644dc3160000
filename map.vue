@@ -14,7 +14,7 @@
 		            
 		        </div>
 		        <div class="col-sm-6">
-		            <div>Floor One</div>
+		            <div @click="focusLowerLevel">Floor One</div>
 		            <div>Floor Two</div>
 		        </div>
 		    </div>
