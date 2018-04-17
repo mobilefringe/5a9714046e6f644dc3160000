@@ -67,6 +67,8 @@
                     windowWidth: 0,
                     storeBanner : null,
                     search_result : null,
+                    lowerActive: true,
+                    upperActive: false
                 }
             },
             created (){
