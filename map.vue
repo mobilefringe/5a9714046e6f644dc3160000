@@ -10,7 +10,7 @@
 		</div>
 		<div class="site_container">
 		    <div class="row">
-		        
+		        <div class="col-sm-8"></div>
 		    </div>
 			<div class="col-sm-4   padding_top_20">
                 <div class="map_directory text-center hidden_phone">
@@ -29,9 +29,9 @@
                 </div>
             </div>
             <div class="col-sm-8">
-            <div class="padding_top_20 map light_border">
-				<png-map ref="pngmap_ref" :png-map-url="getPNGurl" :initial-position="'1250 1875'" @updateMap="updatePNGMap"></png-map>
-			</div>
+                <div class="padding_top_20 map light_border">
+    				<png-map ref="pngmap_ref" :png-map-url="getPNGurl" :initial-position="'1250 1875'" @updateMap="updatePNGMap"></png-map>
+    			</div>
             </div>
 		</div>
 	</div>
