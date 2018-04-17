@@ -204,10 +204,10 @@
                     this.$router.push("/stores/"+option.slug);
                 },
                 focusLowerLevel(){
-                    console.log("focusing to lowerlevel")
+                    console.log("focusing to lowerlevel");
                 },
                 focusUpperLevel() {
-                    console.log("focusing to upperlevel")
+                    console.log("focusing to upperlevel");
                 }
             },
             
