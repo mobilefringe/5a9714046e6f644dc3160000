@@ -50,11 +50,6 @@
 		min-width:2500px;
 		min-height: 2500px;
 	}
-	.floor_switch {
-        padding: 10px;
-        border: 1px solid #000;
-        margin: 0 10px;
-	}
 </style>
 <script>
     define(["Vue", "vuex", "vue-select", "jquery", "smooth-zoom", "vue!png-map", "vue!search-component"], function(Vue, Vuex, VueSelect, $, smoothZoom, PNGMapComponent, SearchComponent) {
