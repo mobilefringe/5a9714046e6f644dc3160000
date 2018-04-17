@@ -51,7 +51,9 @@
 		min-height: 2500px;
 	}
 	.floor_switch {
-	    
+        padding: 10px;
+        border: 1px solid #000;
+        margin: 0 10px;
 	}
 </style>
 <script>
