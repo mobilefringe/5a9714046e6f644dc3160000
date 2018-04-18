@@ -207,12 +207,12 @@
                     this.$router.push("/stores/"+option.slug);
                 },
                 focusLowerLevel(){
-                    this.svgMapRef.focusTo(1250, 1875, 40);
+                    this.svgMapRef.focusTo(1250, 1875, 30);
                     this.lowerActive = true;
                     this.upperActive = false;
                 },
                 focusUpperLevel() {
-                    this.svgMapRef.focusTo(1250, 625, 40);
+                    this.svgMapRef.focusTo(1250, 625, 30);
                     this.lowerActive = false;
                     this.upperActive = true;
                 }
