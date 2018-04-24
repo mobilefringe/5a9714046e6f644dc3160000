@@ -196,7 +196,7 @@
                 updatePNGMap(map) {
                     this.map = map;
                     this.addLandmark(this.currentStore);
-                    this.pngMapRef.focusTo(this.currentStore.x_coordinate, 35);
+                    this.pngMapRef.focusTo(this.currentStore.x_coordinate, this.currentStore.y_coordinate35);
                 },
             }
         });
