@@ -88,7 +88,6 @@
                     if(temp_repo) {
                         this.storeBanner = temp_repo.images[0];
                     }
-                    console.log(temp_repo, this.storeBanner); 
                 });
             },
             methods: {
