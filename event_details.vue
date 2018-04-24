@@ -75,12 +75,12 @@
             watch: {
                 currentEvent : function (){
                     if(this.currentEvent != null) {
-                        if (this.currentEvent.store != null && this.currentEvent.store != undefined && _.includes(this.currentEvent.store.image_url, 'missing')) {
-                            this.currentEvent.store.image_url = this.property.default_logo_url;
+                        if (this.currentEvent.store != null && this.currentEvent.store != undefined && _.includes(this.currentEvent.store.store_front_url_abs, 'missing')) {
+                            this.currentEvent.store.store_front_url_abs = this.property.default_logo_url;
                         }
                         else if (this.currentEvent.store == null || this.currentEvent.store == undefined) {
                             this.currentEvent.store = {};
-                            this.currentEvent.store.image_url =  this.property.default_logo_url;
+                            this.currentEvent.store.store_front_url_abs =  this.property.default_logo_url;
                         }
                         var vm = this;
                         var temp_event = [];
