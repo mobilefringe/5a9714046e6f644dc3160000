@@ -89,15 +89,9 @@
             },
             created() {
                 this.loadData().then(response => {
-                    
                     this.pageBanner = this.findRepoByName('Hours Banner').images[0];
                 });
                 
-            },
-            watch : {
-                locale: function(val, oldVal) {
-                    console.log("locale", this.locale);
-                },
             },
             computed: {
                 ...Vuex.mapGetters([
