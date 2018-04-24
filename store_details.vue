@@ -157,10 +157,7 @@
                     // setTimeout(function() {
                     //     vm.addLandmark(vm.currentStore);
                     // }, 500);
-                },
-                locale: function(val, oldVal) {
-                    console.log("locale", this.locale);
-                },
+                }
             },
             
             computed: {
