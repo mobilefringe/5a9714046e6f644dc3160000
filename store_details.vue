@@ -198,7 +198,6 @@
                 },
                 updatePNGMap(map) {
                     this.map = map;
-                    console.log("in updatepng");
                     this.addLandmark(this.currentStore);
                 },
             }
