@@ -17,7 +17,7 @@
 				</div>
 				<div class="col-sm-8 promo_image_container text-left">
 					<div class="col-sm-12 no_padding">
-						<png-map ref="pngmapref" v-bind:png-map-url="getPNGurl" :initial-position="'1250 1250'" :height="_.toNumber('625')" @updateMap="updatePNGMap" zoomOutToFit="YES"></png-map>
+						<png-map ref="pngmapref" v-bind:png-map-url="getPNGurl" :height="_.toNumber('625')" @updateMap="updatePNGMap" zoomOutToFit="YES"></png-map>
 					</div>
 				</div>
 			</div>
@@ -196,7 +196,7 @@
                 updatePNGMap(map) {
                     this.map = map;
                     this.addLandmark(this.currentStore);
-                    this.pngMapRef.focusTo(this.currentStore.x_coordinate, this.currentStore.y_coordinate35);
+                    this.pngMapRef.focusTo(this.currentStore.x_coordinate, this.currentStore.y_coordinate, 35);
                 },
             }
         });
