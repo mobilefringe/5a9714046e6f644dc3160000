@@ -81,7 +81,6 @@
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
-                    console.log(temp_repo, this.pageBanner); 
                     this.$on('updateMap', this.updatePNGMap);
                 });
             },
