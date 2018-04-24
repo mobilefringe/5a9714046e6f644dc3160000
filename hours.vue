@@ -91,8 +91,6 @@
                 this.loadData().then(response => {
                     
                     this.pageBanner = this.findRepoByName('Hours Banner').images[0];
-                   console.log(this.pageBanner); 
-                   console.log("locale created", this.locale);
                 });
                 
             },
