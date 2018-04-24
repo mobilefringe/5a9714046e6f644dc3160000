@@ -96,7 +96,6 @@
             watch: {
                 currentJob : function (){
                     if(this.currentJob != null) {
-                        console.log(this.currentJob.store);
                         if (this.currentJob.store != null && this.currentJob.store != undefined && _.includes(this.currentJob.store.image_url, 'missing')) {
                             this.currentJob.store.image_url = this.property.default_logo_url;
                         }
