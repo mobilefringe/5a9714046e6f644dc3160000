@@ -172,7 +172,6 @@
                     var el = document.getElementById("selectByCat");
                     if(el) {
                         el.classList.remove("open");
-                        console.log(el.classList);
                     }
                     
                 },
@@ -192,7 +191,6 @@
                 },
                 updatePNGMap(map) {
                     this.map = map;
-                    console.log("in updatepng")
                 },
                 addLandmark(store) {
                     this.svgMapRef.addMarker(store);
