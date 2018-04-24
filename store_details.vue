@@ -197,8 +197,8 @@
                     this.map = map;
                     this.addLandmark(this.currentStore);
                     var vm = this;
-                    setTimeOut(function () {
-                        vm.pngMapRef.focusTo(this.currentStore.x_coordinate, this.currentStore.y_coordinate, 35);
+                    setTimeout(function () {
+                        vm.pngMapRef.focusTo(vm.currentStore.x_coordinate, vm.currentStore.y_coordinate, 35);
                     }, 500)
                     // this.pngMapRef.focusTo(this.currentStore.x_coordinate, this.currentStore.y_coordinate, 35);
                 },
