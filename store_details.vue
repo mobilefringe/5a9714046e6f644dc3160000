@@ -196,6 +196,7 @@
                 updatePNGMap(map) {
                     this.map = map;
                     this.addLandmark(this.currentStore);
+                    this.svgMapRef.focusTo(1250, 1875, 35);
                 },
             }
         });
