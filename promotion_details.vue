@@ -99,12 +99,12 @@
             watch: {
                 currentPromo : function (){
                     if(this.currentPromo != null) {
-                        if (this.currentPromo.store != null && this.currentPromo.store != undefined && _.includes(this.currentPromo.store.image_url, 'missing')) {
-                            this.currentPromo.store.image_url = this.property.default_logo_url;
+                        if (this.currentPromo.store != null && this.currentPromo.store != undefined && _.includes(this.currentPromo.store.store_front_url_abs, 'missing')) {
+                            this.currentPromo.store.store_front_url_abs = this.property.default_logo_url;
                         }
                         else if (this.currentPromo.store == null || this.currentPromo.store == undefined) {
                             this.currentPromo.store = {};
-                            this.currentPromo.store.image_url = this.property.default_logo_url;
+                            this.currentPromo.store.store_front_url_abs = this.property.default_logo_url;
                         }
                         var vm = this;
                         var temp_promo = [];
