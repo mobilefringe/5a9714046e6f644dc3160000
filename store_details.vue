@@ -190,9 +190,6 @@
                         this.$router.replace('/');
                     }
                 },
-                // updateSVGMap(map) {
-                //     this.map = map;
-                // },
                 addLandmark(store) {
                     this.pngMapRef.addMarker(store);
                 },
