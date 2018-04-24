@@ -75,7 +75,6 @@
             watch: {
                 currentEvent : function (){
                     if(this.currentEvent != null) {
-                        console.log(this.currentEvent.store);
                         if (this.currentEvent.store != null && this.currentEvent.store != undefined && _.includes(this.currentEvent.store.image_url, 'missing')) {
                             this.currentEvent.store.image_url = this.property.default_logo_url;
                         }
