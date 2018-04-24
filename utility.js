@@ -8,7 +8,6 @@ define([], function () {
             return randnumber;
         },
         serializeObject(obj) {
-            console.log(obj);
             var newObj = [];
             _.forEach(obj, function(value, key) {
                 var tempVal = {};
