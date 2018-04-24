@@ -99,7 +99,6 @@
             watch: {
                 currentPromo : function (){
                     if(this.currentPromo != null) {
-                        console.log(this.currentPromo.store);
                         if (this.currentPromo.store != null && this.currentPromo.store != undefined && _.includes(this.currentPromo.store.image_url, 'missing')) {
                             this.currentPromo.store.image_url = this.property.default_logo_url;
                         }
