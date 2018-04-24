@@ -154,9 +154,6 @@
                         storeHours.push(hour);
                     });
                         this.storeHours = _.sortBy(storeHours, [function(o) { return o.order; }]);
-                    // setTimeout(function() {
-                    //     vm.addLandmark(vm.currentStore);
-                    // }, 500);
                 }
             },
             
