@@ -96,12 +96,12 @@
             watch: {
                 currentJob : function (){
                     if(this.currentJob != null) {
-                        if (this.currentJob.store != null && this.currentJob.store != undefined && _.includes(this.currentJob.store.image_url, 'missing')) {
-                            this.currentJob.store.image_url = this.property.default_logo_url;
+                        if (this.currentJob.store != null && this.currentJob.store != undefined && _.includes(this.currentJob.store.store_front_url_abs, 'missing')) {
+                            this.currentJob.store.store_front_url_abs = this.property.default_logo_url;
                         }
                         else if (this.currentJob.store == null || this.currentJob.store == undefined) {
                             this.currentJob.store = {};
-                            this.currentJob.store.image_url =  this.property.default_logo_url;
+                            this.currentJob.store.store_front_url_abs =  this.property.default_logo_url;
                         }
                         var vm = this;
                         var temp_job = [];
