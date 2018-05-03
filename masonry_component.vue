@@ -1,7 +1,7 @@
 <template>
     <div v-masonry transition-duration="0.3s" item-selector=".grid-item" class="visible_phone" >
         <div v-masonry-tile class="item" >
-            <div v-for="feature in mobile_feature_items" :class="'grid-item ' + feature.masonry_class ">
+            <div v-for="feature in featureList" :class="'grid-item ' + feature.masonry_class ">
             	<div  :class="{ 'ih-item circle effect19' : feature.no_hover_class}"> 
             	<!--class="ih-item circle effect19"-->
             	     <a v-if="feature.do_anchor_tag" :href="feature.url" target="_blank">
@@ -34,7 +34,7 @@
         return Vue.component("masonry-component", {
             template: template, // the variable template will be injected,
             props: {
-                featureList: {
+                featureList ß: {
                     type: Array,
                     required: true
                 }
