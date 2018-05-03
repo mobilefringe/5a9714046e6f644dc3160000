@@ -38,10 +38,9 @@
 	<body>
 	    {%raw-%} 
     		<div id="app" v-cloak>
-    		    <h1 style="dispaly:none;" class="hidden_now">{{property.name}}</h1>
     			<loader v-if="!dataLoaded"></loader>
     			<div class="main_content_container" v-if="dataLoaded">
-    			    
+    			    <h1 style="display:none;">{{property.name}}</h1>
     			    <header-component></header-component>
     				<transition name="custom-classes-transition" enter-active-class="fadeIn">
     					<router-view class="router_content" :locale="locale"></router-view>
