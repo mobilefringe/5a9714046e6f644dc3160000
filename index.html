@@ -38,7 +38,7 @@
 	<body>
 	    {%raw-%} 
     		<div id="app" v-cloak>
-    		    <h1 style="dispaly:none;">{{property.name}}</h1>
+    		    <h1 style="dispaly:none;" class="hidden_now">{{property.name}}</h1>
     			<loader v-if="!dataLoaded"></loader>
     			<div class="main_content_container" v-if="dataLoaded">
     			    
