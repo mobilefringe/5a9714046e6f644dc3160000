@@ -34,7 +34,7 @@
         return Vue.component("masonry-component", {
             template: template, // the variable template will be injected,
             props: {
-                storelist: {
+                featureList: {
                     type: Array,
                     required: true
                 }
