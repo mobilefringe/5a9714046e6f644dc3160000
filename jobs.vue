@@ -4,6 +4,8 @@
 			<div class="site_container">
 				<div class="header_content cap">
 					<h1>{{$t("jobs_page.jobs")}}</h1>
+					<h2 style="display:none;">Scroll to  view jobs</h2>
+					<h3 style="display:none;">View all jobs below</h3>
 				</div>
 			</div>
 		</div>
