@@ -143,7 +143,7 @@
             watch : {
                 dataLoaded () {
                     var viewed = Cookies.get('popup_viewed');
-                    if(this.popup !== null && viewed !== "true") {
+                    if(this.popup !== null && this.popup !== undefined && viewed !== "true") {
                         Cookies.set('popup_viewed', "true");
                         viewed = Cookies.get('popup_viewed');
                         this.show_popup = true;
