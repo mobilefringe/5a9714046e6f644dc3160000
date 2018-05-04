@@ -1791,6 +1791,8 @@ strong, .bold {
         .open-indicator:before {
             border-color: #000!important;
             background-color:#fff!important;
+            height: 15px;
+            width: 15px;
         }
     }
 }
