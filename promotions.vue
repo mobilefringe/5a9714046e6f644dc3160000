@@ -13,9 +13,9 @@
 				<paginate name="promos" v-if="promos" :list="promos" class="paginate-list margin-60" :per="4">
 					<div class="row event_container" v-for="(promo,index) in paginated('promos')" :class="{ 'last': index === (paginated('promos').length - 1) }">
 						<div class="col-sm-6 col-md-4 event_image_container">
-							<router-link :to="'/promotions/'+ promo.slug" class="event_learn_more">
+							<!--<router-link :to="'/promotions/'+ promo.slug" class="event_learn_more">-->
 								<img v-lazy="promo.store.store_front_url_abs"  class="event_image image" :alt="'Click here to view ' + promo.name"/>
-							</router-link>
+							<!--</router-link>-->
 						</div>
 						<div class="col-sm-6 col-md-8 event_dets_container">
 							<h4 class="event_name caps" v-if="locale=='en-ca'">{{promo.name}}</h4>
