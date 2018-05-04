@@ -5,7 +5,7 @@
 			<div class="site_container">
 				<div class="header_content caps">
 					<h1>{{$t("promos_page.promotions")}}</h1>
-					<h2 style="display:none;">Scroll to  view event details</h2>
+					<h2 style="display:none;">Scroll to  view promotion details</h2>
 				</div>
 			</div>
 		</div>
