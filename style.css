@@ -2640,7 +2640,9 @@ iframe.station_41 {
         }
     }
 }
-
+#zoom_container {
+    
+}
 .map {
     position: relative;
     top: 0;
