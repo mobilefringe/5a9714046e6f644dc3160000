@@ -51,6 +51,7 @@
 								<div class="store_coming_soon" v-if="store.is_new_store">
 									<div class="new_store">{{$t("stores_page.new_store")}}</div>
 								</div>
+								<h2 style="display:none;">{{store.name}}</h2>
 							</router-link>
 						</div>
 					</div>
