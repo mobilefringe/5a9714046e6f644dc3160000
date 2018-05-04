@@ -1759,19 +1759,9 @@ strong, .bold {
     .dropdown-toggle {
         height:100%;
         border-radius: 0;
-    //     border: 1px solid $secondary;
-    //     border-radius: 0;
         .selected-tag {
-    //         // margin-left: 0;
-    //         // margin-right: 0;
-    //         // margin-bottom: 4px;
             margin:0;
-    //         width: 89%;
             text-align: center;
-    //         text-transform: uppercase;
-    //         white-space: nowrap;
-    //         overflow: hidden;
-    //         text-overflow: ellipsis;
             position: absolute;
             top: 0;
             left: 0;
