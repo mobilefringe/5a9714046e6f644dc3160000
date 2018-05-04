@@ -1820,6 +1820,7 @@ strong, .bold {
     display: block;
     .fa {
         display: none;
+        ont-size: 1rem;
     }
     .options-list{
         height:100%;
