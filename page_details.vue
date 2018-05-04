@@ -6,7 +6,7 @@
 				<div class="header_content">
 					<h1 v-if="locale=='en-ca'">{{currentPage.title}}</h1>
 					<h1 v-else>{{currentPage.title_2}}</h1>
-					<h2 style="display:none;">Scroll to  view promotion details</h2>
+					<h2 style="display:none;">Scroll to  view page details</h2>
 				</div>
 			</div>
 		</div>
