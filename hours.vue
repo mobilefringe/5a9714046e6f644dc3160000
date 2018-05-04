@@ -4,7 +4,7 @@
 			<div class="site_container">
 				<div class="header_content caps">
 					<h1>{{$t("hours_page.hours")}}</h1>
-					<h2 style="display:none;">Scroll to  view event details</h2>
+					<h2 style="display:none;">Scroll to  view hours</h2>
 				</div>
 			</div>
 		</div>  
