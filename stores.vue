@@ -44,7 +44,7 @@
 					<div class="col-xs-6 col-sm-3 col-md-2 cats_row" v-for="store in filteredStores" :data-cat="store.cat_list">
 						<div class="store_logo_container" :id="store.initial">
 							<router-link :to="'/stores/'+ store.slug">
-								<img class="store_img" :style="store.initial_img" :src="store.store_front_url_abs" :alt="'Click here to view info about ' + store.name"/>
+								<img class="store_img" :style="store.initial_img" :src="store.store_front_url_abs" :alt="'Click here to view info about ' + store.name + 'Level' + store.z_index"/>
 								<!--<img class="store_hover" :style="store.initial_img" :src="store.hover_img" :alt="'Click here to learn about ' + store.name"/>-->
 								<div class="store_coming_soon" v-if="store.is_coming_soon_store">
 									<div class="new_store">{{$t("stores_page.coming_soon")}}</div>
