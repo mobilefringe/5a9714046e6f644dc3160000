@@ -62,7 +62,7 @@
   },
   "events_page": {
     "events" : "Events",
-    "read_more" : "Click here to view Events details",
+    "read_more" : "Click here to view Event details",
     "no_event_message" : "There are no Events at this time. Please check back soon.",
     "back_to_events" : "Back to Events"
   },
