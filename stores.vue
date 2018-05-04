@@ -52,7 +52,7 @@
 								<div class="store_coming_soon" v-if="store.is_new_store">
 									<div class="new_store">{{$t("stores_page.new_store")}}</div>
 								</div>
-								<p></p>
+								<p>{{store.name}}</p>
 							</router-link>
 						</div>
 					</div>
