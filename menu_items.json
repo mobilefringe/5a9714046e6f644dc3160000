@@ -53,7 +53,7 @@
     },
     {
         "name": "header.contact_us",
-        "href": "/contact_us",
+        "href": "#",
         "show_sub_menu": false,
         "sub_menu": [
             {
