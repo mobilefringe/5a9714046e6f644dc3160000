@@ -2,8 +2,7 @@
     <div v-masonry transition-duration="0.3s" item-selector=".grid-item">
         <div v-masonry-tile class="item" >
             <div v-for="feature in featurelist" :class="'grid-item ' + feature.masonry_class ">
-            	<div  :class="{ 'ih-item circle effect19' : feature.no_hover_class}"> 
-            	<!--class="ih-item circle effect19"-->
+            	<div  :class="{ 'ih-item circle effect19' : feature.no_hover_class}">
             	     <a v-if="feature.do_anchor_tag" :href="feature.url" target="_blank">
             			<img :src="feature.image_url" :alt="'Click to read about' + feature.name">
             			<div class="info">
