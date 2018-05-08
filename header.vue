@@ -74,7 +74,7 @@
     		<div class="site_container">
     			<div class="nav_container hidden_phone">
     				<div class="site_logo">
-    					<router-link to="/"><img :src="property_logo"  :alt="property.name"/></router-link>
+    					<router-link to="/"><img :src="property_logo" :alt="property.name"/></router-link>
     				</div>
     				<div class="row top_nav hidden_phone">
     					<nav id="primary_nav">
@@ -115,7 +115,7 @@
                 $route: function() {
                     // hide dropdown when route changes
                     _.forEach(this.menu_items, function(value, key) {
-                        value.show_sub_menu = false;
+                        value.open_dropdown = false;
                     });
                     this.show_mobile_menu = false; //close menu when navigating to new page
                 },
