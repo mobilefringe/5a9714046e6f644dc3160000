@@ -137,6 +137,13 @@
                     return this.getTodayHours;
                 }
             },
+            methods: {
+                toggleDropdown(index) {
+                    console.log("menu is", this.menu_items[index]);
+                     this.menu_items[index].open_dropdown = true;
+                }
+                
+            }
             
         });
     });
