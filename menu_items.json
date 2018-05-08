@@ -2,7 +2,7 @@
     {
         "name": "header.stores",
         "href": "#",
-        "show_sub_menu": false,
+        "open_dropdown": false,
         "sub_menu": [{
                 "name": "header.stores",
                 "href": "/stores"
