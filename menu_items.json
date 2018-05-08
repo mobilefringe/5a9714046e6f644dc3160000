@@ -24,7 +24,7 @@
     {
         "name": "header.news_events",
         "href": "#",
-        "show_sub_menu": false,
+        "open_dropdown": false,
         "sub_menu": [{
                 "name": "header.events",
                 "href": "/events"
