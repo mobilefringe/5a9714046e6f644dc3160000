@@ -34,7 +34,7 @@
     {
         "name": "header.services",
         "href": "#",
-        "show_sub_menu": false,
+        "open_dropdown": false,
         "sub_menu": [{
                 "name": "header.services ",
                 "href": "/pages/bramaleacitycentre-services"
