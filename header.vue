@@ -138,7 +138,7 @@
             },
             methods: {
                 toggleDropdown(index) {
-                     this.menu_items[index].open_dropdown = true;
+                    this.menu_items[index].open_dropdown = true;
                 }
                 
             }
