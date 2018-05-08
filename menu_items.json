@@ -19,8 +19,7 @@
     },
     {
         "name": "header.promos",
-        "href": "/promotions",
-        "show_sub_menu": false
+        "href": "/promotions"
     },
     {
         "name": "header.news_events",
