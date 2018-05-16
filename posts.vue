@@ -92,7 +92,7 @@
                     // return this.findRepoByName("News").images
                 },
                 blogs() {
-                    var blog = this.findBlogByName("Bramalea City Centre");
+                    var blog = this.findBlogByName("Bramalea City Centre").posts;
                     console.log(blog)
                     // blog = _.reverse(_.sortBy(blog, function (o) { return o.publish_date }));
                     // return blog
