@@ -106,7 +106,7 @@
                         if (_.includes(value.image_url, 'missing')) {
                             value.image_url = "http://via.placeholder.com/350x150";
                         }
-                        value.body_short = _.truncate(value.body, { 'length': 199, 'separator': ' ' });
+                        value.body_short = _.truncate(value.body, { 'length': 99, 'separator': ' ' });
                     });
                     console.log(blog)
                     blog = _.reverse(_.sortBy(blog, function (o) { return o.publish_date }));
