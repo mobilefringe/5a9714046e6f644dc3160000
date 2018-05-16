@@ -105,7 +105,7 @@
                     var blog = this.findBlogByName("Bramalea City Centre").posts;
                     _.forEach(blog, function(value, key) {
                         if (_.includes(value.image_url, 'missing')) {
-                            value.image_url = "http://placeholder.com/350x150";
+                            value.image_url = "http://via.placeholder.com/350x150";
                         }
                         value.body_short = _.truncate(value.body, { 'length': 199, 'separator': ' ' });
                     });
