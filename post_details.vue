@@ -20,10 +20,10 @@
                         <img :src="currentPost.image_url" :alt="currentPost.title" />
                     </div>
                     <div class="details_share_icons hidden_phone">
-                        <a href="http://www.facebook.com/sharer.php?u=http://www.halifaxshoppingcentre.com/posts/{{slug}}" target="_blank">
+                        <a href="" target="_blank">
                             <img class="details_icon" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" alt="Facebook Logo">
                         </a>
-                        <a href="http://twitter.com/home?status={{twitter_title}} http://www.halifaxshoppingcentre.com/posts/{{slug}}" target="_blank">
+                        <a href="" target="_blank">
                             <img class="details_icon" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" alt="Twitter Logo">
                         </a>
                     </div>
