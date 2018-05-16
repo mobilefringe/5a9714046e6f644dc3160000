@@ -2,7 +2,6 @@
     <div v-if="dataloaded">
         <!-- v-if="pageBanner"  -->
         <div class="page_header" v-bind:style="{ backgroundImage: 'url(http://via.placeholder.com/1920x300)' }"> <!-- { backgroundImage: 'url(' + pageBanner.image_url + ')' } -->
-			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
 				<div class="header_content">
 					<h1>{{ $t("blog_page.title") }}</h1>
