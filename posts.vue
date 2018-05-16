@@ -9,24 +9,21 @@
 			</div>
 		</div>
 		<div class="site_container inside_page_content page_content">
-            <div class="row_fluid">
-                
-                <div class="post_container" v-for="(blog, index) in blogs">
-                    <div class="post_image">
-                        <img :src="blog.image_url" :alt="blog.title">
-                    </div>
-                    <div class="post_content">
-                        <h2 class="post_heading">{{ blog.title }}</h2>
-                        <div class="post_text" v-html="blog.body_short"></div>
-                        <router-link :to="'/posts/'+ blog.slug" class="post_read_more"  :aria="blog.title">
-						   {{ $t("blog_page.read_post") }} <i class="fa fa-angle-right" aria-hidden="true"></i>
-					    </router-link>
-                    </div>
+            <div class="post_container" v-for="(blog, index) in blogs">
+                <div class="post_image">
+                    <img :src="blog.image_url" :alt="blog.title">
                 </div>
-                <mugen-scroll :handler="fetchData" :should-handle="!loading">
-                    loading...
-                </mugen-scroll>
+                <div class="post_content">
+                    <h2 class="post_heading">{{ blog.title }}</h2>
+                    <div class="post_text" v-html="blog.body_short"></div>
+                    <router-link :to="'/posts/'+ blog.slug" class="post_read_more"  :aria="blog.title">
+					   {{ $t("blog_page.read_post") }} <i class="fa fa-angle-right" aria-hidden="true"></i>
+				    </router-link>
+                </div>
             </div>
+            <mugen-scroll :handler="fetchData" :should-handle="!loading">
+                loading...
+            </mugen-scroll>
         </div>
     </div>
 </template>
