@@ -19,7 +19,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-paginate", "v-select", "vue-lazy-load"], function (Vue, Vuex, moment, tz, VueMoment, Meta, VuePaginate, vSelect, VueLazyload) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-paginate", "vue-lazy-load"], function (Vue, Vuex, moment, tz, VueMoment, Meta, VuePaginate, VueLazyload) {
         Vue.use(Meta);
         Vue.use(VuePaginate);
         Vue.use(VueLazyload);
