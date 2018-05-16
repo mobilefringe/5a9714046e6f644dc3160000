@@ -102,7 +102,7 @@
                     }
                     var nextPosts = this.blogs.splice(0, 3);
                     // Add 3 more posts to posts array
-                    this.posts.push(nextMsgs);
+                    this.posts.push(nextPosts);
                 }
             }
         });
