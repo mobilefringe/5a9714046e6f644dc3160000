@@ -21,9 +21,10 @@
 				    </router-link>
                 </div>
             </div>
-            <mugen-scroll :handler="fetchData" :should-handle="!loading">
-                loading...
-            </mugen-scroll>
+            <button class="" @click="handleButton">Load More</button>
+            <!--<mugen-scroll :handler="fetchData" :should-handle="!loading">-->
+            <!--    loading...-->
+            <!--</mugen-scroll>-->
         </div>
     </div>
 </template>
@@ -38,6 +39,10 @@
                 return {
                     dataloaded: false,
                     loading: false,
+                    
+                    messages: [],
+                    morePosts: [],
+                    morePostsFetched: false
                 }
             },
             created() {
@@ -81,11 +86,23 @@
                         console.log("Error loading data: " + e.message);
                     }
                 },
-                fetchData() {
-                    this.loading = true
-                    // ... the code you wanna run to fetch data
-                    this.blog = _.slice(this.blog, [4] )
-                    this.loading = false
+                // fetchData() {
+                //     this.loading = true
+                //     // ... the code you wanna run to fetch data
+                //     this.blog = _.slice(this.blog, [4] )
+                //     this.loading = false
+                // }
+                handleButton: function () {
+                    if(!this.morePostsFetched){
+                        // axios.get('chat/messagesmore').then((response) => {
+                            // this.moreMessages = response.data;
+                            this.posts = this.blogs.splice(0, 3);
+                            this.morePostsFetched = true;
+                        // });
+                    }
+                    var nextPosts = this.blogs.splice(0, 3);
+                    // Add 3 more posts to posts array
+                    this.posts.push(nextMsgs);
                 }
             }
         });
