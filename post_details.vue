@@ -1,3 +1,31 @@
+<template>
+    <div v-if="dataloaded">
+        <!-- v-if="pageBanner"  -->
+        <div class="page_header" v-bind:style="{ backgroundImage: 'url(http://via.placeholder.com/1920x300)' }"> <!-- { backgroundImage: 'url(' + pageBanner.image_url + ')' } -->
+			<div class="site_container">
+				<div class="header_content">
+					<h1>{{ $t("blog_page.title") }}</h1>
+				</div>
+			</div>
+		</div>
+		<div class="site_container inside_page_content page_content">
+            <div class="post_container" v-if="posts" v-for="post in posts">
+                <div class="post_image">
+                    <img :src="post.image_url" :alt="post.title">
+                </div>
+                <div class="post_content">
+                    <h2 class="post_heading">{{ post.title }}</h2>
+                    <div class="post_text" v-html="post.body_short"></div>
+                    <router-link :to="{ name: 'postDetails', params: { id: post.slug }}" class="post_read_more"  :aria="post.title">
+					   {{ $t("blog_page.read_post") }} <i class="fa fa-angle-right" aria-hidden="true"></i>
+				    </router-link>
+                </div>
+            </div>
+            <button class="" v-if="!noMorePosts" @click="handleButton">Load More</button>
+            <p v-if="noPosts">No More Posts</p>
+        </div>
+    </div>
+</template>
 <script>
     define(["Vue", "vuex", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing"], function (Vue, Vuex, $, moment, tz, VueMoment, Meta, SocialSharing) {
         return Vue.component("news-details-component", {
