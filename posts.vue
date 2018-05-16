@@ -30,90 +30,99 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment"], function(Vue, Vuex, moment, tz, VueMoment) {
-        return Vue.component("posts-component", {
-            template: template, // the variable template will be injected,
-            data: function() {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-paginate", "v-select", "vue-lazy-load"], function (Vue, Vuex, moment, tz, VueMoment, Meta, VuePaginate, vSelect, VueLazyload) {
+        Vue.use(Meta);
+        Vue.use(VuePaginate);
+        Vue.use(VueLazyload);
+        return Vue.component("news-component", {
+            template: template, // the variable template will be injected
+            data: function () {
                 return {
-                    success_subscribe: false,
-                    currentPage: null,
-                    pageBanner : null,
-                    accessibilityData : null
+                    dataLoaded: false,
+                    currentSelection: null,
+                    paginate: ['currentSelection'],
+                    selected: "Select A Category",
+                    // categoryOptions: [
+                    //     {'label': 'All', 'value': 'blogs'},
+                    //     {'label': 'Beauty', 'value': 'blogBeauty'},
+                    //     {'label': 'Charitable Partners', 'value': 'blogCharity'},
+                    //     {'label': 'Children', 'value': 'blogChildren'},
+                    //     {'label': 'Fashion', 'value': 'blogFashion'},
+                    //     {'label': 'Holiday', 'value': 'blogHoliday'},
+                    //     {'label': 'Lifestyle', 'value': 'blogLifestyle'},
+                    //     {'label': 'Luxury', 'value': 'blogLuxury'},
+                    //     {'label': 'Men', 'value': 'blogMen'},
+                    //     {'label': 'NorthPark50', 'value': 'blogNorthPark50'}
+                    // ]
                 }
             },
-            props:['id', 'locale'],
-            beforeRouteUpdate(to, from, next) {
-                next();
-                this.updatePageData(to.params.id);
+            created() {
+                this.loadData().then(response => {
+                    this.dataLoaded = true;
+                    this.currentSelection = this.blogs
+                });
             },
-            created(){
-               this.updatePageData(this.id);
-               if(this.id == "bramaleacitycentre-accessibilty" ){
-                   this.updateAccessibilityData();
-               }
-            },
+            // watch: {
+            //     selected: function selected() {
+            //         if (this.selected.value == "blogs") {
+            //             this.currentSelection = this.blogs;
+            //         } else if (this.selected.value == "blogBeauty") {
+            //             this.currentSelection = this.blogBeauty;
+            //         } else if (this.selected.value == "blogCharity") {
+            //             this.currentSelection = this.blogCharity;
+            //         } else if (this.selected.value == "blogChildren") {
+            //             this.currentSelection = this.blogChildren;
+            //         } else if (this.selected.value == "blogFashion") {
+            //             this.currentSelection = this.blogFashion;
+            //         } else if (this.selected.value == "blogHoliday") {
+            //             this.currentSelection = this.blogHoliday;
+            //         } else if (this.selected.value == "blogLifestyle") {
+            //             this.currentSelection = this.blogLifestyle;
+            //         } else if (this.selected.value == "blogLuxury") {
+            //             this.currentSelection = this.blogLuxury;
+            //         } else if (this.selected.value == "blogMen") {
+            //             this.currentSelection = this.blogMen;
+            //         } else if (this.selected.value == "blogNorthPark50") {
+            //             this.currentSelection = this.blogNorthPark50;
+            //         } else {
+            //             this.currentSelection = this.blogs;
+            //         }
+            //     }
+            // },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'findRepoByName'
-                ])
+                    'repos',
+                    'findRepoByName',
+                    'blogs',
+                    'findBlogByName'
+                ]),
+                pageBanner() {
+                    return this.findRepoByName("News").images
+                },
+                blogs() {
+                    var blog = this.findBlogByName("main").posts;
+                    blog = _.reverse(_.sortBy(blog, function (o) { return o.publish_date }));
+                    return blog
+                }
             },
             methods: {
-                loadData: async function(id) {
+                loadData: async function () {
                     try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/" + id + ".json"}),this.$store.dispatch("getData", "repos")]);
-                        return results;
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch("getData", "blogs")]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
                 },
-                updatePageData (id) {
-                    this.loadData(id).then(response => {
-                        if(response == null || response == undefined) {
-                            this.$router.replace('/');
-                        }
-                        this.currentPage = response[0].data;
-                        var temp_repo = null;
-                        //Add custom banners for indivial pages 
-                        if( _.includes(id, 'gift-cards')) {
-                            temp_repo = this.findRepoByName('Giftcards Banner');
-                        }
-                        else if ( _.includes(id, 'services')) {
-                            temp_repo = this.findRepoByName('Services Banner');
-                        }
-                        else if( _.includes(id, 'accessibilty')) {
-                            temp_repo = this.findRepoByName('Accessibility Banner');
-                        }
-                        else if( _.includes(id, 'fashionicity')) {
-                            temp_repo = this.findRepoByName('FashioniCity Banner');
-                        }
-                        else if( _.includes(id, 'leasing')) {
-                            temp_repo = this.findRepoByName('Leasing Banner');
-                        }
-                        else {
-                            temp_repo = this.findRepoByName('Pages Banner');
-                        }
-                        
-                        if(temp_repo) {
-                            this.pageBanner = temp_repo.images[0];
-                        }
-                        this.pageBanner = this.pageBanner;
-                    });
-                },
-                updateAccessibilityData() {
-                    var vm = this;
-                    url = "http://acc.speeker.co/get_display_templates?site_id=1";
-                    $.getJSON(url).done(function(data){
-                        var acc_data = data;
-                        acc_data.map(item => {
-                            item.notice_text_approved = _.replace(item.notice_text_approved, '<br/><br/>', '<br/>');
-                        });
-                        
-                        vm.accessibilityData =  _.sortBy(acc_data, [function(o) { return o.service_completed_date; }]).reverse();
-                    });
-                }
+                // tagString(val_tag) {
+                //     var string = _.join(val_tag, ' , ');
+                //     return string
+                // },
+                // truncate(val_description) {
+                //     var truncate = _.truncate(val_description, { 'length': 199, 'separator': ' ' });
+                //     return truncate;
+                // }
             }
         });
     });
