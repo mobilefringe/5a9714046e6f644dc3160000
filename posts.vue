@@ -9,7 +9,7 @@
 			</div>
 		</div>
 		<div class="site_container inside_page_content page_content">
-            <div class="post_container" v-for="post in posts">
+            <div class="post_container" v-if="posts" v-for="post in posts">
                 <div class="post_image">
                     <img :src="post.image_url" :alt="post.title">
                 </div>
