@@ -99,7 +99,7 @@
                     'findBlogByName'
                 ]),
                 pageBanner() {
-                    return this.findRepoByName("News").images
+                    // return this.findRepoByName("News").images
                 },
                 blogs() {
                     var blog = this.findBlogByName("Bramalea City Centre").posts;
