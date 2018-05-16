@@ -18,7 +18,9 @@
                     <div class="post_content">
                         <h2 class="post_heading">{{ blog.title }}</h2>
                         <div class="post_text" v-html="blog.body_short"></div>
-                        <!--<a class="post_read_more" href="{{bloslug}}">Read More</a>-->
+                        <router-link :to="'/posts/'+ blog.slug" class="post_read_more"  :aria="blog.title">
+						   {{ $t("blog_page.read_post") }} <i class="fa fa-angle-right" aria-hidden="true"></i>
+					    </router-link>
                     </div>
                 </div>
             </div>
