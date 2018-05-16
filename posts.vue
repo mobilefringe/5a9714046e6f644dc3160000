@@ -20,7 +20,7 @@
                     </div>
                     <div class="post_content">
                         <h2 class="post_header">{{blog.title}}</h2>
-                        <div class="post_text">{{description_short}}</div>
+                        <div class="post_text" v-html="blog.decsription_short"></div>
                         <!--<a class="post_read_more" href="{{bloslug}}">Read More</a>-->
                     </div>
                 </div>
