@@ -42,7 +42,7 @@ require.config({
         'loader': 'https://mmvue.codecloudapp.com/loader.vue?noext',
         'campaignMonitor': 'https://js.createsend1.com/javascript/copypastesubscribeformlogic',
         'bootstrap-vue' : 'https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue',
-        'mugen-scroll' : 'https://unpkg.com/vue-mugen-scroll@0.2.5/dist/vue-mugen-scroll.min'
+        'vue-mugen-scroll' : 'https://unpkg.com/vue-mugen-scroll@0.2.5/dist/vue-mugen-scroll.min'
         
     }
 });
