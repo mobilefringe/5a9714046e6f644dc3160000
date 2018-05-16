@@ -47,7 +47,6 @@
             },
             created() {
                 this.loadData().then(response => {
-                    this.blogs;
                     this.dataloaded = true;
                     // this.currentSelection = this.blogs
                 });
@@ -92,11 +91,9 @@
                 // }
                 handleButton: function () {
                     if(!this.morePostsFetched){
-                        // axios.get('chat/messagesmore').then((response) => {
-                            this.morePosts = this.blogs;
-                            this.posts = this.morePosts.splice(0, 3);
-                            this.morePostsFetched = true;
-                        // });
+                        this.morePosts = this.blogs;
+                        this.posts = this.morePosts.splice(0, 3);
+                        this.morePostsFetched = true;
                     }
                     var nextPosts = this.morePosts.splice(0, 3);
                     // Add 3 more posts to posts array
