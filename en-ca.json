@@ -90,6 +90,7 @@
     "error_message" : "There was an error when trying to submit your request. Please try again later."
   },
   "blog_page" : {
-    "title" : "BCC Blog"
+    "title" : "BCC Blog",
+    "read_post" : "Read Full Post"
   }
 }
