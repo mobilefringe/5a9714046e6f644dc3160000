@@ -88,7 +88,10 @@
                     } else {
                         var nextPosts = this.morePosts.splice(0, 3);
                         // Add 3 more posts to posts array
-                        this.posts.push(nextPosts);
+                        this.$nextTick(function() {
+                            this.posts.push(nextPosts);
+                        });
+                        
                     }
                 }
             }
