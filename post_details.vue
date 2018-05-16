@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="row" v-if="currentPost">
-                <div class="row_fluid">
+                <div class="col-md-12">
                     <div class="post_details_image">
                         <img :src="currentPost.image_url" :alt="currentPost.title" />
                     </div>
