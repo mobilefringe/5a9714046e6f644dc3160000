@@ -39,6 +39,7 @@
             data: function () {
                 return {
                     dataloaded: false,
+                    loading: false,
                 }
             },
             created() {
@@ -80,6 +81,11 @@
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
+                },
+                fetchData() {
+                    this.loading = true
+                    // ... the code you wanna run to fetch data
+                    this.loading = false
                 }
             }
         });
