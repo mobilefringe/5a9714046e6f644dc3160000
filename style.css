@@ -3136,6 +3136,9 @@ button[disabled].contest_btn {
         height: 362px;
         display: inline-block;
         overflow: hidden;
+        img {
+            max-width: 100%;
+        }
     }
 }
 
