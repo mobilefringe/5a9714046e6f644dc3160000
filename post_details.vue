@@ -2,13 +2,6 @@
     <div v-if="dataloaded">
         <div class="margin_60"></div>
 		<div class="site_container inside_page_content page_content" v-if="currentPost">
-    		<div class="row">
-                <div class="col-md-12">
-                    <router-link to="/posts">
-                        <p class=""><i class="fa fa-chevron-left"></i> Back to Blog</p>
-                    </router-link>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="post_details_image">
@@ -34,6 +27,9 @@
 							</div>
 						</social-sharing>
                         <div class="post_text" v-html="currentPost.html_body"></div>
+                        <router-link to="/posts">
+                            <button class="contact_btn"><i class="fa fa-chevron-left"></i> Back to Blog</button>
+                        </router-link>
                     </div>
                 </div>
                 <div class="col-md-4">
