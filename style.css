@@ -3102,19 +3102,13 @@ button[disabled].contest_btn {
     width: 100%;
     height: 282px;
     border: 1px solid #d3d3d3;
-    .post_image {
-        width: 470px;
-        height: 280px;
-        display: inline-block;
-        overflow: hidden;
-    }
     .post_content {
         padding: 33px 55px;
         position: relative;
         width: 468px;
         height: 280px;
         display: inline-block;
-        float: right;
+        float: left;
         .main_post_heading, .post_heading {
             font-family: 'Open Sans Condensed', sans-serif;
             font-weight: 700;
@@ -3134,6 +3128,12 @@ button[disabled].contest_btn {
             letter-spacing: 0.5px;
             color: #5F574B;
         }
+    }
+    .post_image {
+        width: 470px;
+        height: 280px;
+        display: inline-block;
+        overflow: hidden;
     }
 }
 
