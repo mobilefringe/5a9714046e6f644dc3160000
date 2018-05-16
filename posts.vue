@@ -83,10 +83,10 @@
                     console.log(this.blogs)
                     if(!this.morePostsFetched){
                         this.morePosts = this.blogs;
-                        this.posts = this.morePosts.splice(0, 3);
+                        this.posts = this.morePosts.splice(0, 2);
                         this.morePostsFetched = true;
                     }
-                    var nextPosts = this.morePosts.splice(0, 3);
+                    var nextPosts = this.morePosts.splice(0, 2);
                     // Add 3 more posts to posts array
                     this.posts.push(nextPosts);
                 }
