@@ -28,7 +28,7 @@
 						</social-sharing>
                         <div class="post_text" v-html="currentPost.html_body"></div>
                         <router-link to="/posts">
-                            <button class="contact_btn"><i class="fa fa-chevron-left"></i> Back to Blog</button>
+                            <button class="contact_btn">Back to Blog</button>
                         </router-link>
                     </div>
                 </div>
