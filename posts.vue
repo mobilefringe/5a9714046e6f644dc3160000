@@ -1,5 +1,5 @@
 <template>
-    <div v-if="currentPage">
+    <div v-if="dataloaded">
         <div v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
@@ -39,9 +39,9 @@
             data: function () {
                 return {
                     dataLoaded: false,
-                    currentSelection: null,
-                    paginate: ['currentSelection'],
-                    selected: "Select A Category",
+                    // currentSelection: null,
+                    // paginate: ['currentSelection'],
+                    // selected: "Select A Category",
                     // categoryOptions: [
                     //     {'label': 'All', 'value': 'blogs'},
                     //     {'label': 'Beauty', 'value': 'blogBeauty'},
@@ -59,7 +59,7 @@
             created() {
                 this.loadData().then(response => {
                     this.dataLoaded = true;
-                    this.currentSelection = this.blogs
+                    // this.currentSelection = this.blogs
                 });
             },
             // watch: {
@@ -102,9 +102,10 @@
                     return this.findRepoByName("News").images
                 },
                 blogs() {
-                    var blog = this.findBlogByName("main").posts;
-                    blog = _.reverse(_.sortBy(blog, function (o) { return o.publish_date }));
-                    return blog
+                    var blog = this.findBlogByName("Bramalea City Centre").posts;
+                    console.log(blog)
+                    // blog = _.reverse(_.sortBy(blog, function (o) { return o.publish_date }));
+                    // return blog
                 }
             },
             methods: {
