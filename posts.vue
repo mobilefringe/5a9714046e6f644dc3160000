@@ -28,7 +28,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-paginate", "vue-lazy-load"], function (Vue, Vuex, moment, tz, VueMoment, Meta, VuePaginate, VueLazyload) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-lazy-load", "mugen-scroll"], function (Vue, Vuex, moment, tz, VueMoment, VueLazyload, MugenScroll) {
         Vue.use(Meta);
         Vue.use(VuePaginate);
         Vue.use(VueLazyload);
@@ -37,21 +37,6 @@
             data: function () {
                 return {
                     dataloaded: false,
-                    // currentSelection: null,
-                    // paginate: ['currentSelection'],
-                    // selected: "Select A Category",
-                    // categoryOptions: [
-                    //     {'label': 'All', 'value': 'blogs'},
-                    //     {'label': 'Beauty', 'value': 'blogBeauty'},
-                    //     {'label': 'Charitable Partners', 'value': 'blogCharity'},
-                    //     {'label': 'Children', 'value': 'blogChildren'},
-                    //     {'label': 'Fashion', 'value': 'blogFashion'},
-                    //     {'label': 'Holiday', 'value': 'blogHoliday'},
-                    //     {'label': 'Lifestyle', 'value': 'blogLifestyle'},
-                    //     {'label': 'Luxury', 'value': 'blogLuxury'},
-                    //     {'label': 'Men', 'value': 'blogMen'},
-                    //     {'label': 'NorthPark50', 'value': 'blogNorthPark50'}
-                    // ]
                 }
             },
             created() {
@@ -61,33 +46,6 @@
                     // this.currentSelection = this.blogs
                 });
             },
-            // watch: {
-            //     selected: function selected() {
-            //         if (this.selected.value == "blogs") {
-            //             this.currentSelection = this.blogs;
-            //         } else if (this.selected.value == "blogBeauty") {
-            //             this.currentSelection = this.blogBeauty;
-            //         } else if (this.selected.value == "blogCharity") {
-            //             this.currentSelection = this.blogCharity;
-            //         } else if (this.selected.value == "blogChildren") {
-            //             this.currentSelection = this.blogChildren;
-            //         } else if (this.selected.value == "blogFashion") {
-            //             this.currentSelection = this.blogFashion;
-            //         } else if (this.selected.value == "blogHoliday") {
-            //             this.currentSelection = this.blogHoliday;
-            //         } else if (this.selected.value == "blogLifestyle") {
-            //             this.currentSelection = this.blogLifestyle;
-            //         } else if (this.selected.value == "blogLuxury") {
-            //             this.currentSelection = this.blogLuxury;
-            //         } else if (this.selected.value == "blogMen") {
-            //             this.currentSelection = this.blogMen;
-            //         } else if (this.selected.value == "blogNorthPark50") {
-            //             this.currentSelection = this.blogNorthPark50;
-            //         } else {
-            //             this.currentSelection = this.blogs;
-            //         }
-            //     }
-            // },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
