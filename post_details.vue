@@ -30,10 +30,12 @@
                         </a>
                     </div>
                 </div>
-                <div class="blog_30 hidden_phone"></div>
-                <div class="row_fluid">
-                    <h2 class="post_details_title">{{ currentPost.title }}</h2>
-                    <div class="post_details_desc" v-html="currentPost.html_body"></div>
+                <div class="col-md-12">
+                    <div class="blog_30 hidden_phone"></div>
+                    <div class="row_fluid">
+                        <h2 class="post_details_title">{{ currentPost.title }}</h2>
+                        <div class="post_details_desc" v-html="currentPost.html_body"></div>
+                    </div>
                 </div>
              
             </div>
