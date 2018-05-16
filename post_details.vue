@@ -9,26 +9,15 @@
 			</div>
 		</div>
 		<div class="site_container inside_page_content page_content">
-            <div class="post_container" v-if="posts" v-for="post in posts">
-                <div class="post_image">
-                    <img :src="post.image_url" :alt="post.title">
-                </div>
-                <div class="post_content">
-                    <h2 class="post_heading">{{ post.title }}</h2>
-                    <div class="post_text" v-html="post.body_short"></div>
-                    <router-link :to="{ name: 'postDetails', params: { id: post.slug }}" class="post_read_more"  :aria="post.title">
-					   {{ $t("blog_page.read_post") }} <i class="fa fa-angle-right" aria-hidden="true"></i>
-				    </router-link>
-                </div>
+            <div class="post_container" v-if="currentPost">
+                
             </div>
-            <button class="" v-if="!noMorePosts" @click="handleButton">Load More</button>
-            <p v-if="noPosts">No More Posts</p>
         </div>
     </div>
 </template>
 <script>
     define(["Vue", "vuex", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing"], function (Vue, Vuex, $, moment, tz, VueMoment, Meta, SocialSharing) {
-        return Vue.component("news-details-component", {
+        return Vue.component("post-details-component", {
             template: template, // the variable template will be injected,
             props: ['id'],
             data: function () {
@@ -78,6 +67,7 @@
                     if (this.currentPost === null || this.currentPost === undefined) {
                         this.$router.replace({ name: '404' });
                     }
+                    console.log(this.currentPost)
                 },
                 // tagString(val_tag) {
                 //     // Returns all tags
