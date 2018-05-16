@@ -1,6 +1,6 @@
 <template>
     <div v-if="dataloaded">
-        <div v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
+        <div v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(http://via.placeholder.com/1920x300)' }"> <!-- { backgroundImage: 'url(' + pageBanner.image_url + ')' } -->
 			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
 				<div class="header_content">
@@ -121,15 +121,7 @@
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
-                },
-                // tagString(val_tag) {
-                //     var string = _.join(val_tag, ' , ');
-                //     return string
-                // },
-                // truncate(val_description) {
-                //     var truncate = _.truncate(val_description, { 'length': 199, 'separator': ' ' });
-                //     return truncate;
-                // }
+                }
             }
         });
     });
