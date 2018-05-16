@@ -37,13 +37,12 @@
                         <div class="post_details_desc" v-html="currentPost.html_body"></div>
                     </div>
                 </div>
-             
             </div>
         </div>
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "jquery", "moment", "moment-timezone", "vue-moment", "vue-meta", "vue-social-sharing"], function (Vue, Vuex, $, moment, tz, VueMoment, Meta, SocialSharing) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-social-sharing"], function (Vue, Vuex, moment, tz, VueMoment, SocialSharing) {
         return Vue.component("post-details-component", {
             template: template, // the variable template will be injected,
             props: ['id'],
