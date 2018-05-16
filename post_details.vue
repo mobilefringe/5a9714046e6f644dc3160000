@@ -22,7 +22,7 @@
             props: ['id'],
             data: function () {
                 return {
-                    dataLoaded: false,
+                    dataloaded: false,
                     currentBlog: null,
                     mainBlog: null,
                     currentPost: null,
@@ -35,7 +35,7 @@
             created() {
                 this.loadData().then(response => {
                     this.updateCurrentBlog(this.id);
-                    this.dataLoaded = true;
+                    this.dataloaded = true;
                 });
             },
             watch: {
