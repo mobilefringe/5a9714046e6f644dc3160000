@@ -38,7 +38,7 @@
             template: template, // the variable template will be injected
             data: function () {
                 return {
-                    dataLoaded: false,
+                    dataloaded: false,
                     // currentSelection: null,
                     // paginate: ['currentSelection'],
                     // selected: "Select A Category",
@@ -58,7 +58,7 @@
             },
             created() {
                 this.loadData().then(response => {
-                    this.dataLoaded = true;
+                    this.dataloaded = true;
                     // this.currentSelection = this.blogs
                 });
             },
