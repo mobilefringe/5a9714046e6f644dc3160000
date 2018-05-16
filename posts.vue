@@ -84,6 +84,7 @@
                 fetchData() {
                     this.loading = true
                     // ... the code you wanna run to fetch data
+                    this.blog = _.slice(this.blog, [4] )
                     this.loading = false
                 }
             }
