@@ -16,7 +16,7 @@
                     </router-link>
                 </div>
             </div>
-            <div class="post_container" v-if="currentPost">
+            <div class="row" v-if="currentPost">
                 <div class="row_fluid">
                     <div class="post_details_image">
                         <img :src="currentPost.image_url" :alt="currentPost.title" />
