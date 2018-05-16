@@ -47,6 +47,7 @@
             },
             created() {
                 this.loadData().then(response => {
+                    this.blogs;
                     this.dataloaded = true;
                     // this.currentSelection = this.blogs
                 });
