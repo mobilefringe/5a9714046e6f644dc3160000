@@ -3115,17 +3115,17 @@ button[disabled].contest_btn {
         height: 280px;
         display: inline-block;
         float: right;
-        .main_post_header, .post_header {
+        .main_post_heading, .post_heading {
             font-family: 'Open Sans Condensed', sans-serif;
             font-weight: 700;
             font-size: 24px;
             line-height: 30px;
         }
-        .main_post_header {
+        .main_post_heading {
             margin-top: 0;
             text-transform: uppercase;
         }
-        .post_header {
+        .post_heading {
             margin-bottom: 0;
         }
         .post_text {
