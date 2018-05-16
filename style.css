@@ -3173,6 +3173,7 @@ button[disabled].contest_btn {
     }
 }
 .right_border {
+    padding-right: 56px;
     border-right: 1.5px solid #979797;
 }
 /* *** */
