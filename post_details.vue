@@ -22,7 +22,7 @@
                         <h2 class="post_heading caps">{{ currentPost.title }}</h2>
                         <p class="post_dates">{{ currentPost.publish_date | moment("MMM DD, YYYY", timezone) }}</p>
                         <social-sharing :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="_.truncate(currentPost.description, {'length': 99})" twitter-user="BCCstyle" :media="currentPost.image_url" inline-template >
-							<div class="blog-social-share pull-right" style="margin: 15px auto;">
+							<div class="blog-social-share" style="margin: 15px auto;">
 								<div class="social_share">
 									<network network="facebook">
 										<i class="fa fa-facebook social_icons" aria-hidden="true"></i>
