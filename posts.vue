@@ -22,17 +22,12 @@
                 </div>
             </div>
             <button class="" @click="handleButton">Load More</button>
-            <!--<mugen-scroll :handler="fetchData" :should-handle="!loading">-->
-            <!--    loading...-->
-            <!--</mugen-scroll>-->
         </div>
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-lazy-load", "vue-mugen-scroll"], function (Vue, Vuex, moment, tz, VueMoment, VueLazyload, MugenScroll) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-lazy-load"], function (Vue, Vuex, moment, tz, VueMoment, VueLazyload) {
         Vue.use(VueLazyload);
-        Vue.use(MugenScroll)
-        console.log(MugenScroll)
         return Vue.component("news-component", {
             template: template, // the variable template will be injected
             data: function () {
@@ -83,12 +78,6 @@
                         console.log("Error loading data: " + e.message);
                     }
                 },
-                // fetchData() {
-                //     this.loading = true
-                //     // ... the code you wanna run to fetch data
-                //     this.blog = _.slice(this.blog, [4] )
-                //     this.loading = false
-                // }
                 handleButton: function () {
                     if(!this.morePostsFetched){
                         this.morePosts = this.blogs;
