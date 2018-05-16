@@ -16,7 +16,7 @@
                         <img :src="blog.image_url" :alt="blog.title">
                     </div>
                     <div class="post_content">
-                        <h2 class="post_header">{{ blog.title }}</h2>
+                        <h2 class="post_heading">{{ blog.title }}</h2>
                         <div class="post_text" v-html="blog.body_short"></div>
                         <!--<a class="post_read_more" href="{{bloslug}}">Read More</a>-->
                     </div>
