@@ -15,9 +15,9 @@
             <div class="row_fluid">
                 
                 <div class="post_container" v-for="(blog, index) in blogs">
-                    <!--<div class="post_image_container">-->
-                    <!--    <img src="{{post_image}}" alt="{{title}}">-->
-                    <!--</div>-->
+                    <div class="post_image">
+                        <img :src="blog.post_image" alt="blog.title">
+                    </div>
                     <div class="post_content">
                         <h2 class="post_header">{{blog.title}}</h2>
                         <div class="post_text">{{description_short}}</div>
