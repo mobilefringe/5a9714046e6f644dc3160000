@@ -20,7 +20,7 @@
                 <div class="col-md-8">
                     <div class="row_fluid">
                         <h2 class="post_heading caps">{{ currentPost.title }}</h2>
-                        <p class="post_dates">{{ post.publish_date | moment("MMM DD, YYYY", timezone) }}</p>
+                        <p class="post_dates">{{ currentPost.publish_date | moment("MMM DD, YYYY", timezone) }}</p>
                         <div class="post_text" v-html="currentPost.html_body"></div>
                     </div>
                 </div>
