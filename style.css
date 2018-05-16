@@ -3170,7 +3170,7 @@ button[disabled].contest_btn {
     font-size: 1.125rem;
     color: #000;
     &:hover {
-        color: $primary;
+        color: $accent;
     }
 }
 /* *** */
