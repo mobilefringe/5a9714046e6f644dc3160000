@@ -103,6 +103,9 @@
                 },
                 blogs() {
                     var blog = this.findBlogByName("Bramalea City Centre").posts;
+                    _.forEach(blog, function(value, key) {
+                        value.description_short = _.truncate(value.description, { 'length': 199, 'separator': ' ' });
+                    });
                     blog = _.reverse(_.sortBy(blog, function (o) { return o.publish_date }));
                     return blog
                 }
