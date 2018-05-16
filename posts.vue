@@ -16,10 +16,10 @@
                 
                 <div class="post_container" v-for="(blog, index) in blogs">
                     <div class="post_image">
-                        <img :src="blog.post_image" alt="blog.title">
+                        <img :src="blog.image_url" :alt="blog.title">
                     </div>
                     <div class="post_content">
-                        <h2 class="post_header">{{blog.title}}</h2>
+                        <h2 class="post_header">{{ blog.title }}</h2>
                         <div class="post_text" v-html="blog.body_short"></div>
                         <!--<a class="post_read_more" href="{{bloslug}}">Read More</a>-->
                     </div>
@@ -104,7 +104,9 @@
                 blogs() {
                     var blog = this.findBlogByName("Bramalea City Centre").posts;
                     _.forEach(blog, function(value, key) {
-                        
+                        if (_.includes(value.image_url, 'missing')) {
+                            value.image_url = "http://placeholder.com/350x150";
+                        }
                         value.body_short = _.truncate(value.body, { 'length': 199, 'separator': ' ' });
                     });
                     console.log(blog)
