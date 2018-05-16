@@ -30,18 +30,8 @@
                 </div>
                 <div class="blog_30 hidden_phone"></div>
                 <div class="row_fluid">
-                    <h2 class="post_details_title" title="{{title}}">{{title}}</h2>
-                    <div class="post_details_desc">{{{html_body}}}</div>
-                </div>
-                <div class="row_fluid">
-                    <div class="details_share_icons_mobile">
-                        <a href="https://www.facebook.com/sharer.php?u=https://www.halifaxshoppingcentre.com/posts/{{slug}}" target="_blank">
-                            <img class="details_icon" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" alt="Facebook Logo">
-                        </a>
-                        <a href="https://twitter.com/home?status={{twitter_title}} https://www.halifaxshoppingcentre.com/posts/{{slug}}" target="_blank">
-                            <img class="details_icon" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" alt="Twitter Logo">
-                        </a>
-                    </div>
+                    <h2 class="post_details_title">{{ currentPost.title }}</h2>
+                    <div class="post_details_desc" v-html="currentPost.html_body"></div>
                 </div>
              
             </div>
