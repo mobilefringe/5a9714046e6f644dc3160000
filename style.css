@@ -3146,19 +3146,12 @@ button[disabled].contest_btn {
         display: inline-block;
         float: left;
         .post_heading {
+            margin-bottom: 0;
             font-family: 'ProximaNova-Bold';
             font-size: 1.75rem;
             line-height: 1.1;
             color: #000;
         }
-        .main_post_heading {
-            margin-top: 0;
-            text-transform: uppercase;
-        }
-        .post_heading {
-            margin-bottom: 0;
-        }
-        
     }
     .post_image {
         // width: 470px;
@@ -3180,27 +3173,13 @@ button[disabled].contest_btn {
     font-size: 1.25rem;
     line-height: 1.5;
 }
-.main_read_more, .post_read_more {
+.post_read_more {
     position: absolute;
     bottom: 33px;
     font-size: 20px;
 }
-.main_post_share_icons {
-    position: absolute;
-    top: -37px;
-    right: -1px;
-}
-.post_share_icons {
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-.post_icon {
-    padding-bottom: 5px;
-    width: 36px;
-}
-
 /* *** */
+
 @media (max-width: 1300px) {
     #primary_nav ul .menu_item {
         min-width: 130px;
