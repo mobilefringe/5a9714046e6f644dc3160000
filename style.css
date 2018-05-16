@@ -3102,7 +3102,7 @@ button[disabled].contest_btn {
     width: 100%;
     height: 282px;
     border: 1px solid #d3d3d3;
-    .post_image_container {
+    .post_image {
         width: 470px;
         height: 280px;
         display: inline-block;
