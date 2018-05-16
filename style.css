@@ -3115,27 +3115,28 @@ button[disabled].contest_btn {
         height: 280px;
         display: inline-block;
         float: right;
+        .main_post_header, .post_header {
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+        }
+        .main_post_header {
+            margin-top: 0;
+            text-transform: uppercase;
+        }
+        .post_header {
+            margin-bottom: 0;
+        }
+        .post_text {
+            font-size: 22px;
+            line-height: 30px;
+            letter-spacing: 0.5px;
+            color: #5F574B;
+        }
     }
 }
-.main_post_header, .post_header {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 30px;
-}
-.main_post_header {
-    margin-top: 0;
-    text-transform: uppercase;
-}
-.post_header {
-    margin-bottom: 0;
-}
-.post_text {
-    font-size: 22px;
-    line-height: 30px;
-    letter-spacing: 0.5px;
-    color: #5F574B;
-}
+
 .main_read_more, .post_read_more {
     position: absolute;
     bottom: 33px;
