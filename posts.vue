@@ -80,6 +80,7 @@
                     }
                 },
                 handleButton: function () {
+                    console.log(this.blogs)
                     if(!this.morePostsFetched){
                         this.morePosts = this.blogs;
                         this.posts = this.morePosts.splice(0, 3);
