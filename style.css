@@ -3158,10 +3158,7 @@ button[disabled].contest_btn {
         .post_heading {
             margin-bottom: 0;
         }
-        .post_text {
-            font-size: 1.25rem;
-            line-height: 1.5;
-        }
+        
     }
     .post_image {
         // width: 470px;
@@ -3178,6 +3175,10 @@ button[disabled].contest_btn {
     font-size: 0.75rem;
 	line-height: 2.5;
 	color: #000;
+}
+.post_text {
+    font-size: 1.25rem;
+    line-height: 1.5;
 }
 .main_read_more, .post_read_more {
     position: absolute;
