@@ -17,7 +17,7 @@
             <div class="post_container" v-if="currentPost">
                 <div class="row_fluid">
                     <div class="post_details_image">
-                        <img src="{{post_image}}" alt="{{title}}" />
+                        <img :src="currentPost.image_url" :alt="currentPost.title" />
                     </div>
                     <div class="details_share_icons hidden_phone">
                         <a href="http://www.facebook.com/sharer.php?u=http://www.halifaxshoppingcentre.com/posts/{{slug}}" target="_blank">
