@@ -3117,7 +3117,44 @@ button[disabled].contest_btn {
         float: right;
     }
 }
-
+.main_post_header, .post_header {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+}
+.main_post_header {
+    margin-top: 0;
+    text-transform: uppercase;
+}
+.post_header {
+    margin-bottom: 0;
+}
+.post_text {
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    color: #5F574B;
+}
+.main_read_more, .post_read_more {
+    position: absolute;
+    bottom: 33px;
+    font-size: 20px;
+}
+.main_post_share_icons {
+    position: absolute;
+    top: -37px;
+    right: -1px;
+}
+.post_share_icons {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.post_icon {
+    padding-bottom: 5px;
+    width: 36px;
+}
 
 /* *** */
 @media (max-width: 1300px) {
