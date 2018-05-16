@@ -21,6 +21,18 @@
                     <div class="row_fluid">
                         <h2 class="post_heading caps">{{ currentPost.title }}</h2>
                         <p class="post_dates">{{ currentPost.publish_date | moment("MMM DD, YYYY", timezone) }}</p>
+                        <social-sharing :url="shareURL(currentPromo.slug)" :title="currentPromo.title" :description="currentPromo.body" :quote="_.truncate(currentPromo.description, {'length': 99})" twitter-user="BCCstyle" :media="currentPromo.image_url" inline-template >
+							<div class="blog-social-share pull-right" style="margin: 15px auto;">
+								<div class="social_share">
+									<network network="facebook">
+										<i class="fa fa-facebook social_icons" aria-hidden="true"></i>
+									</network>
+									<network network="twitter">
+										<i class="fa fa-twitter social_icons" aria-hidden="true"></i>
+									</network>
+								</div>
+							</div>
+						</social-sharing>
                         <div class="post_text" v-html="currentPost.html_body"></div>
                     </div>
                 </div>
