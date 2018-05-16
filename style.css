@@ -3110,10 +3110,8 @@ button[disabled].contest_btn {
         border: 1px solid #d3d3d3;
     }
     .main_post_image {
-        width: 700px;
-        height: 450px;
-        position: relative;
-        text-align: center;
+        width: 990px;
+        // height: 450px;
         float: right;
         img {
             max-width: 100%;
