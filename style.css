@@ -3177,6 +3177,7 @@ button[disabled].contest_btn {
     position: absolute;
     bottom: 33px;
     font-size: 1.125rem;
+    color: #000;
 }
 /* *** */
 
