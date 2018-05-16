@@ -93,12 +93,12 @@
                 handleButton: function () {
                     if(!this.morePostsFetched){
                         // axios.get('chat/messagesmore').then((response) => {
-                            // this.moreMessages = response.data;
-                            this.posts = this.blogs.splice(0, 3);
+                            this.morePosts = this.blogs;
+                            this.posts = this.morePosts.splice(0, 3);
                             this.morePostsFetched = true;
                         // });
                     }
-                    var nextPosts = this.blogs.splice(0, 3);
+                    var nextPosts = this.morePosts.splice(0, 3);
                     // Add 3 more posts to posts array
                     this.posts.push(nextPosts);
                 }
