@@ -20,7 +20,7 @@
                     </div>
                     <div class="post_content">
                         <h2 class="post_header">{{blog.title}}</h2>
-                        <div class="post_text" v-html="blog.decsription_short"></div>
+                        <div class="post_text" v-html="blog.body_short"></div>
                         <!--<a class="post_read_more" href="{{bloslug}}">Read More</a>-->
                     </div>
                 </div>
@@ -105,7 +105,7 @@
                     var blog = this.findBlogByName("Bramalea City Centre").posts;
                     _.forEach(blog, function(value, key) {
                         
-                        value.description_short = _.truncate(value.body, { 'length': 199, 'separator': ' ' });
+                        value.body_short = _.truncate(value.body, { 'length': 199, 'separator': ' ' });
                     });
                     console.log(blog)
                     blog = _.reverse(_.sortBy(blog, function (o) { return o.publish_date }));
