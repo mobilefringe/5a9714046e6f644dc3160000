@@ -88,22 +88,6 @@
                     }
                     console.log(this.currentPost)
                 },
-                // tagString(val_tag) {
-                //     // Returns all tags
-                //     // var string = _.join(val_tag, ', ')  
-                //     // return string
-                    
-                //     //Returns only the first tag
-                //     var tag = "";
-                //     if(val_tag != null){
-                //         tag = val_tag[0].replace(/_/g, " ");
-                //     }
-                //     return tag
-                // },
-                // truncate(val_body) {
-                //     var truncate = _.truncate(val_body, { 'length': 99, 'separator': ' ' });
-                //     return truncate;
-                // },
                 shareURL(slug) {
                     var share_url = "http://www.northparkcenter.com/posts/" + slug
                     return share_url
