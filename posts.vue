@@ -31,7 +31,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-lazy-load", "mugen-scroll"], function (Vue, Vuex, moment, tz, VueMoment, VueLazyload, MugenScroll) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-lazy-load", "vue-mugen-scroll"], function (Vue, Vuex, moment, tz, VueMoment, VueLazyload, MugenScroll) {
         Vue.use(VueLazyload);
         Vue.use(MugenScroll)
         return Vue.component("news-component", {
