@@ -49,13 +49,7 @@
             data: function () {
                 return {
                     dataloaded: false,
-                    currentBlog: null,
-                    mainBlog: null,
-                    currentPost: null,
-                    newsletterError: false,
-                    newsletterSuccess: false,
-                    socialFeed: null,
-                    instaFeed: null
+                    currentPost: null
                 }
             },
             created() {
@@ -74,7 +68,6 @@
                     'property',
                     'timezone',
                     'blogs',
-                    'findBlogByName',
                     'findBlogPostBySlug',
                 ])
             },
