@@ -15,21 +15,13 @@
             <div class="row_fluid">
                 
                 <div class="post_container" v-for="(blog, index) in blogs">
-                    <div class="post_image_container">
-                        <img src="{{post_image}}" alt="{{title}}">
-                    </div>
+                    <!--<div class="post_image_container">-->
+                    <!--    <img src="{{post_image}}" alt="{{title}}">-->
+                    <!--</div>-->
                     <div class="post_content">
-                        <div class="post_share_icons">
-                            <a href="https://www.facebook.com/sharer.php?u=https://www.halifaxshoppingcentre.com/{{slug}}" target="_blank">
-                                <img class="post_icon pull-left" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" class="" alt="">
-                            </a>
-                            <a href="https://twitter.com/home?status={{twitter_title}} https://www.halifaxshoppingcentre.com/{{slug}}" target="_blank">
-                                <img class="post_icon pull-right" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" class="" alt="">
-                            </a>
-                        </div>
-                        <a href="{{slug}}"><h2 class="post_header">{{title}}</h2></a>
+                        <h2 class="post_header">{{blog.title}}</h2>
                         <div class="post_text">{{description_short}}</div>
-                        <a class="post_read_more" href="{{slug}}">Read More</a>
+                        <!--<a class="post_read_more" href="{{bloslug}}">Read More</a>-->
                     </div>
                 </div>
             </div>
