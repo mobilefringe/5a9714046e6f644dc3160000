@@ -3176,7 +3176,7 @@ button[disabled].contest_btn {
 .post_read_more {
     position: absolute;
     bottom: 33px;
-    font-size: 20px;
+    font-size: 1.125rem;
 }
 /* *** */
 
