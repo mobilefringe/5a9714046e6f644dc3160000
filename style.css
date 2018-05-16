@@ -3178,7 +3178,6 @@ button[disabled].contest_btn {
 .post_dates {
     font-size: 0.75rem;
 	line-height: 2.5;
-	text-align: left;
 	color: #000;
 }
 .main_read_more, .post_read_more {
