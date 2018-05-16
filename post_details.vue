@@ -10,8 +10,10 @@
 		</div>
 		<div class="site_container inside_page_content page_content">
     		<div class="row">
-                <div class="col-md-6">
-                    <h5 class="pull-left"><a href="/posts"><img src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/png/1490621978000/left.png" class="post_details_arrow" alt=""> Back to Our Style</a></h5>
+                <div class="col-md-12">
+                    <router-link to="/posts">
+                        <p class=""><i class="fa fa-chevron-left"></i> Back to BCC Blog</p>
+                    </router-link>
                 </div>
             </div>
             <div class="post_container" v-if="currentPost">
