@@ -85,10 +85,11 @@
                         this.morePosts = this.blogs;
                         this.posts = this.morePosts.splice(0, 3);
                         this.morePostsFetched = true;
+                    } else {
+                        var nextPosts = this.morePosts.splice(0, 3);
+                        // Add 3 more posts to posts array
+                        this.posts.push(nextPosts);
                     }
-                    var nextPosts = this.morePosts.splice(0, 3);
-                    // Add 3 more posts to posts array
-                    this.posts.push(nextPosts);
                 }
             }
         });
