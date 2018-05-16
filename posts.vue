@@ -23,6 +23,9 @@
 					    </router-link>
                     </div>
                 </div>
+                <mugen-scroll :handler="fetchData" :should-handle="!loading">
+                    loading...
+                </mugen-scroll>
             </div>
         </div>
     </div>
