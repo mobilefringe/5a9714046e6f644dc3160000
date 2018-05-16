@@ -34,6 +34,7 @@
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-lazy-load", "vue-mugen-scroll"], function (Vue, Vuex, moment, tz, VueMoment, VueLazyload, MugenScroll) {
         Vue.use(VueLazyload);
         Vue.use(MugenScroll)
+        console.log(MugenScroll)
         return Vue.component("news-component", {
             template: template, // the variable template will be injected
             data: function () {
