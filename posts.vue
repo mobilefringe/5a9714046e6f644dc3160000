@@ -69,6 +69,7 @@
                     });
                     console.log(blog)
                     blog = _.reverse(_.sortBy(blog, function (o) { return o.publish_date }));
+                    blog = _.slice(blog, [0], [2]);
                     return blog
                 }
             },
