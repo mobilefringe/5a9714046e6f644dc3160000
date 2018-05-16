@@ -3159,10 +3159,8 @@ button[disabled].contest_btn {
             margin-bottom: 0;
         }
         .post_text {
-            font-size: 22px;
-            line-height: 30px;
-            letter-spacing: 0.5px;
-            color: #5F574B;
+            font-size: 1.25rem;
+            line-height: 1.5;
         }
     }
     .post_image {
