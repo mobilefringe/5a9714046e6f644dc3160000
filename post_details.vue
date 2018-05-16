@@ -9,13 +9,41 @@
 			</div>
 		</div>
 		<div class="site_container inside_page_content page_content">
-		<div class="row">
-            <div class="col-md-6">
-                <h5 class="pull-left"><a href="/posts"><img src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/png/1490621978000/left.png" class="post_details_arrow" alt=""> Back to Our Style</a></h5>
+    		<div class="row">
+                <div class="col-md-6">
+                    <h5 class="pull-left"><a href="/posts"><img src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/png/1490621978000/left.png" class="post_details_arrow" alt=""> Back to Our Style</a></h5>
+                </div>
             </div>
-        </div>
             <div class="post_container" v-if="currentPost">
-                
+                <div class="row_fluid">
+                    <div class="post_details_image">
+                        <img src="{{post_image}}" alt="{{title}}" />
+                    </div>
+                    <div class="details_share_icons hidden_phone">
+                        <a href="http://www.facebook.com/sharer.php?u=http://www.halifaxshoppingcentre.com/posts/{{slug}}" target="_blank">
+                            <img class="details_icon" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" alt="Facebook Logo">
+                        </a>
+                        <a href="http://twitter.com/home?status={{twitter_title}} http://www.halifaxshoppingcentre.com/posts/{{slug}}" target="_blank">
+                            <img class="details_icon" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" alt="Twitter Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="blog_30 hidden_phone"></div>
+                <div class="row_fluid">
+                    <h2 class="post_details_title" title="{{title}}">{{title}}</h2>
+                    <div class="post_details_desc">{{{html_body}}}</div>
+                </div>
+                <div class="row_fluid">
+                    <div class="details_share_icons_mobile">
+                        <a href="https://www.facebook.com/sharer.php?u=https://www.halifaxshoppingcentre.com/posts/{{slug}}" target="_blank">
+                            <img class="details_icon" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794350000/fb.jpg" alt="Facebook Logo">
+                        </a>
+                        <a href="https://twitter.com/home?status={{twitter_title}} https://www.halifaxshoppingcentre.com/posts/{{slug}}" target="_blank">
+                            <img class="details_icon" src="//codecloud.cdn.speedyrails.net/sites/5808c7e76e6f6414b30c0000/image/jpeg/1490794359000/tw.jpg" alt="Twitter Logo">
+                        </a>
+                    </div>
+                </div>
+             
             </div>
         </div>
     </div>
