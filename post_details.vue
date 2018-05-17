@@ -89,35 +89,17 @@
                     console.log(current_post_date)
                     console.log(current_post_id)
                     
-                    related_posts = [];
+                    var prev_posts = [];
                     _.forEach(blog_posts, function(value, key) {
                         if (value.id != current_post_id) {
                             if (value.publish_date <= current_post_date){
-                                related_posts.push(value); 
+                                prev_posts.push(value); 
                             }
                         }
                     });
-                    console.log(related_posts)
-                    // if (this.currentPost.tag != null) {
-                    //     var current_post_tag = this.currentPost.tag[0]
-                       
-                    //     var related_blog = [];
-                    //     _.forEach(main_blog, function (value, key) {
-                    //         if (value.tag != null) {
-                    //             var tag = value.tag[0];
-                    //             if (tag === current_post_tag) {
-                    //                 related_blog.push(value);
-                    //             }
-                    //         }
-                    //     });
+                    console.log(prev_posts)
+                    prev_posts = _.slice(prev_posts, 0, 3)
 
-                    //     var related_post = related_blog[0]
-                    //     if (related_post.id != this.currentPost.id) {
-                    //         return related_post;
-                    //     } else {
-                    //         return related_blog[1]
-                    //     }
-                    // }
                 }
             },
             methods: {
