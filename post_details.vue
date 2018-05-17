@@ -81,11 +81,20 @@
                     'findBlogPostBySlug'
                 ]),
                 relatedPost() {
-                    var main_blog = _.reverse(_.orderBy(this.findBlogByName("Bramalea City Centre").posts, function (o) { return o.publish_date }));
-                    console.log(main_blog)
+                    var blog_posts = _.reverse(_.orderBy(this.findBlogByName("Bramalea City Centre").posts, function (o) { return o.publish_date }));
+                    console.log(blog_posts)
                     
                     var current_post = this.currentPost.publish_date
                     console.log(current_post)
+                    
+                    related_posts = [];
+                    _.forEach(blog_posts, function(value, key) {
+                        var publish_date = value.publish_date;
+                        if (publish_date <= current_post){
+                            related_posts.push(value); 
+                        }
+                    });
+                    console.log(related_posts)
                     // if (this.currentPost.tag != null) {
                     //     var current_post_tag = this.currentPost.tag[0]
                        
