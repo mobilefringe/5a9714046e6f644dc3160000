@@ -83,6 +83,9 @@
                 relatedPost() {
                     var main_blog = _.reverse(_.orderBy(this.findBlogByName("Bramalea City Centre").posts, function (o) { return o.publish_date }));
                     console.log(main_blog)
+                    
+                    var current_post = this.currentPost.publish_date
+                    console.log(current_post)
                     // if (this.currentPost.tag != null) {
                     //     var current_post_tag = this.currentPost.tag[0]
                        
