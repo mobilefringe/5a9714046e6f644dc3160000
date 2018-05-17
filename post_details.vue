@@ -34,7 +34,9 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    Previous Posts    
+                    <div class="previous_post_container">
+                        <h3 class="previous_post_title">Previous Posts</h3>
+                    </div>   
                 </div>
             </div>
         </div>
