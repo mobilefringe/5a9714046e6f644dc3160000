@@ -82,13 +82,10 @@
                 ]),
                 relatedPost() {
                     var blog_posts = _.reverse(_.orderBy(this.findBlogByName("Bramalea City Centre").posts, function (o) { return o.publish_date }));
-                    console.log(blog_posts)
-                    
+
                     var current_post_date = this.currentPost.publish_date
                     var current_post_id = this.currentPost.id
-                    console.log(current_post_date)
-                    console.log(current_post_id)
-                    
+
                     var prev_posts = [];
                     _.forEach(blog_posts, function(value, key) {
                         if (value.id != current_post_id) {
