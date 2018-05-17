@@ -91,9 +91,10 @@
                     
                     related_posts = [];
                     _.forEach(blog_posts, function(value, key) {
-                        var publish_date = value.publish_date;
-                        if (publish_date <= current_post){
-                            related_posts.push(value); 
+                        if (value.id != current_post_id) {
+                            if (value.publish_date <= current_post_date){
+                                related_posts.push(value); 
+                            }
                         }
                     });
                     console.log(related_posts)
