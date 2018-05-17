@@ -3260,7 +3260,11 @@ button[disabled].contest_btn {
         // line-height: 95px;
     }
 }
-
+@media (max-width: 1024px) {
+    .inside_page_content {
+        padding: 0 15px;
+    }
+}
 @media (max-width: 992px) {
     .top_bar_wrapper {
         .col-md-3 {
