@@ -56,6 +56,7 @@
             created() {
                 this.loadData().then(response => {
                     this.updateCurrentBlog(this.id);
+                    this.relatedPost
                     this.dataloaded = true;
                 });
             },
@@ -76,8 +77,32 @@
                     'property',
                     'timezone',
                     'blogs',
-                    'findBlogPostBySlug',
-                ])
+                    'findBlogByName',
+                    'findBlogPostBySlug'
+                ]),
+                relatedPost() {
+                    var main_blog = _.reverse(_.orderBy(this.findBlogByName("Bramalea City Centre").posts, function (o) { return o.publish_date }));
+                    if (this.currentPost.tag != null) {
+                        var current_post_tag = this.currentPost.tag[0]
+                       
+                        var related_blog = [];
+                        _.forEach(main_blog, function (value, key) {
+                            if (value.tag != null) {
+                                var tag = value.tag[0];
+                                if (tag === current_post_tag) {
+                                    related_blog.push(value);
+                                }
+                            }
+                        });
+
+                        var related_post = related_blog[0]
+                        if (related_post.id != this.currentPost.id) {
+                            return related_post;
+                        } else {
+                            return related_blog[1]
+                        }
+                    }
+                }
             },
             methods: {
                 loadData: async function () {
