@@ -3268,6 +3268,9 @@ button[disabled].contest_btn {
         padding: 0px 55px;
         height: 300px;
     }
+    .post_read_more {
+        bottom: 10px;
+    }
 }
 @media (max-width: 992px) {
     .top_bar_wrapper {
