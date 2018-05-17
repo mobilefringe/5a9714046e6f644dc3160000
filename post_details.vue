@@ -84,8 +84,10 @@
                     var blog_posts = _.reverse(_.orderBy(this.findBlogByName("Bramalea City Centre").posts, function (o) { return o.publish_date }));
                     console.log(blog_posts)
                     
-                    var current_post = this.currentPost.publish_date
-                    console.log(current_post)
+                    var current_post_date = this.currentPost.publish_date
+                    var current_post_id = this.currentPost.id
+                    console.log(current_post_date)
+                    console.log(current_post_id)
                     
                     related_posts = [];
                     _.forEach(blog_posts, function(value, key) {
