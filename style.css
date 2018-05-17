@@ -3264,10 +3264,14 @@ button[disabled].contest_btn {
     .inside_page_content {
         padding: 0 15px;
     }
-    .post_container .post_content {
-        padding: 0px 55px;
+    .post_container
         height: 300px;
-    }
+        overflow: hidden;
+        .post_content {
+            padding: 0px 55px;
+            height: 300px;
+        }
+    }   
     .post_read_more {
         bottom: 10px;
     }
