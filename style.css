@@ -3264,6 +3264,10 @@ button[disabled].contest_btn {
     .inside_page_content {
         padding: 0 15px;
     }
+    .post_container .post_content {
+        padding: 0px 55px;
+        height: 300px;
+    }
 }
 @media (max-width: 992px) {
     .top_bar_wrapper {
