@@ -97,6 +97,7 @@
                     console.log(prev_posts)
                     prev_posts = _.slice(prev_posts, 0, 3)
                     console.log(prev_posts)
+                    return prev_posts
 
                 }
             },
