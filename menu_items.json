@@ -1,0 +1,83 @@
+[
+    {
+        "name": "header.stores",
+        "href": "#",
+        "open_dropdown": false,
+        "sub_menu": [{
+                "name": "header.stores",
+                "href": "/stores"
+            },
+            {
+                "name": "header.centre_map",
+                "href": "/map"
+            },
+            {
+                "name": "header.restaurants",
+                "href": "/restaurants"
+            }
+        ]
+    },
+    {
+        "name": "header.promos",
+        "href": "/promotions"
+    },
+    {
+        "name": "header.news_events",
+        "href": "#",
+        "open_dropdown": false,
+        "sub_menu": [{
+                "name": "header.events",
+                "href": "/events"
+            },
+                "name": "header.posts",
+                "href": "/posts"
+            }
+        ]
+    },
+    {
+        "name": "header.services",
+        "href": "#",
+        "open_dropdown": false,
+        "sub_menu": [{
+                "name": "header.services ",
+                "href": "/pages/bramaleacitycentre-services"
+            },
+            {
+                "name": "header.gift_card",
+                "href": "/pages/bramaleacitycentre-gift-cards"
+            },
+            {
+                "name": "header.accessibility",
+                "href": "/pages/bramaleacitycentre-accessibilty"
+            }
+            
+        ]
+    },
+    {
+        "name": "header.contact_us",
+        "href": "#",
+        "open_dropdown": false,
+        "sub_menu": [
+            {
+                "name": "header.contact_us",
+                "href": "/contact_us"
+            },
+            {
+                "name": "header.hours",
+                "href": "/hours"
+            },
+            {
+                "name": "header.employment",
+                "href": "/jobs"
+            },
+            {
+                "name": "header.leasing",
+                "href": "/pages/bramaleacitycentre-leasing"
+            },
+            {
+            "name": "header.fashionicity",
+            "href": "/pages/bramaleacitycentre-fashionicity"
+            }
+        ]
+    }
+]
