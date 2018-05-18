@@ -41,9 +41,7 @@ require.config({
         'vue-paginate': 'https://cdnjs.cloudflare.com/ajax/libs/vue-paginate/3.5.1/vue-paginate',
         'loader': 'https://mmvue.codecloudapp.com/loader.vue?noext',
         'campaignMonitor': 'https://js.createsend1.com/javascript/copypastesubscribeformlogic',
-        'bootstrap-vue' : 'https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue',
-        'vue-mugen-scroll' : 'https://unpkg.com/vue-mugen-scroll@0.2.5/dist/vue-mugen-scroll.min'
-        
+        'bootstrap-vue' : 'https://unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue'
     }
 });
 
