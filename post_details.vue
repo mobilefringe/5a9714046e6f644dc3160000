@@ -36,13 +36,14 @@
                 <div class="col-md-4">
                     <div class="previous_post_container">
                         <h3 class="previous_post_title">Previous Posts</h3>
-                        <ul>
+                        <ul v-if="relatedPosts">
                             <li v-for="post in relatedPosts">
                                 <router-link :to="{ name: 'postDetails', params: { id: post.slug }}" class="" :aria="post.title">
 					                <h4>{{ post.title }}</h4>
 				                </router-link>
                             </li>
                         </ul>
+                        <p v-else>No previous posts</p>
                     </div>   
                 </div>
             </div>
