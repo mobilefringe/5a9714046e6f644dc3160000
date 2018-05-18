@@ -29,6 +29,7 @@
                 "name": "header.events",
                 "href": "/events"
             },
+            {
                 "name": "header.posts",
                 "href": "/posts"
             }
