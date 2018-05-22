@@ -74,7 +74,7 @@
                 currentPost: function () {
                     if(this.currentPost != null){
                         if (_.includes(this.currentPost.image_url, 'missing')) {
-                            this.currentPost.image_url = "http://via.placeholder.com/1200x724";
+                            this.currentPost.image_url = "//codecloud.cdn.speedyrails.net/sites/5afb8d456e6f6436aa100000/image/jpeg/1527006352000/bccblogplaceholder.jpg";
                         }
                     }
                 } 
