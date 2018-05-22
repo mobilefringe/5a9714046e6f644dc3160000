@@ -106,7 +106,7 @@
                 return {
                     dataLoaded: false,
                     show_mobile_menu: false,
-                    property_logo: "//codecloud.cdn.speedyrails.net/sites/5afb8d456e6f6436aa100000/image/png/1520457420000/whitelogo1@2x.png",
+                    property_logo: "//codecloud.cdn.speedyrails.net/sites/5afb8d456e6f6436aa100000/image/png/1527017774000/BCC-logo.png",
                     menu_items: MenuItems,
                 }
             },
