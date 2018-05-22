@@ -76,7 +76,7 @@
     				<div class="site_logo">
     					<router-link to="/"><img :src="property_logo" :alt="property.name"/></router-link>
     				</div>
-    				<div class="row top_nav hidden_phone">
+    				<div class="top_nav hidden_phone">
     					<nav id="primary_nav">
     						<ul>
     						    <li v-for="(item, index) in menu_items" class="menu_item" :class="{dropdown : item.sub_menu,open : item.open_dropdown}" @keyup.enter="toggleDropdown(index)">
