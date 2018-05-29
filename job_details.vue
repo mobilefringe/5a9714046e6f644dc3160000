@@ -12,7 +12,7 @@
 			<div class="row">
 				<div class="col-sm-4 promo_logo_container hidden_phone">
 					<div class="image_container">
-						<img v-lazy="currentJob.store.store_front_url_abs" class="image" :alt="currentPromo.name"/>
+						<img v-lazy="currentJob.store.store_front_url_abs" class="image" :alt="currentJob.name"/>
 					</div>
 					<div class="text-center" v-if="currentJob.store.name">
 					    <div v-if="currentJob.jobable_type == 'Store'">
@@ -163,7 +163,7 @@
                     }
                 },
                 shareURL(slug){
-                    var share_url = "http://bramaleacitycentre.com/jobs/" + slug;
+                    var share_url = "https://bramaleacitycentre.com/jobs/" + slug;
                     return share_url;
                 },
             }
