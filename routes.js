@@ -137,16 +137,6 @@ define([], function() {
             }]
         },
         {
-            path: '/community',
-            component: view('default'),
-            redirect: '/',
-            children: [{
-                path: '',
-                component: view('community'),
-                name: 'community'
-            }]
-        },
-        {
             path: '/restaurants',
             component: view('default'),
             redirect: '/',
