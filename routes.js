@@ -71,7 +71,7 @@ define([], function() {
         {
             path: '/map',
             component: view('default'),
-            redirect: '/404',
+            redirect: '/',
             children: [{
                 path: '',
                 component: view('map'),
@@ -118,7 +118,7 @@ define([], function() {
         {
             path: '/pages',
             component: view('default'),
-            redirect: '/404',
+            redirect: '/',
             children: [{
                 path: ':id',
                 component: view('page_details'),
@@ -129,7 +129,7 @@ define([], function() {
         {
             path: '/find_us',
             component: view('default'),
-            redirect: '/404',
+            redirect: '/',
             children: [{
                 path: '',
                 component: view('find_us'),
@@ -139,7 +139,7 @@ define([], function() {
         {
             path: '/community',
             component: view('default'),
-            redirect: '/404',
+            redirect: '/',
             children: [{
                 path: '',
                 component: view('community'),
@@ -149,7 +149,7 @@ define([], function() {
         {
             path: '/restaurants',
             component: view('default'),
-            redirect: '/404',
+            redirect: '/',
             children: [{
                 path: '',
                 component: view('restaurants'),
