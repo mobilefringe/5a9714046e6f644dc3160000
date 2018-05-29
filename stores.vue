@@ -1,7 +1,6 @@
 <template>
 	<div v-if="dataloaded">
 		<div class="page_header" v-if="storeBanner" v-lazy:background-image="storeBanner.image_url">
-			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
 				<div class="header_content">
 					<h1>{{$t("stores_page.shopping")}}</h1>
