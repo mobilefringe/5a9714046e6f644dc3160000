@@ -143,8 +143,9 @@
                 },
                 toggleSubMenu(item) {
                     this.$nextTick(function() {
-                        console.log(item.show_sub_menu)
+                        
                         item.show_sub_menu = !item.show_sub_menu;
+                        console.log(item.show_sub_menu)
                     });
                 }
             }
