@@ -146,7 +146,6 @@
                         item.show_sub_menu = !item.show_sub_menu;
                     });
                 }
-                
             }
             
         });
