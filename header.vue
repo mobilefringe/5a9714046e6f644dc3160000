@@ -36,14 +36,14 @@
     							        <div v-else>
     							            <b-card no-body class="mb-1">
                                                 <b-card-header header-tag="header" class="p-1" role="tab">
-                                                    <b-btn block v-on:click="toggleSubMenu(item)" :class="item.show_sub_menu ? 'collapsed' : null" :aria-controls="$t(item.name)" :aria-expanded="item.show_sub_menu ? 'true' : 'false'"> <!-- v-on:click="item.show_sub_menu = !item.show_sub_menu" -->
+                                                    <b-btn block @click="item.show_sub_menu = !item.show_sub_menu" :class="item.show_sub_menu ? 'collapsed' : null" :aria-controls="$t(item.name)" :aria-expanded="item.show_sub_menu ? 'true' : 'false'">
                                                         {{$t(item.name)}}
                                                         <i v-if="item.show_sub_menu"  class="fa fa-minus"></i>
                                                         <i v-else  class="fa fa-plus"></i>
                                                     </b-btn>
                                                 </b-card-header>
                                                 <b-collapse v-model="item.show_sub_menu" :id="$t(item.name)" :visible="item.show_sub_menu" :accordion="$t(item.name)" role="tabpanel" class="accordion_body">
-                                                    <b-card-body v-for="sub_menu in item.sub_menu" :key="item.sub_menu.name">
+                                                    <b-card-body v-for="sub_menu in item.sub_menu">
                                                         <p class="card-text"><router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link></p>
                                                     </b-card-body>
                                                 </b-collapse>
@@ -51,6 +51,26 @@
     							        </div>
     							        
     							    </li>
+    								<!--<li v-for="(item,key) in menu_items" class="menu_item">-->
+    							 <!--       <router-link :to="item.href" v-if="item.sub_menu == undefined">{{$t(item.name)}}</router-link>-->
+    							 <!--       <div v-else>-->
+    							 <!--           <b-card no-body class="mb-1">-->
+            <!--                                    <b-card-header header-tag="header" class="p-1" role="tab">-->
+                                                    <!-- <b-btn block v-on:click="toggleSubMenu(item)" :class="item.show_sub_menu ? 'collapsed' : null" :aria-controls="$t(item.name)" :aria-expanded="item.show_sub_menu ? 'true' : 'false'"> <!-- v-on:click="item.show_sub_menu = !item.show_sub_menu" -->
+            <!--                                            {{$t(item.name)}}-->
+            <!--                                            <i v-if="item.show_sub_menu"  class="fa fa-minus"></i>-->
+            <!--                                            <i v-else  class="fa fa-plus"></i>-->
+            <!--                                        </b-btn>-->
+            <!--                                    </b-card-header>-->
+            <!--                                    <b-collapse v-model="item.show_sub_menu" :id="$t(item.name)" :visible="item.show_sub_menu" :accordion="$t(item.name)" role="tabpanel" class="accordion_body">-->
+            <!--                                        <b-card-body v-for="sub_menu in item.sub_menu" :key="item.sub_menu.name">-->
+            <!--                                            <p class="card-text"><router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link></p>-->
+            <!--                                        </b-card-body>-->
+            <!--                                    </b-collapse>-->
+            <!--                                </b-card>-->
+    							 <!--       </div>-->
+    							        
+    							 <!--   </li>-->
     							</ul>
     							<div class="small_hr"></div>
     							<div class="tel_num" v-if="property && property.contact_phone">
