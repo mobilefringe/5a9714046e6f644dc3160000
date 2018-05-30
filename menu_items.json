@@ -3,7 +3,7 @@
         "name": "header.stores",
         "href": "#",
         "open_dropdown": false,
-        "id": "stores_link"
+        "id": "stores_link",
         "sub_menu": [{
                 "name": "header.stores",
                 "href": "/stores"
