@@ -146,7 +146,7 @@
                         
                         item.show_sub_menu = !item.show_sub_menu;
                         console.log(item.show_sub_menu, event)
-                        console.log(document.querySelectorAll(event.target))
+                        console.log(event.target)
                     });
                 }
             }
