@@ -141,7 +141,7 @@
                 toggleDropdown(index) {
                     this.menu_items[index].open_dropdown = true;
                 },
-                toggleSubMenu(item) {
+                toggleSubMenu(item, event) {
                     this.$nextTick(function() {
                         
                         item.show_sub_menu = !item.show_sub_menu;
