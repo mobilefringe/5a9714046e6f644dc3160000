@@ -61,6 +61,7 @@
     {
         "name": "header.contact_us",
         "href": "#",
+        "id": "contact_link",
         "open_dropdown": false,
         "sub_menu": [
             {
