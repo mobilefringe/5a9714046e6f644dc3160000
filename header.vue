@@ -36,7 +36,7 @@
     							        <div v-else>
     							            <b-card no-body class="mb-1">
                                                 <b-card-header header-tag="header" class="p-1" role="tab">
-                                                    <b-btn block v-on:click="item.show_sub_menu = !item.show_sub_menu" :class="item.show_sub_menu ? 'collapsed' : null" :aria-controls="$t(item.name)" :aria-expanded="item.show_sub_menu ? 'true' : 'false'">
+                                                    <b-btn block v-on:click="toggleSubMenu(item)" :class="item.show_sub_menu ? 'collapsed' : null" :aria-controls="$t(item.name)" :aria-expanded="item.show_sub_menu ? 'true' : 'false'"> <!-- v-on:click="item.show_sub_menu = !item.show_sub_menu" -->
                                                         {{$t(item.name)}}
                                                         <i v-if="item.show_sub_menu"  class="fa fa-minus"></i>
                                                         <i v-else  class="fa fa-plus"></i>
