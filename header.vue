@@ -138,9 +138,14 @@
                 }
             },
             methods: {
-                // toggleDropdown(index) {
-                //     this.menu_items[index].open_dropdown = true;
-                // }
+                toggleDropdown(index) {
+                    this.menu_items[index].open_dropdown = true;
+                },
+                toggleSubMenu(item) {
+                    this.$nextTick(function() {
+                        item.show_sub_menu = !item.show_sub_menu;
+                    });
+                }
                 
             }
             
