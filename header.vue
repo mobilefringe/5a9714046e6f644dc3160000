@@ -146,8 +146,9 @@
                         
                         item.show_sub_menu = !item.show_sub_menu;
                         console.log(item.show_sub_menu, event)
-                        if(item.show_sub_menu)
+                        if(item.show_sub_menu) {
                         console.log(event.target.classList)
+                        }
                     });
                 }
             }
