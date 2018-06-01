@@ -52,7 +52,8 @@
 		min-height: 2500px;
 	}
 	#zoom_container .landmarks .mark .text {
-	        background-color: #fff
+	        background-color: #fff;
+	        border: 1px solid;
 	}
 </style>
 <script>
