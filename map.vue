@@ -51,6 +51,9 @@
 		min-width:2500px;
 		min-height: 2500px;
 	}
+	#zoom_container .landmarks .mark .text {
+	    
+	}
 </style>
 <script>
     define(["Vue", "vuex", "vue-select", "jquery", "smooth-zoom", "vue!png-map", "vue!search-component"], function(Vue, Vuex, VueSelect, $, smoothZoom, PNGMapComponent, SearchComponent) {
