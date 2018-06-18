@@ -52,6 +52,10 @@
                 "href": "/pages/bramaleacitycentre-gift-cards"
             },
             {
+                "name": "header.community_relations",
+                "href": "/pages/bramaleacitycentre-community-relations"
+            },
+            {
                 "name": "header.accessibility",
                 "href": "/pages/bramaleacitycentre-accessibilty"
             }
