@@ -115,6 +115,9 @@
                         else if( _.includes(id, 'leasing')) {
                             temp_repo = this.findRepoByName('Leasing Banner');
                         }
+                        else if( _.includes(id, 'bees-at-the-hive')) {
+                            temp_repo = this.findRepoByName('Bees Banner');
+                        }
                         else if( _.includes(id, 'community-relations')) {
                             temp_repo = this.findRepoByName('Community Banner');
                         }
