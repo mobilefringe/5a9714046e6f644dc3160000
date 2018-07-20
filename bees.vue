@@ -1,7 +1,6 @@
 <template>
     <div v-if="currentPage">
         <div v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
-			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
 				<div class="header_content">
 					<h1 v-if="locale=='en-ca'">{{currentPage.title}}</h1>
@@ -19,7 +18,6 @@
 						<div class="event_thick_line"></div>
 						<p class="event_dates">{{promo.service_completed_date | moment("MMMM D, YYYY", timezone)}}</p>
 						<p class="event_desc" v-html="promo.notice_text_approved"></p>
-						
 					</div>
 					<div class="col-sm-12">
 						<hr>
@@ -30,9 +28,7 @@
                 <div class="page_body description_text text_left" v-else v-html="currentPage.body_2"></div>
             </div>
         </div>
-        
     </div>
-    <!--Pages Banner-->
 </template>
 <style>
     .page_title {
