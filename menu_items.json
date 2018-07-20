@@ -71,6 +71,11 @@
         ]
     },
     {
+        "name": "header.fashionicity",
+        "href": "/pages/bramaleacitycentre-fashionicity",
+        "id": "fashion_link",
+    },
+    {
         "name": "header.contact_us",
         "href": "#",
         "id": "contact_link",
