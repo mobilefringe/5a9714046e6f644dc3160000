@@ -22,28 +22,13 @@
 	</div>
 </template>
 
-<style>
-    .form-group label {
-        display: inline-block;
-    }
-    .checkbox {
-        font-weight: normal;
-            margin-left: 20px;
-    }
-</style>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vee-validate', 'jquery', 'utility', 'campaignMonitor'], function(Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate, $, Utility, campaignMonitor) {
-        Vue.use(Meta);
-        Vue.use(VeeValidate);
+    define(["Vue", "vuex"], function(Vue, Vuex) {
         return Vue.component("bees-component", {
             template: template, // the variable template will be injected
-            props: ['id'],
             data: function() {
                 return {
                     currentPage: null,
-                    form_data : {},
-                    formSuccess : false,
-                    formError: false,
                     pageBanner: null
                 }
             },
@@ -55,15 +40,6 @@
                     }
                 });    
             },
-            // mounted () {
-            //     this.form_data.email = this.$route.query.email;
-            //     $("#newsletter_email").val(this.form_data.email);
-            //     if(this.$route.query.success == 'success') {
-                    
-            //         this.formSuccess = true;
-            //         this.$router.replace('/newsletter');
-            //     }
-            // },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
@@ -74,7 +50,6 @@
             methods: {
                 loadData: async function() {
                     try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
                         let results = await Promise.all([,this.$store.dispatch("getData", "repos")]);
                         return results;
                     } catch (e) {
