@@ -52,25 +52,15 @@
                     }
                 });    
             },
-            mounted () {
-                this.form_data.email = this.$route.query.email;
-                $("#newsletter_email").val(this.form_data.email);
-                if(this.$route.query.success == 'success') {
+            // mounted () {
+            //     this.form_data.email = this.$route.query.email;
+            //     $("#newsletter_email").val(this.form_data.email);
+            //     if(this.$route.query.success == 'success') {
                     
-                    this.formSuccess = true;
-                    this.$router.replace('/newsletter');
-                }
-            },
-            watch : {
-                $route () {
-                    this.form_data.email = this.$route.query.email;
-                    $("#newsletter_email").val(this.form_data.email);
-                    if(this.$route.query.success == 'success') {
-                        
-                        this.formSuccess = true;
-                    }
-                }
-            },
+            //         this.formSuccess = true;
+            //         this.$router.replace('/newsletter');
+            //     }
+            // },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
@@ -79,36 +69,6 @@
                 ])
             },
             methods: {
-                validateBeforeSubmit(form) {
-                    this.$validator.validateAll().then((result) => {
-                        if (result) {
-                            let errors = this.errors;
-                            
-                            if(errors.length > 0) {
-                                console.log("Error");
-                                this.formError = true;
-                            }
-                            else {
-                                form.preventDefault();
-                                console.log("No Error", form);
-                                var vm = this;
-                                $.getJSON(
-                                    form.target.action ,
-                                    $(form.target).serialize(),
-                                    function (data) {
-                                    if (data.Status === 400) {
-                                      vm.formError = true;
-                                        console.log("ERROR");
-                                    } else { // 200
-                                        vm.formSuccess = true;
-                                        console.log("SUCCESS");
-                                    }
-                                });
-                                form.preventDefault();
-                            }
-                        }
-                    })
-                },
                 loadData: async function() {
                     try {
                         // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
