@@ -35,6 +35,10 @@
             {
                 "name": "header.posts",
                 "href": "/posts"
+            },
+            {
+                "name": "header.bees",
+                "href": "/bees-at-the-hive"
             }
         ]
     },
