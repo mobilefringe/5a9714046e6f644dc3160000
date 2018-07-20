@@ -104,6 +104,15 @@ define([], function() {
             // }]
         },
         {
+            path: '/bees-at-the-hive',
+            component: view('default'),
+            children: [{
+                path: '',
+                component: view('bees'),
+                name: 'bees'
+            }]
+        },
+        {
             path: '/contest',
             component: view('default'),
             children: [{
