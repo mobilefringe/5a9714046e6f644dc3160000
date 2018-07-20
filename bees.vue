@@ -1,75 +1,75 @@
 <template>
-    <div v-if="currentPage">
-        <div v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
+	<div class="page_container" id="contact_us_container">
+		<!-- for some reason if you do not put an outer container div this component template will not render -->
+		<div  v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content">
-					<h1 v-if="locale=='en-ca'">{{currentPage.title}}</h1>
-					<h1 v-else>{{currentPage.title_2}}</h1>
-					<h2 style="display:none;">Scroll to  view page details</h2>
-					<h3 style="display:none;">View page details</h3>
+					<h1>{{$t("newsletter_page.newsletter")}}</h1>
 				</div>
 			</div>
 		</div>
-		<div class="site_container inside_page_content page_content">
-            <div class="margin_side_20" >
-                <div class="row event_container"  v-if="accessibilityData"  v-for="promo in accessibilityData">
-					<div class="col-sm-12 col-md-12 event_dets_container">
-						<h4 class="event_name caps">{{promo.notice_title}}</h4>
-						<div class="event_thick_line"></div>
-						<p class="event_dates">{{promo.service_completed_date | moment("MMMM D, YYYY", timezone)}}</p>
-						<p class="event_desc" v-html="promo.notice_text_approved"></p>
-					</div>
-					<div class="col-sm-12">
-						<hr>
-					</div>
+		<div class="site_container">
+			<div class="row">
+				<div class="col-md-12 contact_contents">
+					
 				</div>
-                <div v-if="accessibilityData" style="padding-top:20px;"></div> 
-                <div class="page_body description_text text_left" v-if="locale=='en-ca'" v-html="currentPage.body"></div>
-                <div class="page_body description_text text_left" v-else v-html="currentPage.body_2"></div>
-            </div>
-        </div>
-    </div>
+			</div>
+			<div class="padding_top_40"></div>
+		</div>
+	</div>
 </template>
+
 <style>
-    .page_title {
-        /*border-top:1px solid #aea99e;*/
-        border-bottom:1px solid #aea99e;
-        height: 35px;
-        line-height: 35px;
+    .form-group label {
+        display: inline-block;
     }
-    #pages_container img{
-        width: 100%;
-        height: auto;
-    }
-    .acc_title {
-        margin-top:20px;
-    }
-    img {
-        max-width: 100%;
+    .checkbox {
+        font-weight: normal;
+            margin-left: 20px;
     }
 </style>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment"], function(Vue, Vuex, moment, tz, VueMoment) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vee-validate', 'jquery', 'utility', 'campaignMonitor'], function(Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate, $, Utility, campaignMonitor) {
+        Vue.use(Meta);
+        Vue.use(VeeValidate);
         return Vue.component("bees-component", {
-            template: template, // the variable template will be injected,
+            template: template, // the variable template will be injected
+            props: ['id'],
             data: function() {
                 return {
-                    success_subscribe: false,
                     currentPage: null,
-                    pageBanner : null,
-                    accessibilityData : null
+                    form_data : {},
+                    formSuccess : false,
+                    formError: false,
+                    pageBanner: null
                 }
             },
-            props:['id', 'locale'],
-            beforeRouteUpdate(to, from, next) {
-                next();
-                this.updatePageData(to.params.id);
+            created () {
+                this.loadData().then(response => {
+                    var temp_repo = this.findRepoByName('Newsletter Banner');
+                    if(temp_repo) {
+                        this.pageBanner = temp_repo.images[0];
+                    }
+                });    
             },
-            created(){
-               this.updatePageData(this.id);
-               if(this.id == "bramaleacitycentre-accessibilty" ){
-                   this.updateAccessibilityData();
-               }
+            mounted () {
+                this.form_data.email = this.$route.query.email;
+                $("#newsletter_email").val(this.form_data.email);
+                if(this.$route.query.success == 'success') {
+                    
+                    this.formSuccess = true;
+                    this.$router.replace('/newsletter');
+                }
+            },
+            watch : {
+                $route () {
+                    this.form_data.email = this.$route.query.email;
+                    $("#newsletter_email").val(this.form_data.email);
+                    if(this.$route.query.success == 'success') {
+                        
+                        this.formSuccess = true;
+                    }
+                }
             },
             computed: {
                 ...Vuex.mapGetters([
@@ -79,66 +79,45 @@
                 ])
             },
             methods: {
-                loadData: async function(id) {
+                validateBeforeSubmit(form) {
+                    this.$validator.validateAll().then((result) => {
+                        if (result) {
+                            let errors = this.errors;
+                            
+                            if(errors.length > 0) {
+                                console.log("Error");
+                                this.formError = true;
+                            }
+                            else {
+                                form.preventDefault();
+                                console.log("No Error", form);
+                                var vm = this;
+                                $.getJSON(
+                                    form.target.action ,
+                                    $(form.target).serialize(),
+                                    function (data) {
+                                    if (data.Status === 400) {
+                                      vm.formError = true;
+                                        console.log("ERROR");
+                                    } else { // 200
+                                        vm.formSuccess = true;
+                                        console.log("SUCCESS");
+                                    }
+                                });
+                                form.preventDefault();
+                            }
+                        }
+                    })
+                },
+                loadData: async function() {
                     try {
                         // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/" + id + ".json"}),this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([,this.$store.dispatch("getData", "repos")]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
                 },
-                updatePageData (id) {
-                    this.loadData(id).then(response => {
-                        if(response == null || response == undefined) {
-                            this.$router.replace('/');
-                        }
-                        this.currentPage = response[0].data;
-                        var temp_repo = null;
-                        //Add custom banners for indivial pages 
-                        if( _.includes(id, 'gift-cards')) {
-                            temp_repo = this.findRepoByName('Giftcards Banner');
-                        }
-                        else if ( _.includes(id, 'services')) {
-                            temp_repo = this.findRepoByName('Services Banner');
-                        }
-                        else if( _.includes(id, 'accessibilty')) {
-                            temp_repo = this.findRepoByName('Accessibility Banner');
-                        }
-                        else if( _.includes(id, 'fashionicity')) {
-                            temp_repo = this.findRepoByName('FashioniCity Banner');
-                        }
-                        else if( _.includes(id, 'leasing')) {
-                            temp_repo = this.findRepoByName('Leasing Banner');
-                        }
-                        else if( _.includes(id, 'bees-at-the-hive')) {
-                            temp_repo = this.findRepoByName('Bees Banner');
-                        }
-                        else if( _.includes(id, 'community-relations')) {
-                            temp_repo = this.findRepoByName('Community Banner');
-                        }
-                        else {
-                            temp_repo = this.findRepoByName('Pages Banner');
-                        }
-                        
-                        if(temp_repo) {
-                            this.pageBanner = temp_repo.images[0];
-                        }
-                        this.pageBanner = this.pageBanner;
-                    });
-                },
-                updateAccessibilityData() {
-                    var vm = this;
-                    url = "//acc.speeker.co/get_display_templates?site_id=1";
-                    $.getJSON(url).done(function(data){
-                        var acc_data = data;
-                        acc_data.map(item => {
-                            item.notice_text_approved = _.replace(item.notice_text_approved, '<br/><br/>', '<br/>');
-                        });
-                        
-                        vm.accessibilityData =  _.sortBy(acc_data, [function(o) { return o.service_completed_date; }]).reverse();
-                    });
-                }
             }
         });
     });
