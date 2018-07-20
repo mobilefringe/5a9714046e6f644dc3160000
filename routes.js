@@ -104,7 +104,7 @@ define([], function() {
             // }]
         },
         {
-            path: '/bees-at-the-hive',
+            path: '/bcc-bee-hives',
             component: view('default'),
             children: [{
                 path: '',
