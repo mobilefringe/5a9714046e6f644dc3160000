@@ -10,8 +10,11 @@
 		</div>
 		<div class="site_container">
 			<div class="row">
-				<div class="col-md-12 contact_contents">
+				<div class="col-md-6">
 					
+				</div>
+				<div class="col-md-6">
+				    <img src="https://www.mallmaverick.com/system/site_images/photos/000/041/211/original/image_(1).png?1532099367" alt="">	
 				</div>
 			</div>
 			<div class="padding_top_40"></div>
