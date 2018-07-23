@@ -9,7 +9,7 @@
 			</div>
 		</div>
 		<div class="site_container">
-			<div class="row">
+			<div class="row .margin_40">
 				<div class="col-md-6">
 				    <iframe width="100%" height="500px" src="https://www.youtube.com/embed/SQbqv4XmtRg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>	
 				</div>
@@ -17,6 +17,12 @@
 				    <img class="img-responsive" src="https://www.mallmaverick.com/system/site_images/photos/000/041/211/original/image_(1).png?1532099367" alt="">	
 				</div>
 			</div>
+			<div class="row">
+			    <div class="col-md-12">
+			        <div></div>
+			    </div>
+			</div>
+				
 			<div class="padding_top_40"></div>
 		</div>
 	</div>
