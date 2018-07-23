@@ -22,7 +22,6 @@
 			        <div></div>
 			    </div>
 			</div>
-				
 			<div class="padding_top_40"></div>
 		</div>
 	</div>
@@ -56,7 +55,7 @@
             methods: {
                 loadData: async function() {
                     try {
-                        let results = await Promise.all([,this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "repos"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/bramaleacitycentre-bees-at-the-hive.json"})]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
