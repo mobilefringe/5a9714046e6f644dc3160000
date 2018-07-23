@@ -44,6 +44,8 @@
                         this.pageBanner = temp_repo.images[0];
                     }
                     console.log(response)
+                    
+                    this.currentPage = response[1].data
                 });    
             },
             computed: {
