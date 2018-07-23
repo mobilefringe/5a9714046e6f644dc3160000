@@ -19,7 +19,7 @@
 			</div>
 			<div class="row">
 			    <div class="col-md-12">
-			        <div></div>
+			        <div v-if="currentPage" v-html="currentPage.body"></div>
 			    </div>
 			</div>
 			<div class="padding_top_40"></div>
@@ -43,8 +43,7 @@
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
-                    console.log(response)
-                    
+
                     this.currentPage = response[1].data
                 });    
             },
