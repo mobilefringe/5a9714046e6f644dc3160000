@@ -22,6 +22,20 @@
 			        <div v-if="para2" v-html="para2.body"></div>
 			    </div>
 			</div>
+			<div class="row margin_40">
+			    <div class="col-md-3"></div>
+			    <div class="col-md-3">
+			        <a href="" target="_blank">
+			            <img src="" alt="Google Play Store" />
+			        </a>
+			    </div>
+			    <div class="col-md-3">
+			        <a href="" target="_blank">
+			            <img src="" alt="Apple App Store" />
+			        </a>    
+			    </div>
+			    <div class="col-md-3"></div>
+			</div>
 			<div class="padding_top_40"></div>
 		</div>
 	</div>
