@@ -9,7 +9,7 @@
 		<div class="site_container">
 			<div class="row margin_40">
 			    <div class="col-md-12">
-			        <div v-if="currentPage" v-html="currentPage.body"></div>
+			        <div v-if="para1" v-html="para1.body"></div>
 			    </div>
 			</div>
 			<div class="row margin_40">
@@ -19,7 +19,7 @@
 		    </div>
 			<div class="row margin_40">
 			    <div class="col-md-12">
-			        <div v-if="currentPage" v-html="currentPage.body"></div>
+			        <div v-if="para2" v-html="para2.body"></div>
 			    </div>
 			</div>
 			<div class="padding_top_40"></div>
@@ -48,7 +48,7 @@
                     this.currentPage = response[1].data
                     
                     this.para1 = response[1].data;
-                    this.para2 = response[1].data.subpages
+                    // this.para2 = response[1].data.subpages
                 });    
             },
             computed: {
