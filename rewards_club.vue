@@ -27,12 +27,12 @@
 			<div class="row margin_40">
 			    <div class="col-md-3"></div>
 			    <div class="col-md-3">
-			        <a href="" target="_blank">
+			        <a href="https://play.google.com/store/apps/details?id=ca.wearecircus.bcc" target="_blank">
 			            <img class="rewards_badge" src="//codecloud.cdn.speedyrails.net/sites/5afb8d456e6f6436aa100000/image/png/1532614130000/google-play-badge.png" alt="Google Play Store" />
 			        </a>
 			    </div>
 			    <div class="col-md-3">
-			        <a href="" target="_blank">
+			        <a href="https://itunes.apple.com/ca/app/bramalea-city-centre/id1042094590?mt=8" target="_blank">
 			            <img class="rewards_badge" src="//codecloud.cdn.speedyrails.net/sites/5afb8d456e6f6436aa100000/image/gif/1532616284000/app_store.gif" alt="Apple App Store" />
 			        </a>    
 			    </div>
