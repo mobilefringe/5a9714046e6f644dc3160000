@@ -108,9 +108,7 @@
                     'findMetaDataByPath'
                 ]),
                 banners () {
-                    // _.forEach(this.$store.state.banners, function(val){
-                    //     val.image_url ="//codecloud.cdn.speedyrails.net/sites/5afb8d456e6f6436aa100000/image/jpeg/1524688316210/18-7189_BCC_MothersDay_WebSlider_FNL-03.jpg"
-                    // })
+                    console.log(this.$store.state.banners)
                     return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
                 },
                 feature_items () {
