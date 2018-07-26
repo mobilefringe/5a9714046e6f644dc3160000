@@ -12,6 +12,16 @@
 			        <div v-if="currentPage" v-html="currentPage.body"></div>
 			    </div>
 			</div>
+			<div class="row margin_40">
+			    <div class="col-md-12">
+			        <div class="contact_btn">Join Now</div>
+			    </div>
+		    </div>
+			<div class="row margin_40">
+			    <div class="col-md-12">
+			        <div v-if="currentPage" v-html="currentPage.body"></div>
+			    </div>
+			</div>
 			<div class="padding_top_40"></div>
 		</div>
 	</div>
@@ -23,8 +33,9 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
-                    currentPage: null,
-                    pageBanner: null
+                    pageBanner: null,
+                    para1: null,
+                    para2: null
                 }
             },
             created () {
@@ -33,7 +44,7 @@
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
-
+                    console.log(response)
                     this.currentPage = response[1].data
                 });    
             },
