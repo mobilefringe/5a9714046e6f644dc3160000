@@ -9,7 +9,7 @@
 		<div class="site_container">
 			<div class="row margin_40">
 			    <div class="col-md-12">
-			        <div class="https://place-bathurst.codecloudapp.com/" v-if="para1" v-html="para1.body"></div>
+			        <div class="center" v-if="para1" v-html="para1.body"></div>
 			    </div>
 			</div>
 			<div class="row margin_40">
