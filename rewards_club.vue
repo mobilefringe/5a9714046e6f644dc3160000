@@ -26,7 +26,13 @@
 		</div>
 	</div>
 </template>
-
+<style>
+    .contact_btn {
+        margin: 0 auto;
+        max-width: 250px;
+        display: block;
+    }
+</style>
 <script>
     define(["Vue", "vuex"], function(Vue, Vuex) {
         return Vue.component("rewards-component", {
