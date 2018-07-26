@@ -43,6 +43,9 @@
 	</div>
 </template>
 <style>
+    a:hover {
+        text-decoration: none;
+    }
     .contact_btn {
         margin: 0 auto;
         max-width: 250px;
