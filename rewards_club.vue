@@ -14,7 +14,9 @@
 			</div>
 			<div class="row margin_40">
 			    <div class="col-md-12">
-			        <div class="contact_btn">Join Now</div>
+			        <a href="https://bccfashionicity.com/site/register" target="_blank">
+			            <div class="contact_btn">Join Now</div>
+			        </a>
 			    </div>
 		    </div>
 			<div class="row margin_40">
