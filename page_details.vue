@@ -109,9 +109,6 @@
                         else if( _.includes(id, 'accessibilty')) {
                             temp_repo = this.findRepoByName('Accessibility Banner');
                         }
-                        else if( _.includes(id, 'fashionicity')) {
-                            temp_repo = this.findRepoByName('FashioniCity Banner');
-                        }
                         else if( _.includes(id, 'leasing')) {
                             temp_repo = this.findRepoByName('Leasing Banner');
                         }
