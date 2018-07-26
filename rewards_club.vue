@@ -44,9 +44,7 @@
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
-                    console.log(response)
-                    this.currentPage = response[1].data
-                    
+
                     this.para1 = response[1].data;
                     this.para2 = response[1].data.subpages[0];
                 });    
