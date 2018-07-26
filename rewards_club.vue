@@ -26,7 +26,7 @@
 			    <div class="col-md-3"></div>
 			    <div class="col-md-3">
 			        <a href="" target="_blank">
-			            <img src="//codecloud.cdn.speedyrails.net/sites/5afb8d456e6f6436aa100000/image/png/1532614130000/google-play-badge.png" alt="Google Play Store" />
+			            <img class="rewards_badge center-block" src="//codecloud.cdn.speedyrails.net/sites/5afb8d456e6f6436aa100000/image/png/1532614130000/google-play-badge.png" alt="Google Play Store" />
 			        </a>
 			    </div>
 			    <div class="col-md-3">
