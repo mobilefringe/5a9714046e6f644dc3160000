@@ -108,7 +108,6 @@
                     'findMetaDataByPath'
                 ]),
                 banners () {
-                    console.log(this.$store.state.banners)
                     return _.orderBy(this.$store.state.banners, ['position'], ['asc']);
                 },
                 feature_items () {
