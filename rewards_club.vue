@@ -33,7 +33,7 @@
 			    </div>
 			    <div class="col-md-3">
 			        <a href="" target="_blank">
-			            <img class="rewards_badge" src="" alt="Apple App Store" />
+			            <img class="rewards_badge" src="//codecloud.cdn.speedyrails.net/sites/5afb8d456e6f6436aa100000/image/gif/1532616284000/app_store.gif" alt="Apple App Store" />
 			        </a>    
 			    </div>
 			    <div class="col-md-3"></div>
