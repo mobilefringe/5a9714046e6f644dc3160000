@@ -113,6 +113,15 @@ define([], function() {
             }]
         },
         {
+            path: '/rewards_club',
+            component: view('default'),
+            children: [{
+                path: '',
+                component: view('rewards_club'),
+                name: 'rewardsClub'
+            }]
+        },
+        {
             path: '/contest',
             component: view('default'),
             children: [{
