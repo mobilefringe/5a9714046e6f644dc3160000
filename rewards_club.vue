@@ -3,9 +3,7 @@
 		<!-- for some reason if you do not put an outer container div this component template will not render -->
 		<div  v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
-				<div class="header_content">
-					<h1>{{$t("header.bees")}}</h1>
-				</div>
+				<div class="header_content"></div>
 			</div>
 		</div>
 		<div class="site_container">
