@@ -19,9 +19,9 @@
 			        </a>
 			    </div>
 		    </div>
-			<div class="row margin_40">
+			<div v-if="para2" class="row margin_40">
 			    <div class="col-md-12">
-			        <div class="center" v-if="para2" v-html="para2.body"></div>
+			        <div class="center" v-html="para2.body"></div>
 			    </div>
 			</div>
 			<div class="row margin_40">
