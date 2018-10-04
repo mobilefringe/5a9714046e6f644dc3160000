@@ -39,6 +39,10 @@
             {
                 "name": "header.bees",
                 "href": "/pages/bramaleacitycentre-bees-at-the-hive"
+            },
+            {
+                "name": "header.news",
+                "href": "/pages/bramaleacitycentre-news"
             }
         ]
     },
