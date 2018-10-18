@@ -138,6 +138,7 @@
                         });
                         
                         vm.accessibilityData =  _.sortBy(acc_data, [function(o) { return o.service_completed_date; }]).reverse();
+                        console.log("accessibilityData",accessibilityData)
                     });
                 }
             }
