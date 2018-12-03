@@ -80,6 +80,9 @@ p, ol, ul, td{
 a{
     cursor:pointer;
 }
+.inline_block {
+    display: inline-block;
+}
 .pointer {
     cursor:pointer;
 }
