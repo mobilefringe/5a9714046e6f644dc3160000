@@ -14,7 +14,7 @@
     				<div class="col-sm-6 hidden_phone text-right">
     					<div class="header_social">
     					    <i class="fa fa-search"></i>
-    					    <social-links></social-links>
+    					    <social-links class="inline_block"></social-links>
     					</div>
     					<router-link id="signup" to="/rewards_club">{{$t("header.sign_up")}}</router-link>
     					<a href="https://play.google.com/store/apps/details?id=ca.wearecircus.bcc" target="_blank">
