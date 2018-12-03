@@ -150,7 +150,11 @@
                 ...Vuex.mapGetters([
                     'property',
                     'timezone',
-                    'getTodayHours'
+                    'getTodayHours',
+                    'processedStores',
+                    'processedEvents',
+                    'processedPromos',
+                    'processedJobs'
                 ]),
                 searchList() {
                     var events = this.processedEvents;
