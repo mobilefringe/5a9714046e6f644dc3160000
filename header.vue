@@ -13,8 +13,8 @@
     				</div>
     				<div class="col-sm-6 hidden_phone text-right">
     					<div class="header_social">
-    					<div id="search_component_wrapper"></div>
-    				    	<div class="search_component_container" v-if="showSearch">
+    					<div id="search_component_wrapper">
+    					    <div class="search_component_container" v-if="showSearch">
                                 <search-component v-if="headerReady" :list="searchList" placeholder="Search" :suggestion-attribute="suggestionAttribute" :keys="keys" v-model="search_result" @select="onOptionSelect" :autocomplete="false" :minMatchCharLength="3" :tokenize="true" class="text-left">
                                     <template slot="item" scope="option" class="manual">
                                         <article class="media">
@@ -26,6 +26,8 @@
                                 </search-component>
                                 <!--<site-search-component site-id='www.rialtorenaissance.com' searchBoxSelector='#searchBox' themeColor='#8A251A' resultPageURL='https://dev-preview.rialtorenaissance.com/search-results' resultPageContainer="#searchResults"></site-search-component>-->
                             </div>
+    					</div>
+    				    	
     					    <span class="search_icon" @click="showSearch = !showSearch"> <i class="fa fa-search"></i></span>
     					    <social-links class="inline_block"></social-links>
     					</div>
