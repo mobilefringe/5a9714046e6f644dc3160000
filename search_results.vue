@@ -163,7 +163,18 @@
                     } else {
                         this.$router.push("/");
                     }
-                }
+                },
+                onOptionSelect(option) {
+                    console.log("option", option)
+                  this.$router.push({
+                    name: "search-results",
+                    query: { searchQuery: this.search_result },
+                    params: { results: option }
+                  });
+                  this.$nextTick(function() {
+                    this.search_result = "";
+                  });
+                },
             }
         });
     });
