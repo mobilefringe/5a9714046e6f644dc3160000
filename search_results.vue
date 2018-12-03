@@ -104,40 +104,7 @@
                         };
                     }
                     return pageBanner;
-                },
-                searchList() {
-                    var events = this.processedEvents;
-                    _.forEach(events, function (value, key) {
-                        if (_.includes(value.eventable_type, 'Property')) {
-                            value.is_store = false;
-                        } else {
-                            value.is_store = true;    
-                        }
-                    });
-                    var promos = this.processedPromos;
-                    _.forEach(promos, function (value, key) {
-                        if (_.includes(value.promotionable_type, 'Property')) {
-                            value.is_store = false;
-                        } else {
-                            value.is_store = true;    
-                        }
-                    });
-                    var jobs = this.processedJobs;
-                    _.forEach(jobs, function (value, key) {
-                        if (_.includes(value.jobable_type, 'Property')) {
-                            value.is_store = false;
-                        } else {
-                            value.is_store = true;    
-                        }
-                    });
-                    var stores = this.processedStores;
-                    _.forEach(stores, function (value, key) {
-                        value.is_store = true;    
-                    });
-                    
-                    var list = _.union( stores, events, promos, jobs );
-                    return list;
-                },
+                }
             },
             methods: {
                 truncated(string) {
@@ -163,18 +130,7 @@
                     } else {
                         this.$router.push("/");
                     }
-                },
-                onOptionSelect(option) {
-                    console.log("option", option)
-                  this.$router.push({
-                    name: "search-results",
-                    query: { searchQuery: this.search_result },
-                    params: { results: option }
-                  });
-                  this.$nextTick(function() {
-                    this.search_result = "";
-                  });
-                },
+                }
             }
         });
     });
