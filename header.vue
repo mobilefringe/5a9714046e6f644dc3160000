@@ -127,7 +127,7 @@
                     show_mobile_menu: false,
                     property_logo: "//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1527017774000/BCC-logo.png",
                     menu_items: MenuItems,
-                    showSearch: fase
+                    showSearch: false
                 }
             },
             watch: {
@@ -173,7 +173,18 @@
                             document.getElementById(item.id).classList.remove("show");
                         }
                     });
-                }
+                },
+                onOptionSelect(option) {
+                    console.log("option", option)
+                  this.$router.push({
+                    name: "search-results",
+                    query: { searchQuery: this.search_result },
+                    params: { results: option }
+                  });
+                  this.$nextTick(function() {
+                    this.search_result = "";
+                  });
+                },
             }
             
         });
