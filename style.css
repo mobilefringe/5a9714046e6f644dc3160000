@@ -688,6 +688,8 @@ strong, .bold {
   }
   
 }
+
+}
 #searchResults {
   margin: 30px auto;
   .result_link {
@@ -725,8 +727,6 @@ strong, .bold {
     margin-bottom: 30px;
   }
 }
-}
-
 .nav_container {
     position: relative;
     z-index: 999;
