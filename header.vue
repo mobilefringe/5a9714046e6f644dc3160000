@@ -13,7 +13,7 @@
     				</div>
     				<div class="col-sm-6 hidden_phone text-right">
     					<div class="header_social">
-    					    <i class="fa fa-search"></i>
+    					    <span> <i class="fa fa-search"></i></span>
     					    <social-links class="inline_block"></social-links>
     					</div>
     					<router-link id="signup" to="/rewards_club">{{$t("header.sign_up")}}</router-link>
