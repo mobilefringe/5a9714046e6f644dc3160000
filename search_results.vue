@@ -114,6 +114,7 @@
                     });
                 },
                 updateResults() {
+                    
                     if (
                         this.$route.query.searchQuery !== null &&
                         this.$route.query.searchQuery !== undefined &&
@@ -126,6 +127,7 @@
                         ) {
                             this.searchResults = this.$route.params.results;
                             this.searchQuery = this.$route.query.searchQuery;
+                            console.log( this.searchResults)
                         }
                     } else {
                         this.$router.push("/");
