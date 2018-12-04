@@ -141,7 +141,9 @@
                     property_logo: "//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1527017774000/BCC-logo.png",
                     menu_items: MenuItems,
                     showSearch: false,
-                    search_result: null
+                    search_result: null,
+                    suggestionAttribute: "name",
+                    keys: ["name", "description", "tags", "keywords", "store.name"]
                 }
             },
             watch: {
