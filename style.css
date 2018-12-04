@@ -622,6 +622,8 @@ strong, .bold {
     }
     .solid_bg{
         background-color: $primary;
+        position: relative;
+        z-index: 1;
     }
     #search_component_wrapper {
     //   position: absolute;
