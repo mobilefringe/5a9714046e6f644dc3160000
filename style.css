@@ -1991,40 +1991,10 @@ strong, .bold {
             font-size:0.9rem;
         }
         z-index:9999999;
-        // overflow:hidden;
-        // overflow-y:scroll;
-        // max-height: 400px;
-        // MAX-WIDTH:100%;
         height: auto;
         max-height: 400px;
         overflow-x: hidden!important;
         overflow-y:scroll!important;
-        
-        // position:absoulte;
-        // top: 100%;
-        // left:0;
-        // z-index:1000;
-        // min-width:160px;
-        // padding: 5px 0;
-        // margin:0;
-        // width:100%;
-        // overflow-y:scroll;
-        // border: 1px solid rgba(0,0,0,.26);
-        // box-shadow: 0 3px 6px 0 rgba(0,0,0,0.15);
-        // border-top:none;
-        // border-radius: 0 0 4px 4px;
-        // text-align:left;
-        // list-style: none;
-        // background:#fff;
-        // li>a {
-        //     display: block;
-        //     padding: 3px 20px;
-        //     clear: both;
-        //     color: #333;
-        //     white-space: nowrap;
-        //     font-weight:400;
-        //     line-height:1.428;
-        // }
     }
 }
 
