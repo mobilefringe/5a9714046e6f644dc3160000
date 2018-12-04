@@ -29,7 +29,7 @@
         					</div>
         				</transition>
     					    <div class="search_icon inline_block solid_bg" @click="showSearch = !showSearch"> <i class="fa fa-search"></i></div>
-    					    <social-links class="inline_block solid_bg"></social-links>
+    					    <social-links class="inline_block "></social-links>
     					</div>
     					<router-link id="signup" to="/rewards_club">{{$t("header.sign_up")}}</router-link>
     					<a href="https://play.google.com/store/apps/details?id=ca.wearecircus.bcc" target="_blank">
