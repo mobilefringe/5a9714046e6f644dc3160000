@@ -666,7 +666,7 @@ strong, .bold {
           box-shadow: none;
           transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
           color: #fff;
-          border-radius: 11px !important;
+          border-radius: 0px !important;
           width: 100%;
           &::placeholder {
                 font-family: "ProximaNova-Bold", "Helvetica", "Arial", sans-serif;
