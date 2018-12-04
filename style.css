@@ -669,20 +669,20 @@ strong, .bold {
           border-radius: 11px !important;
           width: 100%;
           &::placeholder {
-            font-family: "ProximaNova-Bold", "Helvetica", "Arial", sans-serif;
-            color: #FFF;
-        }
-        
-        &::-ms-input-placeholder {
-            font-family: "ProximaNova-Bold", "Helvetica", "Arial", sans-serif;
-            color: #FFF;
-        }
-        
-        &::-moz-placeholder {
-            font-family: "ProximaNova-Bold", "Helvetica", "Arial", sans-serif;
-            color: #FFF;
-            opacity: 1;
-        }
+                font-family: "ProximaNova-Bold", "Helvetica", "Arial", sans-serif;
+                color: #FFF;
+            }
+            
+            &::-ms-input-placeholder {
+                font-family: "ProximaNova-Bold", "Helvetica", "Arial", sans-serif;
+                color: #FFF;
+            }
+            
+            &::-moz-placeholder {
+                font-family: "ProximaNova-Bold", "Helvetica", "Arial", sans-serif;
+                color: #FFF;
+                opacity: 1;
+            }
         }
         #siteSearchBtn {
           cursor: pointer;
