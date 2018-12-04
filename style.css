@@ -665,7 +665,7 @@ strong, .bold {
           background: #ffffff !important;
           box-shadow: none;
           transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
-          color: #555555;
+          color: #fff;
           border-radius: 11px !important;
           width: 100%;
         }
@@ -682,7 +682,7 @@ strong, .bold {
         background-color: transparent !important;
         box-shadow: none;
         transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
-        color: #555555;
+        color: #fff;
         border-radius: 11px !important;
         // width: 125px;
       }
