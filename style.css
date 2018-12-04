@@ -630,6 +630,7 @@ strong, .bold {
       top:-3px;
       .search_component_container {
         position: relative;
+        top: -5px;
         // border-bottom: 1px solid #000;
         p.control.has-icon.has-icon-right {
           margin-bottom: 0;
