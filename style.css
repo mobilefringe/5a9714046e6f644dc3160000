@@ -623,9 +623,9 @@ strong, .bold {
     #search_component_wrapper {
     //   position: absolute;
     //   right: 30px;
-      margin-top: 10px;
-      margin-bottom: 20px;
-      margin-right:30px;
+    //   margin-top: 10px;
+    //   margin-bottom: 20px;
+    //   margin-right:30px;
       transition: all ease 0.5s;
       .search_component_container {
         position: relative;
