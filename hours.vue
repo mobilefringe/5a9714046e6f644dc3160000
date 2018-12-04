@@ -26,34 +26,7 @@
                         <div class="padding_top_20"></div>
                         <h3 class="hours_heading text-left">{{$t("hours_page.holiday_hours")}}</h3>
                         <div id="holidays_hours_container" class="hours_container" v-if="currentPage" v-html="currentPage.body"></div>
-                        <!--<div id="holidays_hours_container" class="hours_container">-->
-                        <!--    BCC is open on the following Statutory Holidays 11am – 6pm <br/>-->
-                        <!--    <ul>-->
-                        <!--        <li>-->
-                        <!--            New Year’s Day-->
-                        <!--        </li>-->
-                        <!--        <li>-->
-                        <!--            Family Day-->
-                        <!--        </li>-->
-                        <!--        <li>-->
-                        <!--            Victoria Day-->
-                        <!--        </li>-->
-                        <!--        <li>-->
-                        <!--            Canada Day-->
-                        <!--        </li>-->
-                        <!--        <li>-->
-                        <!--            Labour Day-->
-                        <!--        </li>-->
-                        <!--        <li>-->
-                        <!--            Thanksgiving Day-->
-                        <!--        </li>-->
-                        <!--    </ul>-->
-                            
-                        <!--    *Not all retailers may open during stat holidays. Please verify holiday hours with individual stores.-->
-                        <!--</div>-->
-                        
                         <div class="padding_top_20"></div>
-                        
                         <h3 class="hours_heading text-left">{{$t("hours_page.holiday_closures")}}</h3>
                         <div id="closed_hours_container" class="hours_container">
                             <div class="hours_div text-left" v-for="hour in closeHolidays">
@@ -64,7 +37,6 @@
                                 </span>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
                 <div class="padding_top_40"></div>
@@ -78,7 +50,7 @@
     }
 </style>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta"], function(Vue, Vuex, moment, tz, VueMoment, Meta) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment"], function(Vue, Vuex, moment, tz, VueMoment) {
         Vue.use(Meta);
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
@@ -94,8 +66,6 @@
                     this.pageBanner = this.findRepoByName('Hours Banner').images[0];
                     
                     this.currentPage = response[1].data;
-                    
-                    console.log("this.currentPage", this.currentPage)
                 });
             },
             computed: {
@@ -129,7 +99,7 @@
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
-                },
+                }
             }
         });
     });
