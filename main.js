@@ -36,6 +36,7 @@ require.config({
         'mapplic' : 'https://preview-mmvue.codecloudapp.com/mapplic',
         'hammer' : 'https://codecloud.cdn.speedyrails.net/sites/59bac7db6e6f644f22ba0000/text/javascript/1484859750000/hammer.min',
         'mapplic-map' : 'https://preview-mmvue.codecloudapp.com/mapplic.vue?noext',
+        
         'vue-simple-spinner': 'https://cdn.jsdelivr.net/npm/vue-simple-spinner@1.2.8/dist/vue-simple-spinner.min',
         'vue-lazy-load': 'https://unpkg.com/vue-lazyload/vue-lazyload',
         'masonry' : 'https://cdnjs.cloudflare.com/ajax/libs/masonry/4.0.0/masonry.pkgd.min',
