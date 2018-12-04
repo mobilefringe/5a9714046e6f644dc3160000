@@ -28,7 +28,7 @@
                                 </div>
         					</div>
         				</transition>
-    					    <span class="search_icon solid_bg" @click="showSearch = !showSearch"> <i class="fa fa-search"></i></span>
+    					    <div class="search_icon solid_bg" @click="showSearch = !showSearch"> <i class="fa fa-search"></i></div>
     					    <social-links class="inline_block solid_bg"></social-links>
     					</div>
     					<router-link id="signup" to="/rewards_club">{{$t("header.sign_up")}}</router-link>
