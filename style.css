@@ -620,6 +620,9 @@ strong, .bold {
             text-align: center;
         }    
     }
+    .solid_bg{
+        background-color: $primary;
+    }
     #search_component_wrapper {
     //   position: absolute;
     //   right: 30px;
