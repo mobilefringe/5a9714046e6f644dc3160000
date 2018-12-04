@@ -673,19 +673,19 @@ strong, .bold {
           cursor: pointer;
         }
       }
-      #searchBox {
-        // height: 25px !important;
-        // margin: 0 -25px 0 0 !important;
-        padding: 0 10px !important;
-        // font: 11px  Arial, sans-serif !important;
-        border: none !important;
-        background-color: transparent !important;
-        box-shadow: none;
-        transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
-        color: #fff;
-        border-radius: 11px !important;
-        // width: 125px;
-      }
+    //   #searchBox {
+    //     // height: 25px !important;
+    //     // margin: 0 -25px 0 0 !important;
+    //     padding: 0 10px !important;
+    //     // font: 11px  Arial, sans-serif !important;
+    //     border: none !important;
+    //     background-color: transparent !important;
+    //     box-shadow: none;
+    //     transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    //     color: #fff;
+    //     border-radius: 11px !important;
+    //     // width: 125px;
+    //   }
       
     }
 }
