@@ -51,7 +51,6 @@
 </style>
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment"], function(Vue, Vuex, moment, tz, VueMoment) {
-        Vue.use(Meta);
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
             props:['locale'],
