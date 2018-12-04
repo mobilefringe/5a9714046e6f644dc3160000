@@ -657,8 +657,8 @@ strong, .bold {
         }
         .search-component .input,
         .sub_input_text {
-          height: 25px !important;
-          margin: 0 -25px 0 0 !important;
+        //   height: 25px !important;
+        //   margin: 0 -25px 0 0 !important;
           padding: 0 10px !important;
           font: 11px Avenir-Book, Arial, sans-serif !important;
           border: none !important;
