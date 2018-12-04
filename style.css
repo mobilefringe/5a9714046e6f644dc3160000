@@ -674,7 +674,7 @@ strong, .bold {
         }
       }
       #searchBox {
-        height: 25px !important;
+        // height: 25px !important;
         margin: 0 -25px 0 0 !important;
         padding: 0 10px !important;
         font: 11px  Arial, sans-serif !important;
@@ -688,7 +688,6 @@ strong, .bold {
       }
       
     }
-
 }
 #searchResults {
   margin: 30px auto;
