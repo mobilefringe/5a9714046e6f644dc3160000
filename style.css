@@ -660,7 +660,7 @@ strong, .bold {
           height: 25px !important;
         //   margin: 0 -25px 0 0 !important;
           padding: 0 10px !important;
-          font-size: 11px;
+          font-size: 0.9rem;
           border: none !important;
           background-color: transparent !important;
           box-shadow: none;
