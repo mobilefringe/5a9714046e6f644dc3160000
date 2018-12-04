@@ -80,7 +80,7 @@
   },
   "hours_page" : {
     "hours" : "Hours",
-    "reg_hours" : "Regular Shopping Hours",
+    "reg_hours" : "Extended Shopping Hours",
     "holiday_hours" : "Holiday Hours",
     "holiday_closures" : "Holiday Closures"
   },
