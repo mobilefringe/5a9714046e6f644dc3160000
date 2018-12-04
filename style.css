@@ -629,7 +629,7 @@ strong, .bold {
       transition: all ease 0.5s;
       .search_component_container {
         position: relative;
-        border-bottom: 1px solid #000;
+        // border-bottom: 1px solid #000;
         p.control.has-icon.has-icon-right {
           margin-bottom: 0;
         }
