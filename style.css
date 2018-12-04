@@ -621,7 +621,7 @@ strong, .bold {
         }    
     }
     .solid_bg{
-        background-color: $primary;
+        background-color: $accent;
         position: relative;
         z-index: 1;
     }
