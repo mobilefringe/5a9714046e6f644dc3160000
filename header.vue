@@ -13,6 +13,7 @@
     				</div>
     				<div class="col-sm-8 hidden_phone text-right">
     					<div class="header_social">
+    					<transition name="custom-classes-transition" enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
         					<div id="search_component_wrapper" class="inline_block" v-if="showSearch">
         					    <div class="search_component_container" >
                                     <search-component :list="searchList" placeholder="Search" :suggestion-attribute="suggestionAttribute" :keys="keys" v-model="search_result" @select="onOptionSelect" :autocomplete="false" :minMatchCharLength="3" :tokenize="true" class="text-left">
@@ -26,6 +27,7 @@
                                     </search-component>
                                 </div>
         					</div>
+        				<</transition>
     					    <span class="search_icon" @click="showSearch = !showSearch"> <i class="fa fa-search"></i></span>
     					    <social-links class="inline_block"></social-links>
     					</div>
