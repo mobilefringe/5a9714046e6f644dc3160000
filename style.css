@@ -662,7 +662,7 @@ strong, .bold {
           padding: 0 10px !important;
           font: 11px Avenir-Book, Arial, sans-serif !important;
           border: none !important;
-          background: #ffffff !important;
+          background-color: transparent !important;
           box-shadow: none;
           transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
           color: #fff;
