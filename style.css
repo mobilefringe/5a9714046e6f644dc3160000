@@ -750,6 +750,7 @@ strong, .bold {
   }
   .result_logo{
       border: 1px solid #D8D8D8; 
+      padding:20px;
   }
   .result_container_row {
     margin-bottom: 30px;
@@ -3458,7 +3459,7 @@ button[disabled].contest_btn {
         display: inline-block;
     }
     #searchResults .search_result_content h3 {
-        margin-top: 20px'';
+        margin-top: 20px;
     }
     .footer_logos {
         margin-bottom: 0;
