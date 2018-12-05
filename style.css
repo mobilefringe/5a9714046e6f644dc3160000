@@ -732,7 +732,7 @@ strong, .bold {
   .search_result_content {
     font-family: Avenir-Book;
     h3 {
-      font-family: Georgia-Italic;
+      font-family: $font_family;
     }
     p {
       margin-bottom: 10px;
