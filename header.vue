@@ -148,9 +148,6 @@
                     keys: ["name", "description", "tags", "keywords", "store.name"]
                 }
             },
-            created(){
-              console.log("this.$router.options.routes", this.$router.options.routes)  
-            },
             watch: {
                 $route: function() {
                     // hide dropdown when route changes
