@@ -234,7 +234,8 @@
                     this.$router.push({
                         name: "search-results",
                         query: { searchQuery: this.search_result },
-                        params: { results: option }
+                        params: { results: option },
+                        props: {locale: this.locale}
                     });
                     this.$nextTick(function() {
                         this.search_result = "";
