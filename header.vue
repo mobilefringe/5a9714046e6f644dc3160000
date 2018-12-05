@@ -236,7 +236,7 @@
                         query: { searchQuery: this.search_result },
                         params: { results: option }
                     });
-                        this.$nextTick(function() {
+                    this.$nextTick(function() {
                         this.search_result = "";
                     });
                 },
