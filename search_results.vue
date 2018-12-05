@@ -73,6 +73,7 @@
                     
                 }
             },
+            props: ['locale']
             beforeRouteUpdate(to, from, next) {
                 this.$nextTick(function() {
                     this.updateResults();
