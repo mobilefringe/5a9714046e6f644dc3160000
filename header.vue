@@ -230,7 +230,7 @@
                     });
                 },
                 onOptionSelect(option) {
-                    console.log("option", option)
+                    ga('send', 'event', 'Search Keywords', 'search', this.search_result);
                   this.$router.push({
                     name: "search-results",
                     query: { searchQuery: this.search_result },
