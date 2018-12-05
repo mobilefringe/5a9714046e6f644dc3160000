@@ -100,7 +100,7 @@
                         pageBanner = temp_repo.images[0];
                     } else {
                         pageBanner = {
-                            image_url: "//codecloud.cdn.speedyrails.net/sites/5b5f2c136e6f644fcb5b0100/image/jpeg/1529532304000/insidebanner2.jpg"
+                            image_url: ""
                         };
                     }
                     return pageBanner;
