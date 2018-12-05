@@ -127,7 +127,7 @@
                             temp_promo.push(value);
                         }
                     });
-                    temp_promo = _.sortBy(temp_promo, ['start_date', 'end_date']);
+                    temp_promo = _.sortBy(temp_promo, ['created_at', 'start_date']).reverse();
                     return temp_promo;
                 },
             },
