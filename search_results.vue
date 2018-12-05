@@ -3,15 +3,15 @@
         <div v-if="dataLoaded" v-cloak>
             <div v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<!--http://via.placeholder.com/1920x300-->
-			<div class="site_container">
-				<div class="header_content">
-					<h1 v-if="locale=='en-ca'">Seach Results</h1>
-					<h1 v-else>Seach Results</h1>
-					<h2 style="display:none;">Scroll to  view page details</h2>
-					<h3 style="display:none;">View page details</h3>
-				</div>
-			</div>
-		</div>
+    			<div class="site_container">
+    				<div class="header_content">
+    					<h1 v-if="locale=='en-ca'">Seach Results</h1>
+    					<h1 v-else>Seach Results</h1>
+    					<h2 style="display:none;">Scroll to  view page details</h2>
+    					<h3 style="display:none;">View page details</h3>
+    				</div>
+    			</div>
+    		</div>
             <div class="main_container margin_30">
         		<div class="page_container text-left" v-if="searchResults && searchResults.length > 0" id="searchResults">
                     <p class="search_result_title">Found {{searchResults.length}} results matching "{{searchQuery}}"</p>
