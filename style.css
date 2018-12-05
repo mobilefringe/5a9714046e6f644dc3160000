@@ -625,6 +625,9 @@ strong, .bold {
         position: relative;
         z-index: 1;
     }
+    .search_icon {
+        margin-right: -5px;
+    }
     #search_component_wrapper {
     //   position: absolute;
     //   right: 30px;
