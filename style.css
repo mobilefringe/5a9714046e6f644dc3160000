@@ -730,7 +730,7 @@ strong, .bold {
     color: $secondary;
   }
   .search_result_content {
-    font-family: Avenir-Book;
+    font-family: $font_family;
     h3 {
       font-family: $font_family;
     }
