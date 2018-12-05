@@ -2,7 +2,6 @@
 	<div>
         <div v-if="dataLoaded" v-cloak>
             <div v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
-			<!--http://via.placeholder.com/1920x300-->
     			<div class="site_container">
     				<div class="header_content">
     					<h1 v-if="locale=='en-ca'">Seach Results</h1>
