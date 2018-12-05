@@ -127,7 +127,6 @@
                         ) {
                             this.searchResults = this.$route.params.results;
                             this.searchQuery = this.$route.query.searchQuery;
-                            console.log( " this.searchResults",this.searchResults)
                         }
                     } else {
                         this.$router.push("/");
