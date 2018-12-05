@@ -96,7 +96,7 @@
                 pageBanner() {
                     var pageBanner = null;
                     var temp_repo = this.findRepoByName('Pages Banner');
-                    if (temp_repo != null) {
+                    if (temp_repo != null && temp_repo.images) {
                         pageBanner = temp_repo[0];
                     } else {
                         pageBanner = {
