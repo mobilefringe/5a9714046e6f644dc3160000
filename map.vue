@@ -54,6 +54,7 @@
 	#zoom_container .landmarks .mark .text {
         background-color: #fff;
         border: 1px solid;
+        color: #000;
 	}
 </style>
 <script>
