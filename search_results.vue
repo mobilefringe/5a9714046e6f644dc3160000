@@ -52,7 +52,7 @@
                         </div>                
                     </div>
         		</div>
-                <div class="page_container text-left col-md-12" v-else> 
+                <div class="page_container text-left col-md-12" v-else style="padding-bottom:20px"> 
                     <h3>Sorry, there are no results that match your query. Please try again.</h3>
                 </div>
             </div>
