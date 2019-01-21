@@ -3467,47 +3467,47 @@ button[disabled].contest_btn {
         margin-top: 20px;
     }
     /*** mobile search ****/ 
-  .mobile_search_icon{
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        top: 24px;
-        right: 60px;
-        .fa-search{
-            font-size: 1.5rem;
-            position: relative;
-            vertical-align: super;
-        }
-  }
-  .mobile_search_container{
-      background-color: #fff;
-      position: absolute;
-      top: 80px;
-      padding: 15px;
-      transition: all ease 0.5s;
-      .search-component{
-          display: inline-block;
-        //   width: auto;
-          p{
-              margin-bottom:0;
-          }
-          .input {
-                text-align: left;
-                height: auto;
-                // width:80%;
-                border: none;
-                border-bottom: 1px solid #000;
-                outline: none;
-                box-shadow: none;
-          }
-      }
-      #closeSiteSearch{
-            cursor: pointer;
+      .mobile_search_icon{
+            width: 30px;
             height: 30px;
-            position: relative;
-            top: 5px;
+            position: absolute;
+            top: 24px;
+            right: 60px;
+            .fa-search{
+                font-size: 1.5rem;
+                position: relative;
+                vertical-align: super;
+            }
       }
-  }
+      .mobile_search_container{
+          background-color: #fff;
+          position: absolute;
+          top: 80px;
+          padding: 15px;
+          transition: all ease 0.5s;
+          .search-component{
+              display: inline-block;
+            //   width: auto;
+              p{
+                  margin-bottom:0;
+              }
+              .input {
+                    text-align: left;
+                    height: auto;
+                    // width:80%;
+                    border: none;
+                    border-bottom: 1px solid #000;
+                    outline: none;
+                    box-shadow: none;
+              }
+          }
+          #closeSiteSearch{
+                cursor: pointer;
+                height: 30px;
+                position: relative;
+                top: 5px;
+          }
+      }
   .fixed_menu.smallerHeader {
      .mobile_search_container{
         margin-top: 0px;
