@@ -105,6 +105,20 @@
     			</div>
     		</div>
     	</div>
+    	<transition name="custom-classes-transition" enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
+			<div class="mobile_search_container col-xs-12" v-if="showMobileSearch">
+			    <search-component :list="searchList" placeholder="Search" :suggestion-attribute="suggestionAttribute" :keys="keys" v-model="search_result" @select="onOptionSelect" :autocomplete="false" :minMatchCharLength="3" :tokenize="true" class="text-left inline_block col-xs-10">
+                    <template slot="item" scope="option" class="manual">
+                        <article class="media">
+                        <p>
+                            {{ option.data.name }}
+                        </p>
+                        </article>
+                    </template>
+                </search-component>
+                <i id="closeSiteSearch" class="closeSiteSearch fa fa-times col-xs-2" @click="showMobileSearch = false"></i>
+			</div>
+		</transition>
     	<div class="menu_bar hidden_phone">
     		<div class="site_container">
     			<div class="nav_container hidden_phone">
