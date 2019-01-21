@@ -247,7 +247,12 @@
                     });
                 },
                 onOptionSelect(option) {
-                    ga('send', 'event', 'Search Keywords', 'search', this.search_result);
+                    try{
+                        ga('send', 'event', 'Search Keywords', 'search', this.search_result);
+                    }
+                    catch (err){
+                        console.log("cannot send search data to GA tracking")
+                    }
                     this.$router.push({
                         name: "search-results",
                         query: { searchQuery: this.search_result },
@@ -255,6 +260,7 @@
                     });
                     this.$nextTick(function() {
                         this.search_result = "";
+                        this.showMobileSearch = false;
                     });
                 },
             }
