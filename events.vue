@@ -32,7 +32,7 @@
 								<router-link :to="'/events/'+ promo.slug" class="event_learn_more pull-left" :aria="promo.name">
 								    {{$t("events_page.read_more")}} <i class="fa fa-angle-right" aria-hidden="true"></i>
 							    </router-link>
-								<social-sharing :url="shareURL(promo.slug)" :title="promo.name" :description="promo.body" :quote="_.truncate(promo.description, {'length': 99})" twitter-user="BCCstyle" :media="promo.image_url" inline-template >
+								<social-sharing :url="shareURL(promo.slug)" :title="promo.name" :description="promo.description" :quote="_.truncate(promo.description, {'length': 99})" twitter-user="BCCstyle" :media="promo.image_url" inline-template >
 									<div class="blog-social-share pull_right">
 										<div class="social_share">
 											<network network="facebook">
