@@ -140,7 +140,7 @@
                 return {
                     dataloaded: false,
                     promoBanner: null,
-                    paginate: ['events']
+                    paginate: ['news']
                 }
             },
             created() {
