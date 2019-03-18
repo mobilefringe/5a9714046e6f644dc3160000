@@ -160,7 +160,7 @@
                     'processedEvents',
                     'findRepoByName',
                 ]),
-                blogs() {
+                news() {
                     var news = this.findBlogByName("News").posts;
                     var vm = this;
                     var temp_news = [];
