@@ -173,7 +173,7 @@
                             }
                             value.body_short = _.truncate(value.body, { 'length': 99, 'separator': ' ' });
                             
-                            temp_blog.push(value);
+                            temp_news.push(value);
                         }
                     });
                     news = _.reverse(_.sortBy(temp_news, function (o) { return o.publish_date }));
