@@ -177,7 +177,7 @@
                         }
                     });
                     news = _.reverse(_.sortBy(temp_news, function (o) { return o.publish_date }));
-                    return blog
+                    return news
                 },
             },
             methods: {
