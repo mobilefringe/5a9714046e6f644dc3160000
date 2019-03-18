@@ -13,7 +13,7 @@
 		</div>
 		<div class="site_container page_content">
 			<div id="events_container" v-if="news.length > 0">
-				<paginate name="news" v-if="events" :list="events" class="paginate-list margin-60" :per="4">
+				<paginate name="news" v-if="news" :list="events" class="paginate-list margin-60" :per="4">
 					<div class="row event_container" v-for="(promo,index) in paginated('events')" :class="{ 'last': index === (paginated('events').length - 1) }">
 						<div class="col-sm-6 col-md-4 event_image_container">
 							<!--<router-link :to="'/events/'+ promo.slug" class="event_learn_more">-->
