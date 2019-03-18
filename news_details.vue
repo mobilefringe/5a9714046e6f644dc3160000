@@ -122,7 +122,7 @@
                     }
                 },
                 shareURL(slug) {
-                    var share_url = "https://www.bramaleacitycentre.com/posts/" + slug
+                    var share_url = "https://www.bramaleacitycentre.com/news/" + slug
                     return share_url
                 }
             }
