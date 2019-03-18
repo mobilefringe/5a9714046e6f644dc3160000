@@ -159,6 +159,8 @@
                     'timezone',
                     'processedEvents',
                     'findRepoByName',
+                    'news',
+                    'findBlogByName'
                 ]),
                 news() {
                     var news = this.findBlogByName("News").posts;
