@@ -191,7 +191,7 @@ define([], function() {
             },
             {
                 path: ':id',
-                component: view('post_details'),
+                component: view('news_details'),
                 name: 'newsDetails',
                 props: true
             }]
