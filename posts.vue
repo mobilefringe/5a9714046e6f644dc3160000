@@ -63,7 +63,6 @@
         return Vue.component("news-component", {
             template: template, // the variable template will be injected
             data: function () {
-                console.log(posts)
                 return {
                     dataloaded: false,
                     posts: [],
@@ -119,7 +118,6 @@
                 loadData: async function () {
                     try {
                         let results = await Promise.all([this.$store.dispatch("getData", "blogs")]);
-                        console.log(results)
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
