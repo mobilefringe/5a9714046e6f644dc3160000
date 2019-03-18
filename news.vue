@@ -181,6 +181,7 @@
                     news = _.reverse(_.sortBy(temp_news, function (o) { return o.publish_date }));
                     return news
                 },
+                console.log(news)
             },
             methods: {
                 loadData: async function() {
