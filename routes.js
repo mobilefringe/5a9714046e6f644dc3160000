@@ -190,10 +190,10 @@ define([], function() {
                 name: 'news'
             },
             {
-                    path: ':id',
-                    component: view('post_details'),
-                    name: 'postDetails',
-                    props: true
+                path: ':id',
+                component: view('post_details'),
+                name: 'newsDetails',
+                props: true
             }]
         },
         {
