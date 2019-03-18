@@ -160,31 +160,24 @@
                     'processedEvents',
                     'findRepoByName',
                 ]),
-                events() {
+                blogs() {
+                    var news = this.findBlogByName("News").posts;
                     var vm = this;
-                    var temp_promo = [];
-                    _.forEach(this.processedEvents, function(value, key) {
+                    var temp_news = [];
+                    _.forEach(blog, function(value, key) {
                         today = moment().tz(vm.timezone);
-                        webDate = moment(value.show_on_web_date).tz(vm.timezone);
+                        webDate = moment(value.publish_date).tz(vm.timezone);
                         if (today >= webDate) {
-                            value.description_short = _.truncate(value.description, {
-                                'length': 150
-                            });
-                            value.description_short_2 = _.truncate(value.description_2, {
-                                'length': 150
-                            });
-                            if (value.store != null && value.store != undefined && _.includes(value.store.store_front_url_abs, 'missing')) {
-                                value.store.store_front_url_abs = vm.property.default_logo_url;
+                            if (_.includes(value.image_url, 'missing')) {
+                                value.image_url = "//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/jpeg/1527006352000/bccblogplaceholder.jpg";
                             }
-                            else if (value.store == null || value.store == undefined) {
-                                value.store = {};
-                                value.store.store_front_url_abs =  vm.property.default_logo_url;
-                            }
-                            temp_promo.push(value);
+                            value.body_short = _.truncate(value.body, { 'length': 99, 'separator': ' ' });
+                            
+                            temp_blog.push(value);
                         }
                     });
-                    temp_promo = _.sortBy(temp_promo, ['created_at', 'start_date']).reverse();
-                    return temp_promo;
+                    news = _.reverse(_.sortBy(temp_news, function (o) { return o.publish_date }));
+                    return blog
                 },
             },
             methods: {
