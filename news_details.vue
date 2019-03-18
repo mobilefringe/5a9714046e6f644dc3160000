@@ -1,22 +1,23 @@
 <template>
-    <div v-if="dataloaded">
-        <div class="margin_60"></div>
-		<div class="site_container inside_page_content page_content" v-if="currentPost">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="post_details_image">
-                        <img :src="currentPost.image_url" :alt="currentPost.title" />
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="margin_60"></div>
-                <div class="col-md-8">
-                    <div class="post_details_container right_border">
-                        <h2 class="post_heading caps">{{ currentPost.title }}</h2>
-                        <p class="post_dates">{{ currentPost.publish_date | moment("MMM DD, YYYY", timezone) }}</p>
-                        <social-sharing :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="_.truncate(currentPost.description, {'length': 99})" twitter-user="BCCstyle" :media="currentPost.image_url" inline-template >
-							<div class="blog-social-share">
+	<div class="event_dets_container" v-if="currentEvent">
+		<div class="page_header" v-if="eventBanner" v-bind:style="{ backgroundImage: 'url(' + eventBanner.image_url + ')' }">
+			<div class="site_container">
+				<div class="header_content caps">
+					<h1>{{$t("events_page.events")}}</h1>
+					<h2 style="display:none;">Scroll to  view event details</h2>
+				</div>
+			</div>
+		</div>
+		<div class="site_container">
+			<div class="row">
+				<div class="col-sm-12 promo_image_container text-left">
+					<router-link to="/events"><i class="fa fa-angle-left"></i> &nbsp; {{$t("events_page.back_to_events")}}</router-link>
+					<h3 class="promo_name" style="margin: 20px auto 0px;"  v-if="locale=='en-ca'">{{currentEvent.name}}</h3>
+					<h3 class="promo_name" style="margin: 20px auto 0px;"  v-else>{{currentEvent.name_2}}</h3>
+					<div class="row">
+						<p class="promo_div_date pull-left">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
+						<social-sharing :url="shareURL(currentEvent.slug)" :title="currentEvent.name" :description="currentEvent.description" :quote="_.truncate(currentEvent.description, {'length': 99})" twitter-user="BCCstyle" :media="currentEvent.image_url" inline-template >
+							<div class="blog-social-share pull-right" style="margin: 15px auto;">
 								<div class="social_share">
 									<network network="facebook">
 										<i class="fa fa-facebook social_icons" aria-hidden="true"></i>
@@ -27,104 +28,123 @@
 								</div>
 							</div>
 						</social-sharing>
-                        <div class="margin_60 post_text" v-html="currentPost.html_body"></div>
-                        <router-link to="/posts">
-                            <button class="contact_btn">Back to Blog</button>
-                        </router-link>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="previous_post_container">
-                        <h3 class="previous_post_title">Previous Posts</h3>
-                        <ul v-if="relatedPosts.length > 0">
-                            <li v-for="post in relatedPosts">
-                                <router-link :to="{ name: 'postDetails', params: { id: post.slug }}" class="" :aria="post.title">
-					                <h4>{{ post.title }}</h4>
-				                </router-link>
-                            </li>
-                        </ul>
-                        <p v-else>No previous posts</p>
-                    </div>   
-                </div>
-            </div>
-        </div>
-    </div>
+					</div>
+					<div class="col-sm-12 no_padding text-center">
+						<img v-if="!_.includes(currentEvent.image_url, 'missing')" v-lazy="currentEvent.image_url" class="image" :alt="currentEvent.name"/>
+						<div class="text-left promo_description">
+							<p v-if="locale=='en-ca'" v-html="currentEvent.rich_description"></p>
+							<p v-else v-html="currentEvent.rich_description_2"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
+
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-social-sharing"], function (Vue, Vuex, moment, tz, VueMoment, SocialSharing) {
-        return Vue.component("post-details-component", {
+    define(['Vue', 'vuex', 'moment', 'vue-lazy-load'], function(Vue, Vuex, moment, VueLazyload) {
+        Vue.use(VueLazyload);
+        return Vue.component("event-details-component", {
             template: template, // the variable template will be injected,
-            props: ['id'],
-            data: function () {
+            data: function() {
                 return {
-                    dataloaded: false,
-                    currentPost: null
+                    currentEvent: null,
+                    storeEvents : null,
+                    storeHours : null,
+                    eventBanner : null
                 }
             },
-            created() {
+            props:['id', 'locale'],
+            beforeRouteUpdate(to, from, next) {
+                this.currentEvent = this.findEventBySlug(to.params.id);
+                    if (this.currentEvent === null || this.currentEvent === undefined){
+                        this.$router.replace('/');
+                    }
+                next();
+            },
+            created(){
                 this.loadData().then(response => {
-                    this.updateCurrentBlog(this.id);
-                    this.dataloaded = true;
+                    this.updatecurrentEvent(this.id);
+                    var temp_repo = this.findRepoByName('Events Banner');
+                    if(temp_repo) {
+                        this.eventBanner = temp_repo.images[0];
+                    }
+                    this.events = this.event;
                 });
             },
             watch: {
-                $route: function () {
-                    this.updateCurrentBlog(this.$route.params.id);
-                },
-                currentPost: function () {
-                    if(this.currentPost != null){
-                        if (_.includes(this.currentPost.image_url, 'missing')) {
-                            this.currentPost.image_url = "//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/jpeg/1527006352000/bccblogplaceholder.jpg";
+                currentEvent : function (){
+                    if(this.currentEvent != null) {
+                        if (this.currentEvent.store != null && this.currentEvent.store != undefined && _.includes(this.currentEvent.store.store_front_url_abs, 'missing')) {
+                            this.currentEvent.store.store_front_url_abs = this.property.default_logo_url;
                         }
+                        else if (this.currentEvent.store == null || this.currentEvent.store == undefined) {
+                            this.currentEvent.store = {};
+                            this.currentEvent.store.store_front_url_abs =  this.property.default_logo_url;
+                        }
+                        var vm = this;
+                        var temp_event = [];
+                        var current_id =_.toNumber(this.currentEvent.id);
+                        _.forEach(this.currentEvent.store.event, function(value, key) {
+                            if(_.toNumber(value) != current_id){
+                                var current_event = vm.findEventById(value);
+                                current_event.description_short = _.truncate(current_event.description, {'length': 70});
+                                temp_event.push(current_event);
+                            }
+                        });
+                        this.storeEvents = temp_event;
                     }
-                } 
+                    if(this.currentEvent.store) {
+                        var storeHours = [];
+                        var vm = this;
+                        _.forEach(this.currentEvent.store.store_hours, function (value, key) {
+                            var hour = vm.findHourById(value);
+                            if(hour.day_of_week === 0){
+                                hour.order = 7;
+                            }
+                            else {
+                                hour.order = hour.day_of_week;
+                            }
+                            storeHours.push();
+                        });
+                        this.storeHours = _.sortBy(storeHours, [function(o) { return o.order; }]);;
+                    }
+                }
             },
             computed: {
                 ...Vuex.mapGetters([
                     'property',
+                    'processedEents',
+                    'findEventBySlug',
+                    'findEventById',
                     'timezone',
-                    'blogs',
-                    'findBlogByName',
-                    'findBlogPostBySlug'
+                    'findRepoByName',
+                    'findHourById'
                 ]),
-                relatedPosts () {
-                    var blog_posts = _.reverse(_.orderBy(this.findBlogByName("Bramalea City Centre").posts, function (o) { return o.publish_date }));
-
-                    var current_post_date = this.currentPost.publish_date
-                    var current_post_id = this.currentPost.id
-
-                    var prev_posts = [];
-                    _.forEach(blog_posts, function(value, key) {
-                        if (value.id != current_post_id) {
-                            if (value.publish_date <= current_post_date){
-                                prev_posts.push(value); 
-                            }
-                        }
-                    });
-                    prev_posts = _.slice(prev_posts, 0, 3)
-                    return prev_posts
-                }
+                allEvents() {
+                    return this.processedEvents;
+                },
             },
             methods: {
-                loadData: async function () {
+                updatecurrentEvent (id) {
+                    this.currentEvent = this.findEventBySlug(id);
+                    if (this.currentEvent === null || this.currentEvent === undefined){
+                        this.$router.replace('/');
+                    }
+                },
+                loadData: async function() {
                     try {
-                        let results = await Promise.all([this.$store.dispatch("getData", "blogs")]);
-                        return results;
+                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
+                        let results = await Promise.all([this.$store.dispatch("getData", "events"), this.$store.dispatch("getData", "repos")]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
                 },
-                updateCurrentBlog(id) {
-                    var blogName = "News";
-                    this.currentPost = this.findBlogPostBySlug(blogName, id);
-                    if (this.currentPost === null || this.currentPost === undefined) {
-                        this.$router.replace({ name: '404' });
-                    }
+                shareURL(slug){
+                    var share_url = "http://bramaleacitycentre.com/events/" + slug;
+                    return share_url;
                 },
-                shareURL(slug) {
-                    var share_url = "https://www.bramaleacitycentre.com/news/" + slug
-                    return share_url
-                }
             }
         });
     });
