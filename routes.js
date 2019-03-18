@@ -188,6 +188,12 @@ define([], function() {
                 path: '',
                 component: view('news'),
                 name: 'news'
+            },
+            {
+                    path: ':id',
+                    component: view('post_details'),
+                    name: 'postDetails',
+                    props: true
             }]
         },
         {
