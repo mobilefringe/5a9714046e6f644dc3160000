@@ -164,7 +164,7 @@
                     var news = this.findBlogByName("News").posts;
                     var vm = this;
                     var temp_news = [];
-                    _.forEach(blog, function(value, key) {
+                    _.forEach(news, function(value, key) {
                         today = moment().tz(vm.timezone);
                         webDate = moment(value.publish_date).tz(vm.timezone);
                         if (today >= webDate) {
