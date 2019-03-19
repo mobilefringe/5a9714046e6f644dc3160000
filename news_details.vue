@@ -11,24 +11,30 @@
             </div>
             <div class="row">
                 <div class="margin_60"></div>
-                <div class="col-md-12">
-                    <div class="post_details_container">
-                        <router-link to="/events"><i class="fa fa-angle-left"></i> &nbsp; {{$t("events_page.back_to_events")}}</router-link>
-                        <h2 class="post_heading caps">{{ currentPost.title }}</h2>
-                        <p class="post_dates">{{ currentPost.publish_date | moment("MMM DD, YYYY", timezone) }}</p>
-                        <social-sharing :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="_.truncate(currentPost.description, {'length': 99})" twitter-user="BCCstyle" :media="currentPost.image_url" inline-template >
-							<div class="blog-social-share">
-								<div class="social_share">
-									<network network="facebook">
-										<i class="fa fa-facebook social_icons" aria-hidden="true"></i>
-									</network>
-									<network network="twitter">
-										<i class="fa fa-twitter social_icons" aria-hidden="true"></i>
-									</network>
-								</div>
-							</div>
-						</social-sharing>
-                        <div class="margin_60 post_text" v-html="currentPost.html_body"></div>
+                    <div class="col-md-12">
+                        <div class="post_details_container">
+                            <router-link to="/events"><i class="fa fa-angle-left"></i> &nbsp; {{$t("events_page.back_to_events")}}</router-link>
+                            <h2 class="post_heading caps">{{ currentPost.title }}</h2>
+                            <p class="post_dates">{{ currentPost.publish_date | moment("MMM DD, YYYY", timezone) }}</p>
+                            <social-sharing :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="_.truncate(currentPost.description, {'length': 99})" twitter-user="BCCstyle" :media="currentPost.image_url" inline-template >
+    							<div class="blog-social-share">
+    								<div class="social_share">
+    									<network network="facebook">
+    										<i class="fa fa-facebook social_icons" aria-hidden="true"></i>
+    									</network>
+    									<network network="twitter">
+    										<i class="fa fa-twitter social_icons" aria-hidden="true"></i>
+    									</network>
+    								</div>
+    							</div>
+    						</social-sharing>
+                            <div class="col-sm-12 no_padding text-center">
+        						<img v-if="!_.includes(currentPost.image_url, 'missing')" v-lazy="currentEvent.image_url" class="image" :alt="currentEvent.name"/>
+        						<div class="text-left promo_description">
+        							<p v-if="locale=='en-ca'" v-html="currentEvent.rich_description"></p>
+        							<p v-else v-html="currentEvent.rich_description_2"></p>
+    						</div>
+    					</div>
                     </div>
                 </div>
             </div>
