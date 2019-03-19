@@ -185,16 +185,17 @@ define([], function() {
             component: view('default'),
             redirect: '/',
             children: [{
-                path: '',
-                component: view('news'),
-                name: 'news'
-            },
-            {
-                path: ':id',
-                component: view('news_details'),
-                name: 'newsDetails',
-                props: true
-            }]
+                    path: '',
+                    component: view('news'),
+                    name: 'news'
+                },
+                {
+                    path: ':id',
+                    component: view('news_details'),
+                    name: 'newsDetails',
+                    props: true
+                }
+            ]
         },
         {
             path: '/restaurants',
