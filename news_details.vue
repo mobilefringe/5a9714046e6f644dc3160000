@@ -31,8 +31,8 @@
                             <div class="col-sm-12 no_padding text-center">
         						<img v-if="!_.includes(currentPost.image_url, 'missing')" v-lazy="currentPost.image_url" class="image" :alt="currentPost.name"/>
         						<div class="text-left promo_description">
-        							<p v-if="locale=='en-ca'" v-html="currentEvent.rich_description"></p>
-        							<p v-else v-html="currentEvent.rich_description_2"></p>
+        							<p v-if="locale=='en-ca'" v-html="currentPost.rich_description"></p>
+        							<p v-else v-html="currentPost.rich_description_2"></p>
     						</div>
     					</div>
                     </div>
