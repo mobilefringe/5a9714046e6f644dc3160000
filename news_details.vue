@@ -111,6 +111,7 @@
                     if (this.currentPost === null || this.currentPost === undefined) {
                         this.$router.replace({ name: '404' });
                     }
+                    console.log(this.currentPost)
                 },
                 shareURL(slug) {
                     var share_url = "https://www.bramaleacitycentre.com/news/" + slug
