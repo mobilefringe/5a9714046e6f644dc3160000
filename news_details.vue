@@ -102,8 +102,8 @@
                     }
                 },
                 updateCurrentBlog(id) {
-                    var blogName = "News";
-                    this.currentPost = this.findBlogPostBySlug(blogName, id);
+                    var newsName = "News";
+                    this.currentPost = this.findBlogPostBySlug(newsName, id);
                     if (this.currentPost === null || this.currentPost === undefined) {
                         this.$router.replace({ name: '404' });
                     }
