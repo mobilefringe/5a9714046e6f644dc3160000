@@ -11,7 +11,7 @@
             </div>
             <div class="row">
                 <div class="margin_60"></div>
-                <div class="col-md-8">
+                <div class="col-md-12">
                     <div class="post_details_container right_border">
                         <h2 class="post_heading caps">{{ currentPost.title }}</h2>
                         <p class="post_dates">{{ currentPost.publish_date | moment("MMM DD, YYYY", timezone) }}</p>
