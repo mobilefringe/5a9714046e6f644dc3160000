@@ -13,7 +13,7 @@
                 <div class="margin_60"></div>
                 <div class="col-md-12">
                     <div class="post_details_container">
-                        <router-link to="/events"><i class="fa fa-angle-left"></i> &nbsp; {{$t("news_page.back_to_news")}}</router-link>
+                        <router-link to="/events"><i class="fa fa-angle-left"></i> &nbsp; {{$t("events_page.back_to_events")}}</router-link>
                         <h2 class="post_heading caps">{{ currentPost.title }}</h2>
                         <p class="post_dates">{{ currentPost.publish_date | moment("MMM DD, YYYY", timezone) }}</p>
                         <social-sharing :url="shareURL(currentPost.slug)" :title="currentPost.title" :description="currentPost.body" :quote="_.truncate(currentPost.description, {'length': 99})" twitter-user="BCCstyle" :media="currentPost.image_url" inline-template >
