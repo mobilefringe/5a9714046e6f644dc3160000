@@ -42,7 +42,7 @@
     </div>
 </template>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-social-sharing"], function (Vue, Vuex, moment, tz, VueMoment, SocialSharing) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-social-sharing" 'vue-lazy-load'], function (Vue, Vuex, moment, tz, VueMoment, SocialSharing, VueLazyload) {
         return Vue.component("post-details-component", {
             template: template, // the variable template will be injected,
             props: ['id'],
