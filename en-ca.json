@@ -74,7 +74,7 @@
   },
   "news_page": {
     "news" : "News",
-    "read_more" : "View News Details",
+    "read_more" : "View Post Details",
     "no_event_message" : "There are no News at this time. Please check back soon.",
     "back_to_events" : "Back to News"
   },
