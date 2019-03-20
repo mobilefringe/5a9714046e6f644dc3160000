@@ -2569,7 +2569,7 @@ strong, .bold {
     padding: 0;
     li {
         list-style:none;
-            padding: 0;
+        padding: 0;
     }
 }
 .store_dets_title {
@@ -3046,7 +3046,7 @@ button[disabled].contest_btn {
 	color: #000;
 }
 .post_text {
-    font-size: 1.25rem;
+    font-size: 1.25rem !important;
     line-height: 1.5;
 }
 .post_read_more {
