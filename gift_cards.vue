@@ -19,14 +19,17 @@
         <div class="site_container">
             <div class="all_hours_container">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <h3 class="hours_heading text-left" >{{$t("hours_page.reg_hours")}}</h3>
-                        <div id="hours_container" class="hours_container">
-                            <div class="hours_div text-left" v-for="hour in hours">
-                                <span>{{hour.day_of_week | moment("dddd", timezone)}} : </span>
-                                <span>{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
-                            </div>
-                        </div>
+                    <div>
+                      <b-button v-b-toggle.collapse1 variant="primary">Toggle Collapse</b-button>
+                      <b-collapse id="collapse1" class="mt-2">
+                        <b-card>
+                          <p class="card-text">Collapse contents Here</p>
+                          <b-button v-b-toggle.collapse1_inner size="sm">Toggle Inner Collapse</b-button>
+                          <b-collapse id="collapse1_inner" class="mt-2">
+                            <b-card>Hello!</b-card>
+                          </b-collapse>
+                        </b-card>
+                      </b-collapse>
                     </div>
                 </div>
                 <div class="row">
