@@ -37,7 +37,7 @@
 								<span v-else class="col-xs-7 text-left">{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
 							</li>
 						</ul>
-						<div class="col-xs-12" v-if="currentStore.has_giftcard">
+						<div class="col-xs-12 promo_description" v-if="currentStore.has_giftcard">
 						    <p class="col-xs-5 gift_card text-left">This store accepts BCC gift cards</p>
 						    <img class="col-xs-5 bitmap"src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1553632445000/CardICON@2x.png" />
 						</div>
