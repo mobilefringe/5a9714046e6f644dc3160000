@@ -2653,7 +2653,7 @@ strong, .bold {
                 margin-top: 10px;
             }
         }
-        .gift_card_banner_image img {
+        .gift_card_banner_image {
             max-width: 465px;
             max-height: 427px;
         }
