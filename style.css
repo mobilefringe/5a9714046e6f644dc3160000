@@ -2600,6 +2600,10 @@ strong, .bold {
     }
 }
 
+.gift_card_container {
+    margin: 30px auto 50px;
+}
+
 .gift_card {
     height: 40px;	
     width: 174px;	
