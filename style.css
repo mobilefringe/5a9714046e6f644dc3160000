@@ -2650,6 +2650,7 @@ strong, .bold {
             }
             p {
                 margin-top: 10px;
+                width: 690px;
             }
         }
         .gift_card_banner_image img {
