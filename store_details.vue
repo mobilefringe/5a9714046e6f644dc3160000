@@ -39,7 +39,7 @@
 						</ul>
 						<div class="col-xs-12 gift_card_container" v-if="currentStore.has_giftcard">
 						    <p class="col-xs-5 gift_card text-left">This store accepts BCC gift cards</p>
-						    <div class="col-xs-7 gift_card_image text-right">
+						    <div class="col-xs-7 gift_card_image text-left">
     						    <img class="bitmap" src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1553632445000/CardICON@2x.png" />
 						    </div>
 						</div>
