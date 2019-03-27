@@ -2645,6 +2645,8 @@ strong, .bold {
             padding: 0;
             h1 {
                 margin: 0;
+                height: 150px;
+                width: 690px;
             }
             p {
                 margin-top: 10px;
