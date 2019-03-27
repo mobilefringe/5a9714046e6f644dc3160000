@@ -2636,9 +2636,12 @@ strong, .bold {
     height: 600px;
     .gift_card_title {
         width: 60%;
+        h1 {
+            margin: 0;
+        }
     }
-    h1 {
-        margin: 0;
+    .gift_card_image {
+        width: 40%;
     }
 }
     
