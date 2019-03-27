@@ -2646,6 +2646,7 @@ strong, .bold {
         .gift_card_title {
             color: #fff;
             padding: 0;
+            width: 690px;
             h1 {
                 margin: 0;
                 height: 150px;
