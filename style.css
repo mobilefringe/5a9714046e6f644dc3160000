@@ -2637,7 +2637,7 @@ strong, .bold {
     .gift_card_container {
         position: relative;
         height: 600px;
-        transform: translateY(-50%);
+        transform: translateY(-35%);
         top: 50%;
         margin: 0;
         .gift_card_title {
