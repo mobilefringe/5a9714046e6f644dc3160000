@@ -2604,12 +2604,17 @@ strong, .bold {
     height: 40px;	
     width: 174px;	
     color: #000000;	
-    font-family: "Proxima Nova";	
+    font-family: "ProximaNova-Regular","Helvetica","Arial",sans-serif;	
     font-size: 15px;	
     font-weight: bold;	
     letter-spacing: 0.62px;	
     line-height: 20px;
 }
+.bitmap {	
+    height: 64.9px;	
+    width: 100px;
+}
+    
 .details_header{
     margin-top: 0;
     margin-bottom: 10px;
