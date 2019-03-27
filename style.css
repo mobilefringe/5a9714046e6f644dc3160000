@@ -2640,6 +2640,9 @@ strong, .bold {
         transform: translateY(-30%);
         top: 50%;
         margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         .gift_card_title {
             color: #fff;
             padding: 0;
