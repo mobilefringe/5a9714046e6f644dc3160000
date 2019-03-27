@@ -3,7 +3,10 @@
         <div class="page_header gift_card_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content caps">
-					<h1 class="">Looking for the perfect gift?</h1>
+				    <div>
+					    <h1 class="">Looking for the perfect gift?</h1>
+				        <p>Your Friends, Family and Clients will enjoy Shopping at over 300 stores with the Bramalea Centre Gift Card.</p>
+				    </div>
 					<div>
 					    <img src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1553632445000/CardICON@2x.png" />
 					</div>
