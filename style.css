@@ -2611,6 +2611,7 @@ strong, .bold {
     line-height: 20px;
     text-transform: uppercase;
     text-align: left;
+    padding: 0;
 }
 .bitmap {	
     height: 64.9px;	
