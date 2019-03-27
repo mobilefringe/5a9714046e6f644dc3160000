@@ -2610,10 +2610,10 @@ strong, .bold {
     letter-spacing: 0.62px;	
     line-height: 20px;
 }
-.bitmap {	
-    height: 64.9px;	
-    width: 100px;
-}
+// .bitmap {	
+//     height: 64.9px;	
+//     width: 100px;
+// }
     
 .details_header{
     margin-top: 0;
