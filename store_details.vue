@@ -39,7 +39,7 @@
 						</ul>
 						<div v-if="currentStore.has_giftcard">
 						    <h4>This store accepts BCC gift cards</h4>
-						    <img src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1553632445000/CardICON.png"
+						    <img src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1553632445000/CardICON.png" />
 						</div>
 					</div>
 				</div>
