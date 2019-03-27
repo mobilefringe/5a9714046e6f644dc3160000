@@ -2,8 +2,8 @@
     <div v-if="pageBanner"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="page_header gift_card_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
-				<div class="header_content caps">
-					<h1 class="caps">Looking for the perfect gift?</h1>
+				<div class="gift_card_content caps">
+					<h1>Looking for the perfect gift?</h1>
 					<h2 style="display:none;">Scroll to  view hours</h2>
 				</div>
 			</div>
