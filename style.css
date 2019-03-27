@@ -2614,7 +2614,7 @@ strong, .bold {
 }
 .bitmap {	
     height: 64.9px;	
-    width: 35%;
+    max-width: 35%;
 }
     
 .details_header{
