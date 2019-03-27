@@ -3,7 +3,7 @@
         <div class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content caps">
-					<h1>{{$t("hours_page.hours")}}</h1>
+					<h1></h1>
 					<h2 style="display:none;">Scroll to  view hours</h2>
 				</div>
 			</div>
@@ -12,7 +12,7 @@
             <div class="all_hours_container">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h3 class="hours_heading text-left" >{{$t("hours_page.reg_hours")}}</h3>
+                        <h3 class="hours_heading text-left" ></h3>
                         <div id="hours_container" class="hours_container">
                             <div class="hours_div text-left" v-for="hour in hours">
                                 <span>{{hour.day_of_week | moment("dddd", timezone)}} : </span>
