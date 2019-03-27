@@ -2634,6 +2634,9 @@ strong, .bold {
 
 .gift_card_content {
     height: 600px;
+    h1 {
+        margin: 0;
+    }
 }
     
 .details_header{
