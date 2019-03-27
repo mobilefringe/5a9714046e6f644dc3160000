@@ -2610,6 +2610,7 @@ strong, .bold {
     letter-spacing: 0.62px;	
     line-height: 20px;
     text-transform: uppercase;
+    text-align: left;
 }
 .bitmap {	
     height: 64.9px;	
