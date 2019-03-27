@@ -2638,6 +2638,7 @@ strong, .bold {
         position: relative;
         height: 600px;
         transform: translateY(-50%);
+        top: 50%;
         .gift_card_title {
             width: 60%;
             h1 {
