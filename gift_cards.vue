@@ -4,7 +4,7 @@
 			<div class="site_container">
 				<div class="gift_card_content caps">
 				    <div class="gift_card_container">
-    				    <div class="col-md-7 gift_card_title">
+    				    <div class="col-md-6 gift_card_title">
     					    <h1 class="">Looking for the perfect gift?</h1>
     				        <p>Your Friends, Family and Clients will enjoy Shopping at over 300 stores with the Bramalea Centre Gift Card.</p>
     				    </div>
