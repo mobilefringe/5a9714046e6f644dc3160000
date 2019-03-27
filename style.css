@@ -2651,8 +2651,8 @@ strong, .bold {
             }
         }
         .gift_card_banner_image img {
-            width: 465px;
-            height: 427px;
+            max-width: 465px;
+            max-height: 427px;
         }
     }
 }
