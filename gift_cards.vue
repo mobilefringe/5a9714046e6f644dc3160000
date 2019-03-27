@@ -2,8 +2,8 @@
     <div v-if="pageBanner"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="page_header gift_card_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
-				<div class="header_content caps">
-				    <div>
+				<div class="gift_card_content caps">
+				    <div class="col-">
 					    <h1 class="">Looking for the perfect gift?</h1>
 				        <p>Your Friends, Family and Clients will enjoy Shopping at over 300 stores with the Bramalea Centre Gift Card.</p>
 				    </div>
