@@ -2627,6 +2627,10 @@ strong, .bold {
     max-width: 100%;
     max-height: 100%;
 }
+
+.gift_card_header {
+    height: 600px;
+}
     
 .details_header{
     margin-top: 0;
