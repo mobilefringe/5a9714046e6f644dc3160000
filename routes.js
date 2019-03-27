@@ -198,6 +198,16 @@ define([], function() {
             ]
         },
         {
+            path: '/gift_cards',
+            component: view('default'),
+            redirect: '/',
+            children: [{
+                path: '',
+                component: view('gift_cards'),
+                name: 'giftCards'
+            }]
+        },
+        {
             path: '/restaurants',
             component: view('default'),
             redirect: '/',
