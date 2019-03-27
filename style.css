@@ -2645,6 +2645,9 @@ strong, .bold {
             h1 {
                 margin: 0;
             }
+            p {
+                margin-top: 10px;
+            }
         }
         .gift_card_image {
             width: 40%;
