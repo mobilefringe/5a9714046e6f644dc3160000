@@ -90,7 +90,7 @@
             },
             created() {
                 this.loadData().then(response => {
-                    this.pageBanner = this.findRepoByName('Hours Banner').images[0];
+                    this.pageBanner = this.findRepoByName('Gift Cards Banner').images[0];
                 });
                 
             },
