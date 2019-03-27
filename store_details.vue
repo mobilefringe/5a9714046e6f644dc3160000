@@ -37,6 +37,9 @@
 								<span v-else class="col-xs-7 text-left">{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
 							</li>
 						</ul>
+						<div v-if="">
+						    
+						</div>
 					</div>
 				</div>
 				<hr class="green_hr visible_phone">
@@ -157,6 +160,7 @@
                         storeHours.push(hour);
                     });
                     this.storeHours = _.sortBy(storeHours, [function(o) { return o.order; }]);
+                    console.log(this.currentStore)
                 }
             },
             
