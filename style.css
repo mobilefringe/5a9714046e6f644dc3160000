@@ -2611,10 +2611,10 @@ strong, .bold {
     line-height: 20px;
     text-transform: uppercase;
 }
-// .bitmap {	
-//     height: 64.9px;	
-//     width: 100px;
-// }
+.bitmap {	
+    height: 64.9px;	
+    max-width: 40%;
+}
     
 .details_header{
     margin-top: 0;
