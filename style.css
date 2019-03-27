@@ -2599,6 +2599,17 @@ strong, .bold {
         
     }
 }
+
+.gift_card {
+    height: 40px;	
+    width: 174px;	
+    color: #000000;	
+    font-family: "Proxima Nova";	
+    font-size: 15px;	
+    font-weight: bold;	
+    letter-spacing: 0.62px;	
+    line-height: 20px;
+}
 .details_header{
     margin-top: 0;
     margin-bottom: 10px;
