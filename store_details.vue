@@ -38,7 +38,7 @@
 							</li>
 						</ul>
 						<div class="col-xs-12" v-if="currentStore.has_giftcard">
-						    <p class="gift_card">This store accepts BCC gift cards</p>
+						    <p class="col-xs-6 gift_card">This store accepts BCC gift cards</p>
 						    <img src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1553632445000/CardICON.png" />
 						</div>
 					</div>
