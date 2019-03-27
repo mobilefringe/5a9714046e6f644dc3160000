@@ -2620,7 +2620,7 @@ strong, .bold {
 }
 .bitmap {	
     height: 64.9px;	
-    width: 200px;
+    max-width: 100%;
 }
     
 .details_header{
