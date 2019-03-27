@@ -2656,6 +2656,7 @@ strong, .bold {
         .gift_card_banner_image {
             max-width: 465px;
             max-height: 427px;
+            margin: 0;
         }
     }
 }
