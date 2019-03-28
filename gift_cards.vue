@@ -102,7 +102,7 @@
             data: function() {
                 return {
                     pageBanner : null,
-                    showCollapse : true
+                    menu_items: MenuItems
                 }
             },
             created() {
