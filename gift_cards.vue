@@ -20,15 +20,15 @@
             <div class="all_hours_container">
                 <div class="row">
                     <div>
-                      <!-- Using modifiers -->
-                      <b-button v-b-toggle.collapse2 class="m-1">Toggle Collapse</b-button>
-                    
-                      <!-- Using value -->
-                      <b-button v-b-toggle="'collapse2'" class="m-1">Toggle Collapse</b-button>
-                    
-                      <!-- Element to collapse -->
-                      <b-collapse id="collapse2">
-                        <b-card>I am collapsible content!</b-card>
+                      <b-button v-b-toggle.collapse1 variant="primary">Toggle Collapse</b-button>
+                      <b-collapse id="collapse1" class="mt-2">
+                        <b-card>
+                          <p class="card-text">Collapse contents Here</p>
+                          <b-button v-b-toggle.collapse1_inner size="sm">Toggle Inner Collapse</b-button>
+                          <b-collapse id="collapse1_inner" class="mt-2">
+                            <b-card>Hello!</b-card>
+                          </b-collapse>
+                        </b-card>
                       </b-collapse>
                     </div>
                 </div>
