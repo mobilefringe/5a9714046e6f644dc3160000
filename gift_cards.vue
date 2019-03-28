@@ -89,9 +89,9 @@
     }
 </style>
 <script>
-    define(["Vue", "vuex", "vue-meta", 'bootstrap-vue'], function(Vue, Vuex, Meta, Collapse) {
+    define(["Vue", "vuex", "vue-meta", 'bootstrap-vue'], function(Vue, Vuex, Meta, BootStrapVue) {
         Vue.use(Meta);
-        Vue.use(Collapse)
+        Vue.use(BootStrapVue)
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
             props:['locale'],
