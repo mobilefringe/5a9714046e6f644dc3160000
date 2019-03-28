@@ -19,19 +19,18 @@
         <div class="site_container">
             <div class="all_hours_container">
                 <div class="row">
-                  <div>
-                    <b-button
-                      @click="showCollapse = !showCollapse"
-                      :class="showCollapse ? 'collapsed' : null"
-                      aria-controls="collapse4"
-                      :aria-expanded="showCollapse ? 'true' : 'false'"
-                    >
-                      Toggle Collapse
-                    </b-button>
-                    <b-collapse class="mt-2" v-model="showCollapse" id="collapse4">
-                      <b-card>I should start open!</b-card>
-                    </b-collapse>
-                  </div>
+                    <div>
+                      <!-- Using modifiers -->
+                      <b-button v-b-toggle.collapse2 class="m-1">Toggle Collapse</b-button>
+                    
+                      <!-- Using value -->
+                      <b-button v-b-toggle="'collapse2'" class="m-1">Toggle Collapse</b-button>
+                    
+                      <!-- Element to collapse -->
+                      <b-collapse id="collapse2">
+                        <b-card>I am collapsible content!</b-card>
+                      </b-collapse>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12 ">
@@ -90,16 +89,15 @@
     }
 </style>
 <script>
-    define(["Vue", "vuex", "vue-meta", 'bootstrap-vue'], function(Vue, Vuex, Meta, BootstrapVue) {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'bootstrap-vue'], function(Vue, Vuex, moment, tz, VueMoment, Meta, Collapse) {
         Vue.use(Meta);
-        Vue.use(BootstrapVue)
+        Vue.use(Collapse)
         return Vue.component("hours-component", {
             template: template, // the variable template will be injected
             props:['locale'],
             data: function() {
                 return {
-                    pageBanner : null,
-                    showCollapse: true
+                    pageBanner : null
                 }
             },
             created() {
