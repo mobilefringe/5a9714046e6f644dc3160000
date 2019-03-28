@@ -2668,6 +2668,7 @@ strong, .bold {
 
 #collapseButton {
     height: 36px;
+    width: 100%;
 }
     
 .details_header{
