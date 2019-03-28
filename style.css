@@ -2681,6 +2681,11 @@ strong, .bold {
         text-align: left;
     }
 }
+
+.gift_card_list {
+    width: 283px;
+    padding: 10px;
+}
     
 .details_header{
     margin-top: 0;
