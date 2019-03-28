@@ -19,18 +19,19 @@
         <div class="site_container">
             <div class="all_hours_container">
                 <div class="row">
-                    <div>
-                      <b-button v-b-toggle.collapse1 variant="primary">Toggle Collapse</b-button>
-                      <b-collapse id="collapse1" class="mt-2">
-                        <b-card>
-                          <p class="card-text">Collapse contents Here</p>
-                          <b-button v-b-toggle.collapse1_inner size="sm">Toggle Inner Collapse</b-button>
-                          <b-collapse id="collapse1_inner" class="mt-2">
-                            <b-card>Hello!</b-card>
-                          </b-collapse>
-                        </b-card>
-                      </b-collapse>
-                    </div>
+                                   <div>
+                    <b-button
+                      @click="showCollapse = !showCollapse"
+                      :class="showCollapse ? 'collapsed' : null"
+                      aria-controls="collapse4"
+                      :aria-expanded="showCollapse ? 'true' : 'false'"
+                    >
+                      Toggle Collapse
+                    </b-button>
+                    <b-collapse class="mt-2" v-model="showCollapse" id="collapse4">
+                      <b-card>I should start open!</b-card>
+                    </b-collapse>
+                  </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12 ">
