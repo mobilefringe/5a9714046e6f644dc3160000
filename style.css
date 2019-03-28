@@ -2680,7 +2680,7 @@ strong, .bold {
         max-width: 1170px;
         text-align: left;
         text-transform: uppercase;
-        color: black;
+        color: #000;
     }
 }
 
