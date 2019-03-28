@@ -2679,14 +2679,14 @@ strong, .bold {
         margin: 0 auto;
         max-width: 1170px;
         text-align: left;
-        text-transform: uppercase;
-        color: #000;
     }
 }
 
 .gift_card_list {
     width: 283px;
     padding: 10px;
+    text-transform: uppercase;
+    color: #000;
 }
     
 .details_header{
