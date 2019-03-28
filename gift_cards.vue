@@ -118,6 +118,7 @@
                     'getPropertyHours',
                     'getPropertyHolidayHours',
                     'findRepoByName'
+                    'processedStores'
                 ]),
                 hours () {
                     return this.getPropertyHours;
