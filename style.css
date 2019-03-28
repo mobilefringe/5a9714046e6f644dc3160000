@@ -2671,6 +2671,7 @@ strong, .bold {
     font-weight: bold;
     font-size: 32px;
     padding: 10px;
+    border-bottom: 1px solid #000;
 }
     
 .details_header{
