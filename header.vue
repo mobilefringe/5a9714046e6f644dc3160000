@@ -74,7 +74,6 @@
                                                 </b-collapse>
                                             </b-card>
     							        </div>
-    							        
     							    </li>
     							</ul>
     							<div class="small_hr"></div>
