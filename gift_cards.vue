@@ -98,7 +98,8 @@
             props:['locale'],
             data: function() {
                 return {
-                    pageBanner : null
+                    pageBanner : null,
+                    showCollapse : true
                 }
             },
             created() {
