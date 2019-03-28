@@ -2670,6 +2670,7 @@ strong, .bold {
     border-bottom: 1px solid #000;
 }
 .collapseButton {
+    width: 100%;
     font-weight: bold;
     font-size: 32px;
     padding: 20px 0;
