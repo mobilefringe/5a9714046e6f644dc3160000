@@ -92,7 +92,7 @@
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'bootstrap-vue'], function(Vue, Vuex, moment, tz, VueMoment, Meta, BootstrapVue) {
         Vue.use(Meta);
         Vue.use(BootstrapVue)
-        return Vue.component("hours-component", {
+        return Vue.component("gift-card-component", {
             template: template, // the variable template will be injected
             props:['locale'],
             data: function() {
