@@ -144,6 +144,20 @@
                         console.log("Error loading data: " + e.message);
                     }
                 },
+                toggleSubMenu(item, event) {
+                    this.$nextTick(function() {
+                        
+                        item.show_sub_menu = !item.show_sub_menu;
+                        if(item.show_sub_menu) {
+                            event.target.classList.add("collapsed");
+                            document.getElementById(item.id).classList.add("show");
+                        }
+                        else {
+                            event.target.classList.remove("collapsed");
+                            document.getElementById(item.id).classList.remove("show");
+                        }
+                    });
+                },
             }
         });
     });
