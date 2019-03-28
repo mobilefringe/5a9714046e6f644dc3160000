@@ -2677,6 +2677,7 @@ strong, .bold {
     border-bottom: 1px solid #000;
     div {
         display: flex;
+        justify-content: space-between;
         p {
             margin: 0 auto;
             max-width: 1170px;
