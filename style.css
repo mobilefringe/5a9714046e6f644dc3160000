@@ -2686,7 +2686,9 @@ strong, .bold {
     width: 283px;
     padding: 10px;
     text-transform: uppercase;
-    color: #000;
+    a {
+        color: #000;
+    }
 }
     
 .details_header{
