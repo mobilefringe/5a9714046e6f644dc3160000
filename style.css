@@ -2665,6 +2665,10 @@ strong, .bold {
         }
     }
 }
+
+#collapseButton {
+    height: 36px;
+}
     
 .details_header{
     margin-top: 0;
