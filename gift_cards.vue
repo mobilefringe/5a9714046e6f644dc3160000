@@ -19,19 +19,22 @@
         <div class="site_container">
             <div class="all_hours_container">
                 <div class="row">
-                                   <div>
-                    <b-button
-                      @click="showCollapse = !showCollapse"
-                      :class="showCollapse ? 'collapsed' : null"
-                      aria-controls="collapse4"
-                      :aria-expanded="showCollapse ? 'true' : 'false'"
-                    >
-                      Toggle Collapse
-                    </b-button>
-                    <b-collapse class="mt-2" v-model="showCollapse" id="collapse4">
-                      <b-card>I should start open!</b-card>
-                    </b-collapse>
-                  </div>
+                    <div>
+                        <b-card no-body class="mb-1">
+                            <b-card-header header-tag="header" class="p-1" role="tab">
+                                <b-btn block @click="toggleSubMenu(item, $event)" :class="item.show_sub_menu ? 'collapsed' : null" :aria-controls="$t(item.name)" :aria-expanded="item.show_sub_menu ? 'true' : 'false'">
+                                    {{$t(item.name)}}
+                                    <i v-if="item.show_sub_menu"  class="fa fa-minus"></i>
+                                    <i v-else  class="fa fa-plus"></i>
+                                </b-btn>
+                            </b-card-header>
+                            <b-collapse v-model="item.show_sub_menu" :id="item.id" :visible="item.show_sub_menu" :accordion="$t(item.name)" role="tabpanel" class="accordion_body">
+                                <b-card-body v-for="sub_menu in item.sub_menu">
+                                    <p class="card-text"><router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link></p>
+                                </b-card-body>
+                            </b-collapse>
+                        </b-card>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12 ">
