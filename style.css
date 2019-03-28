@@ -2666,6 +2666,11 @@ strong, .bold {
     }
 }
 
+.black-line {
+    width: 100%;
+    border-bottom: 1px solid #000;
+}
+
 #collapseButton {
     width: 100%;
     font-weight: bold;
