@@ -2670,8 +2670,6 @@ strong, .bold {
     border-bottom: 1px solid #000;
 }
 .collapseButton {
-    max-width: 1170px;
-    margin: 0 auto;
     font-weight: bold;
     font-size: 32px;
     padding: 20px 0;
