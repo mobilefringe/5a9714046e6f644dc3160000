@@ -67,7 +67,7 @@
                                                         <i v-else  class="fa fa-plus"></i>
                                                     </b-btn>
                                                 </b-card-header>
-                                                <b-collapse id="store" v-model="item.show_sub_menu" :id="item.id" :visible="item.show_sub_menu" :accordion="$t(item.name)" role="tabpanel" class="accordion_body">
+                                                <b-collapse id="item.id" v-model="item.show_sub_menu" :id="item.id" :visible="item.show_sub_menu" :accordion="$t(item.name)" role="tabpanel" class="accordion_body">
                                                     <b-card-body v-for="sub_menu in item.sub_menu">
                                                         <p class="card-text"><router-link :to="sub_menu.href">{{$t(sub_menu.name)}}</router-link></p>
                                                     </b-card-body>
