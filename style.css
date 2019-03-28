@@ -2678,6 +2678,7 @@ strong, .bold {
     p {
         margin: 0 auto;
         max-width: 1170px;
+        text-align: left;
     }
 }
     
