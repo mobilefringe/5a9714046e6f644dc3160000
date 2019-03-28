@@ -89,7 +89,7 @@
     }
 </style>
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'bootstrap-vue'], function(Vue, Vuex, moment, tz, VueMoment, Meta, Collapse) {
+    define(["Vue", "vuex", "vue-meta", 'bootstrap-vue'], function(Vue, Vuex, Meta, Collapse) {
         Vue.use(Meta);
         Vue.use(Collapse)
         return Vue.component("hours-component", {
