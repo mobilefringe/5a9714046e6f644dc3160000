@@ -2675,14 +2675,12 @@ strong, .bold {
     font-size: 32px;
     padding: 30px 0;
     border-bottom: 1px solid #000;
-    div {
+    div
         display: flex;
         justify-content: space-between;
-        p {
-            margin: 0 auto;
-            max-width: 1170px;
-            text-align: left;
-        }
+        margin: 0 auto;
+        max-width: 1170px;
+        text-align: left;
     }
 }
 
