@@ -2675,10 +2675,13 @@ strong, .bold {
     font-size: 32px;
     padding: 30px 0;
     border-bottom: 1px solid #000;
-    p {
-        margin: 0 auto;
-        max-width: 1170px;
-        text-align: left;
+    div {
+        display: flex;
+        p {
+            margin: 0 auto;
+            max-width: 1170px;
+            text-align: left;
+        }
     }
 }
 
