@@ -122,7 +122,6 @@
                             store.store_front_url_abs = this.property.default_logo_url;
                         }
                     });
-                    console.log(this.processedStores)
                     return this.processedStores;
                 },
                 allCatergories() {
