@@ -47,6 +47,7 @@
 						</div>
 					</div>
 				</div>
+				</div>
 				<hr class="green_hr visible_phone">
 				<div class="col-sm-8 text-left" style="position: static">
 					<h4 v-if="currentStore.rich_description" class="store_dets_title caps"> {{$t("stores_page.about_us")}}</h4>
