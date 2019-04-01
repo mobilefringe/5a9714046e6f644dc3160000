@@ -22,7 +22,7 @@
 				</div>
 			</div>
 			<hr class="green_hr">
-			<div class="row margin_30">
+			<div class="row margin_30 green_line">
 				<div class="col-sm-4">
 					<div class="text-center">
 					    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{currentStore.name}}</h4>
