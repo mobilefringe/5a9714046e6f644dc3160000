@@ -45,6 +45,7 @@
     						    </div>
 						    </router-link>
 						</div>
+					</div>
 				</div>
 				<hr class="green_hr visible_phone">
 				<div class="col-sm-8 text-left" style="position: static">
