@@ -52,10 +52,6 @@
                 "href": "/pages/bramaleacitycentre-services"
             },
             {
-                "name": "header.gift_card",
-                "href": "/pages/bramaleacitycentre-gift-cards"
-            },
-            {
                 "name": "header.gift_cards",
                 "href": "/gift_cards"
             },
