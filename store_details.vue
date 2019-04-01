@@ -44,9 +44,8 @@
         						    <img class="bitmap" src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1553632445000/CardICON@2x.png" />
     						    </div>
 						    </router-link>
-						</div>
-					</div>
-				</div>
+					    </div>
+				    </div>
 				</div>
 				<hr class="green_hr visible_phone">
 				<div class="col-sm-8 text-left" style="position: static">
