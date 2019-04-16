@@ -21,8 +21,8 @@
 							<h4 class="event_name caps" v-else>{{promo.name_2}}</h4>
 							<div class="event_thick_line"></div>
 							<p class="event_dates">
-							    <span v-if="isMultiDay(promo)">{{ promo.start_date | moment("MMM D", timezone)}} to {{ promo.end_date | moment("MMM D", timezone)}}</span>
-							    <span v-else>{{ promo.start_date | moment("MMM D", timezone)}}</span>
+							    <span v-if="isMultiDay(promo)">{{ promo.start_date | moment("MMM. D", timezone)}} to {{ promo.end_date | moment("MMM. D", timezone)}}</span>
+							    <span v-else>{{ promo.start_date | moment("MMM. D", timezone)}}</span>
 							</p>
 							<p class="event_desc" v-if="locale=='en-ca'">{{promo.description_short}}</p>
 							<p class="event_desc" v-else>{{promo.description_short_2}}</p>
