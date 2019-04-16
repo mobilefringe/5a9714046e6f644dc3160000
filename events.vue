@@ -192,6 +192,16 @@
                         console.log("Error loading data: " + e.message);
                     }
                 },
+                isMultiDay(item) {
+                    var timezone = this.timezone
+                    var start_date = moment(item.start_date).tz(timezone).format("MM-DD-YYYY")
+                    var end_date = moment(item.end_date).tz(timezone).format("MM-DD-YYYY")
+                    if (start_date === end_date) {
+                        return false
+                    } else {
+                        return true
+                    }
+                },
                 shareURL(slug){
                     var share_url = "http://bramaleacitycentre.com/events/" + slug;
                     return share_url;
