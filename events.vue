@@ -164,7 +164,6 @@
                         today = moment().tz(vm.timezone);
                         webDate = moment(value.show_on_web_date).tz(vm.timezone);
                         if (today >= webDate) {
-                            console.log("event", value)
                             value.description_short = _.truncate(value.description, {
                                 'length': 150
                             });
@@ -177,13 +176,7 @@
                             } else {
                                 value.event_image = value.event_image_url_abs;
                             }
-                            // if (value.store != null && value.store != undefined && _.includes(value.store.store_front_url_abs, 'missing')) {
-                            //     value.store.store_front_url_abs = vm.property.default_logo_url;
-                            // }
-                            // else if (value.store == null || value.store == undefined) {
-                            //     value.store = {};
-                            //     value.store.store_front_url_abs =  vm.property.default_logo_url;
-                            // }
+
                             temp_promo.push(value);
                         }
                     });
