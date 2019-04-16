@@ -14,7 +14,7 @@
 				<paginate name="events" v-if="events" :list="events" class="paginate-list margin-60" :per="4">
 					<div class="row event_container" v-for="(promo,index) in paginated('events')" :class="{ 'last': index === (paginated('events').length - 1) }">
 						<div class="col-sm-6 col-md-4 event_image_container">
-							<img :src="promo.store.store_front_url_abs"  class="event_image image" :alt="'Click here to view ' + promo.name"/>
+							<img :src="event_image"  class="event_image image" :alt="'Click here to view ' + promo.name"/>
 						</div>
 						<div class="col-sm-6 col-md-8 event_dets_container">
 							<h4 class="event_name caps" v-if="locale=='en-ca'">{{promo.name}}</h4>
@@ -171,13 +171,19 @@
                             value.description_short_2 = _.truncate(value.description_2, {
                                 'length': 150
                             });
-                            if (value.store != null && value.store != undefined && _.includes(value.store.store_front_url_abs, 'missing')) {
-                                value.store.store_front_url_abs = vm.property.default_logo_url;
+                            
+                            if (_.includes(value.event_image_url_abs, "missing")) {
+                                value.event_image = vm.property.default_logo_url;
+                            } else {
+                                value.event_image = value.event_image_url_abs;
                             }
-                            else if (value.store == null || value.store == undefined) {
-                                value.store = {};
-                                value.store.store_front_url_abs =  vm.property.default_logo_url;
-                            }
+                            // if (value.store != null && value.store != undefined && _.includes(value.store.store_front_url_abs, 'missing')) {
+                            //     value.store.store_front_url_abs = vm.property.default_logo_url;
+                            // }
+                            // else if (value.store == null || value.store == undefined) {
+                            //     value.store = {};
+                            //     value.store.store_front_url_abs =  vm.property.default_logo_url;
+                            // }
                             temp_promo.push(value);
                         }
                     });
