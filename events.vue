@@ -145,7 +145,7 @@
                     this.dataloaded = true;
                     
                     var temp_repo = this.findRepoByName('Events Banner');
-                    if(temp_repo) {
+                    if (temp_repo) {
                         this.promoBanner = temp_repo.images[0];
                     }
                 });
@@ -164,6 +164,7 @@
                         today = moment().tz(vm.timezone);
                         webDate = moment(value.show_on_web_date).tz(vm.timezone);
                         if (today >= webDate) {
+                            console.log("event", value)
                             value.description_short = _.truncate(value.description, {
                                 'length': 150
                             });
