@@ -26,7 +26,11 @@
 							</div>
 							
 							<div class="event_thick_line"></div>
-							<p class="event_dates">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
+							<p class="event_dates">
+							    <span v-if="isMultiDay(promo)">{{ promo.start_date | moment("MMM D", timezone)}} to {{ promo.end_date | moment("MMM D", timezone)}}</span>
+							    <span v-else>{{ promo.start_date | moment("MMM D", timezone)}}</span>
+							    <!--{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}-->
+						    </p>
 							<p class="event_desc"  v-if="locale=='en-ca'" >{{promo.description_short}}</p>
 							<p class="event_desc" v-else>{{promo.description_short_2}}</p>
 						
@@ -141,10 +145,20 @@
                         console.log("Error loading data: " + e.message);
                     }
                 },
+                isMultiDay(item) {
+                    var timezone = this.timezone
+                    var start_date = moment(item.start_date).tz(timezone).format("MM-DD-YYYY")
+                    var end_date = moment(item.end_date).tz(timezone).format("MM-DD-YYYY")
+                    if (start_date === end_date) {
+                        return false
+                    } else {
+                        return true
+                    }
+                },
                 shareURL(slug){
                     var share_url = "http://bramaleacitycentre.com/promotions/" + slug;
                     return share_url;
-                },
+                }
             }
         });
     });
