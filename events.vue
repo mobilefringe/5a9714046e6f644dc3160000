@@ -164,12 +164,8 @@
                         today = moment().tz(vm.timezone);
                         webDate = moment(value.show_on_web_date).tz(vm.timezone);
                         if (today >= webDate) {
-                            value.description_short = _.truncate(value.description, {
-                                'length': 150
-                            });
-                            value.description_short_2 = _.truncate(value.description_2, {
-                                'length': 150
-                            });
+                            value.description_short = _.truncate(value.description, { 'length': 150 });
+                            value.description_short_2 = _.truncate(value.description_2, { 'length': 150 });
                             
                             if (_.includes(value.event_image_url_abs, "missing")) {
                                 value.event_image = vm.property.default_logo_url;
