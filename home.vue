@@ -1,5 +1,5 @@
 <template>
-	<div class="row page_content" v-if="dataLoaded">
+	<div class="row page_content" v-show="dataLoaded">
 		<div class="banner_div">
 			<div class="home-banner-container">
 				<slick ref="slick" :options="slickOptions">
