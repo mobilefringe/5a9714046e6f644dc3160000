@@ -24,7 +24,6 @@
 							    <h4 class="event_store_name caps" v-if="locale=='en-ca'">{{promo.store.name}}</h4>
 							    <h4 class="event_store_name caps" v-else>{{promo.store.name_2}}</h4>
 							</div>
-							
 							<div class="event_thick_line"></div>
 							<p class="event_dates">
 							    <span v-if="isMultiDay(promo)">{{ promo.start_date | moment("MMM D", timezone)}} to {{ promo.end_date | moment("MMM D", timezone)}}</span>
@@ -66,7 +65,6 @@
 			<div class="row margin-60">
 				<div class="col-md-12">
 					<paginate-links for="promos" :async="true" :limit="5" :show-step-links="true"></paginate-links>
-					<!--<paginate-links for="currentSelection" :async="true" :simple="{ next: 'Next »', prev: '« Back' }"></paginate-links>-->
 				</div>
 			</div>
 		</div>
@@ -96,7 +94,7 @@
                     this.dataloaded = true;
                     
                     var temp_repo = this.findRepoByName('Promos Banner');
-                    if(temp_repo) {
+                    if (temp_repo) {
                         this.promoBanner = temp_repo.images[0];
                     }
                     this.promos = this.promotions;
@@ -132,7 +130,7 @@
                             temp_promo.push(value);
                         }
                     });
-                    temp_promo = _.sortBy(temp_promo, ['created_at', 'start_date']).reverse();
+                    temp_promo = _.sortBy(temp_promo, ['end_date']).reverse();
                     return temp_promo;
                 },
             },
