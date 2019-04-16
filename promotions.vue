@@ -1,5 +1,5 @@
 <template>
-	<div v-if="dataloaded">
+	<div v-show="dataloaded">
 		<div class="page_header" v-if="promoBanner" v-lazy:background-image="promoBanner.image_url">
 			<!--http://via.placeholder.com/1920x300-->
 			<div class="site_container">
