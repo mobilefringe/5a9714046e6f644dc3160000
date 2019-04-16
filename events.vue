@@ -16,9 +16,7 @@
 				<paginate name="events" v-if="events" :list="events" class="paginate-list margin-60" :per="4">
 					<div class="row event_container" v-for="(promo,index) in paginated('events')" :class="{ 'last': index === (paginated('events').length - 1) }">
 						<div class="col-sm-6 col-md-4 event_image_container">
-							<!--<router-link :to="'/events/'+ promo.slug" class="event_learn_more">-->
 							<img :src="promo.store.store_front_url_abs"  class="event_image image" :alt="'Click here to view ' + promo.name"/>
-							<!--</router-link>-->
 						</div>
 						<div class="col-sm-6 col-md-8 event_dets_container">
 							<h4 class="event_name caps" v-if="locale=='en-ca'">{{promo.name}}</h4>
@@ -27,7 +25,6 @@
 							<p class="event_dates">{{promo.start_date | moment("MMM D", timezone)}} - {{promo.end_date | moment("MMM D", timezone)}}</p>
 							<p class="event_desc" v-if="locale=='en-ca'">{{promo.description_short}}</p>
 							<p class="event_desc" v-else>{{promo.description_short_2}}</p>
-						
 							<div class="text-right  col-sm-6" v-if="promo" style="padding:0">
 								<router-link :to="'/events/'+ promo.slug" class="event_learn_more pull-left" :aria="promo.name">
 								    {{$t("events_page.read_more")}} <i class="fa fa-angle-right" aria-hidden="true"></i>
@@ -60,7 +57,6 @@
 			<div class="row margin-60">
 				<div class="col-md-12">
 					<paginate-links for="events" :async="true" :limit="5" :show-step-links="true"></paginate-links>
-					<!--<paginate-links for="currentSelection" :async="true" :simple="{ next: 'Next »', prev: '« Back' }"></paginate-links>-->
 				</div>
 			</div>
 		</div>
