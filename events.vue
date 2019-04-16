@@ -14,7 +14,7 @@
 				<paginate name="events" v-if="events" :list="events" class="paginate-list margin-60" :per="4">
 					<div class="row event_container" v-for="(promo,index) in paginated('events')" :class="{ 'last': index === (paginated('events').length - 1) }">
 						<div class="col-sm-6 col-md-4 event_image_container">
-							<img :src="event_image"  class="event_image image" :alt="'Click here to view ' + promo.name"/>
+							<img :src="promo.event_image"  class="event_image image" :alt="'Click here to view ' + promo.name"/>
 						</div>
 						<div class="col-sm-6 col-md-8 event_dets_container">
 							<h4 class="event_name caps" v-if="locale=='en-ca'">{{promo.name}}</h4>
