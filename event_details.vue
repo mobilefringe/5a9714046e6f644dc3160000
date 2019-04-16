@@ -15,7 +15,11 @@
 					<h3 class="promo_name" style="margin: 20px auto 0px;"  v-if="locale=='en-ca'">{{currentEvent.name}}</h3>
 					<h3 class="promo_name" style="margin: 20px auto 0px;"  v-else>{{currentEvent.name_2}}</h3>
 					<div class="row">
-						<p class="promo_div_date pull-left">{{currentEvent.start_date | moment("MMM D", timezone)}} - {{currentEvent.end_date | moment("MMM D", timezone)}}</p>
+						<p class="promo_div_date pull-left">
+						    <span v-if="isMultiDay(currentEvent)">{{ currentEvent.start_date | moment("MMM. D", timezone)}} to {{ currentEvent.end_date | moment("MMM. D", timezone)}}</span>
+							    <span v-else>{{ currentEvent.start_date | moment("MMM. D", timezone)}}</span>
+						    <!--{{currentEvent.start_date | moment("MMM. D", timezone)}} - {{currentEvent.end_date | moment("MMM. D", timezone)}}-->
+					    </p>
 						<social-sharing :url="shareURL(currentEvent.slug)" :title="currentEvent.name" :description="currentEvent.description" :quote="_.truncate(currentEvent.description, {'length': 99})" twitter-user="BCCstyle" :media="currentEvent.image_url" inline-template >
 							<div class="blog-social-share pull-right" style="margin: 15px auto;">
 								<div class="social_share">
@@ -135,16 +139,28 @@
                 },
                 loadData: async function() {
                     try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch("getData", "events"), this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "events"), 
+                            this.$store.dispatch("getData", "repos")
+                        ]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
+                    }
+                },
+                isMultiDay(item) {
+                    var timezone = this.timezone
+                    var start_date = moment(item.start_date).tz(timezone).format("MM-DD-YYYY")
+                    var end_date = moment(item.end_date).tz(timezone).format("MM-DD-YYYY")
+                    if (start_date === end_date) {
+                        return false
+                    } else {
+                        return true
                     }
                 },
                 shareURL(slug){
                     var share_url = "http://bramaleacitycentre.com/events/" + slug;
                     return share_url;
-                },
+                }
             }
         });
     });
