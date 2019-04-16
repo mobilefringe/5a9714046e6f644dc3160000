@@ -8,7 +8,9 @@
     					    <router-link to="/"><img :src="property_logo" :alt="property.name"/></router-link>
     				    </div>
     					<div id="home_hours_container" class="hidden_phone" v-if="todays_hours">
-    						<p class="open_now"><span v-if="todays_hours.is_closed == null || !todays_hours.is_closed ">{{$t("header.open_today")}}</span><span v-else>{{$t("header.closed")}}</span> <span v-if="todays_hours.is_closed == null || !todays_hours.is_closed "><span style="margin:0 20px">|</span> {{todays_hours.open_time | moment("h:mma", timezone)}} - {{todays_hours.close_time | moment("h:mma", timezone)}} </span></p>
+    					    <router-link to="/hours">
+    						    <p class="open_now"><span v-if="todays_hours.is_closed == null || !todays_hours.is_closed ">{{$t("header.open_today")}}</span><span v-else>{{$t("header.closed")}}</span> <span v-if="todays_hours.is_closed == null || !todays_hours.is_closed "><span style="margin:0 20px">|</span> {{todays_hours.open_time | moment("h:mma", timezone)}} - {{todays_hours.close_time | moment("h:mma", timezone)}} </span></p>
+    						</router-link>
     					</div>
     				</div>
     				<div class="col-sm-8 hidden_phone text-right">
@@ -148,7 +150,7 @@
 
 <script>
     define(["Vue", "vuex", 'vue!social_links.vue', "bootstrap-vue", 'json!menu_items.json', 'jquery', 'vue!search-component'], function (Vue, Vuex, SocialLinks, BootstrapVue, MenuItems, $, SearchComponent) {
-        // Vue.use(BootstrapVue);
+        Vue.use(BootstrapVue);
         console.log("bootstrap", BootstrapVue)
         return Vue.component("header-component", {
             template: template, // the variable template will be injected,
