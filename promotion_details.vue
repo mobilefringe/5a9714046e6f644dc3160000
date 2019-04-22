@@ -69,6 +69,7 @@
 <script>
     define(['Vue', 'vuex', 'moment', 'vue-lazy-load'], function(Vue, Vuex, moment, VueLazyload) {
         Vue.use(VueLazyload);
+        Vue.use(SocialSharing);
         return Vue.component("promo-details-component", {
             template: template, // the variable template will be injected,
             props:['id', 'locale'],
