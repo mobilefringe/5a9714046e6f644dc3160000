@@ -40,6 +40,11 @@
                 "name": "header.news",
                 "href": "/news"
             }
+            ,
+            {
+                "name": "header.news",
+                "href": "/bcc-bee-hives"
+            }
         ]
     },
     {
