@@ -100,7 +100,7 @@
                     'findRepoByName'
 
                 ]),
-                aallStores() {
+                allStores() {
                     var stores = this.processedStores;
                     stores.map(store => {
                         if (_.includes(store.store_front_url_abs, 'missing')) {
