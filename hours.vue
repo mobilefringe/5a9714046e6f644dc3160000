@@ -25,6 +25,7 @@
                         <div id="hours_container" class="hours_container">
                             <div class="hours_div text-left" v-for="hour in hours">
                                 <span>
+                                            <span v-if="locale=='en-ca'">{{hour.holiday_name}} / </span>
                                             <span v-else>{{hour.holiday_name_2}} / </span>
                                             {{ hour.holiday_date | moment("MMM D, YYYY", timezone) }} /
                                         </span>
