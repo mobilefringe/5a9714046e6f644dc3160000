@@ -21,8 +21,8 @@
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <h3 v-if="extendedHours" class="hours_heading text-left" >{{$t("hours_page.ex_hours")}}</h3>
-                        <div v-if="extendedHours" class="hours_container">
+                        <h3 v-if="extendedHours.length > 0" class="hours_heading text-left" >{{$t("hours_page.ex_hours")}}</h3>
+                        <div v-if="extendedHours.length > 0" class="hours_container">
                             <div class="hours_div text-left" v-for="hour in extendedHours">
                                 <span>
                                     {{ hour.holiday_date | moment("MMM D, YYYY", timezone) }}:
