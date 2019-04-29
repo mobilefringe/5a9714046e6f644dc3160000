@@ -15,7 +15,7 @@
                         <h3 class="hours_heading text-left" >{{$t("hours_page.reg_hours")}}</h3>
                         <div id="hours_container" class="hours_container">
                             <div class="hours_div text-left" v-for="hour in hours">
-                                <span>{{hour.day_of_week | moment("dddd", timezone)}} : </span>
+                                <span>{{hour.day_of_week | moment("dddd", timezone)}}: </span>
                                 <span>{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
                             </div>
                         </div>
@@ -25,14 +25,14 @@
                         <div id="hours_container" class="hours_container">
                             <div class="hours_div text-left" v-for="hour in extendedHours">
                                 <span>
-                                            <span v-if="locale=='en-ca'">{{hour.holiday_name}} / </span>
-                                            <span v-else>{{hour.holiday_name_2}} / </span>
-                                            {{ hour.holiday_date | moment("MMM D, YYYY", timezone) }} /
-                                        </span>
-                                        <span v-if="hour.is_closed == true">{{ $t("hours_page.closed") }}</span>
-                                        <span v-else>
-                                            {{ hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone) }}
-                                        </span>
+                                    <span v-if="locale=='en-ca'">{{hour.holiday_name}} / </span>
+                                    <span v-else>{{hour.holiday_name_2}}: </span>
+                                    {{ hour.holiday_date | moment("MMM D, YYYY", timezone) }}:
+                                </span>
+                                <span v-if="hour.is_closed == true">{{ $t("hours_page.closed") }}</span>
+                                <span v-else>
+                                    {{ hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone) }}
+                                </span>
                             </div>
                         </div>
                     </div>
