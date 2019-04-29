@@ -103,6 +103,7 @@
                     'timezone',
                     'getPropertyHours',
                     'getPropertyHolidayHours',
+                    'getPropertyExtendedHours',
                     'findRepoByName'
                 ]),
                 hours () {
