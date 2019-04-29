@@ -24,13 +24,9 @@
                         <h3 v-if="extendedHours.length > 0" class="hours_heading text-left" >{{$t("hours_page.ex_hours")}}</h3>
                         <div v-if="extendedHours.length > 0" class="hours_container">
                             <div class="hours_div text-left" v-for="hour in extendedHours">
-                                <span>
-                                    {{ hour.holiday_date | moment("MMM D, YYYY", timezone) }}:
-                                </span>
+                                <span>{{ hour.holiday_date | moment("MMM D, YYYY", timezone) }}:</span>
                                 <span v-if="hour.is_closed == true">{{ $t("hours_page.closed") }}</span>
-                                <span v-else>
-                                    {{ hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone) }}
-                                </span>
+                                <span v-else>{{ hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone) }}</span>
                             </div>
                         </div>
                     </div>
