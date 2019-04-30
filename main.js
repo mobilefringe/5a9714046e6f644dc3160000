@@ -42,7 +42,7 @@ require.config({
         'loader': 'https://mmvue.codecloudapp.com/loader.vue?noext',
         'campaignMonitor': 'https://js.createsend1.com/javascript/copypastesubscribeformlogic',
         'bootstrap-vue' : 'https://codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/text/javascript/1554736414383/bootstrap-vue',
-        'store-masonry': 'https://mmvue.codecloudapp.com/storelist_masonry.vue?noext'
+        'store-masonry': 'https://preview-mmvue.codecloudapp.com/storelist_masonry.vue?noext'
     }
 });
 
