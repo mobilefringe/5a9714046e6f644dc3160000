@@ -75,10 +75,7 @@
                     </div>
 				</div>
 			</div>
-			<div class="row">
-			    <div class="col-md-12 text-center">
-			        <div id="load_more" class="load_more_stores contact_btn" v-if="filteredStores && showMore <= filteredStores.length" @click ="loadMore()">Load More</div>
-                </div>
+	        <div id="load_more" v-if="filteredStores && showMore <= filteredStores.length" @click ="loadMore()">Load More</div>
             </div>
 		</div>
 	</div>
@@ -177,7 +174,6 @@
                     if(el) {
                         el.classList.remove("open");
                     }
-                    
                 }
             },
             methods: {
@@ -192,18 +188,15 @@
                     }
                 },
                 loadMore() {
-                    console.log("click")
                     if (this.showMore <= this.filteredStores.length) {
                         var num = this.showMore + this.incrementBy;
                         this.showMore = num;
                     }
                 },
                 isScrolled () {
-                    if (window.pageYOffset > 500) {
+                    if (window.pageYOffset > 300) {
                         var button = document.getElementById("load_more");
-                        console.log("button", button)
                         this.isScrolledIntoView(button)
-                        
                     }
                 },
                 isScrolledIntoView(button) {
