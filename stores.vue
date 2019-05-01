@@ -41,40 +41,43 @@
 			<div class="row">
 				<div id="store_list_container">
 				    <!--<store-masonry :filteredStores="filteredStores"></store-masonry>-->
-				    div v-masonry transition-duration="0.3s" item-selector=".stores-grid-item" horizontal-order="true">
-        <transition-group name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" tag="div">
-            <div v-masonry-tile  v-for="(store, index) in filteredStores" :key="index" class="stores-grid-item">
-        	    <div class="store_logo_container">
-        	        <router-link :to="'/stores/'+ store.slug">
-            			<div v-if="!store.no_store_logo">
-            			    <img class="transparent_logo" src="//codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/image/png/1545150810975/default_background.png" alt="">
-            			    <img  class="store_img" :src="store.store_front_url_abs" :alt="'Click here to view info about ' + store.name +  store.id"/>
-            			</div>
-                        <div v-else class="no_logo_container">
-                            <img class="transparent_logo" src="//codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/image/png/1545150810975/default_background.png" alt="">
-                            <div class="no_logo_text">
-                                <div class="store_text"><h2>{{ store.name }}</h2></div>
+				    <div v-masonry transition-duration="0.3s" item-selector=".stores-grid-item" horizontal-order="true">
+                        <transition-group name="custom-classes-transition" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut" tag="div">
+                            <div v-masonry-tile  v-for="(store, index) in filteredStores"  v-if="showMore > index" :key="index" class="stores-grid-item">
+                        	    <div class="store_logo_container">
+                        	        <router-link :to="'/stores/'+ store.slug">
+                            			<div v-if="!store.no_store_logo">
+                            			    <img class="transparent_logo" src="//codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/image/png/1545150810975/default_background.png" alt="">
+                            			    <img  class="store_img" :src="store.store_front_url_abs" :alt="'Click here to view info about ' + store.name +  store.id"/>
+                            			</div>
+                                        <div v-else class="no_logo_container">
+                                            <img class="transparent_logo" src="//codecloud.cdn.speedyrails.net/sites/59347e776e6f64538f150000/image/png/1545150810975/default_background.png" alt="">
+                                            <div class="no_logo_text">
+                                                <div class="store_text"><h2>{{ store.name }}</h2></div>
+                                            </div>
+                                        </div>
+                            			<div class="store_tag" v-if="store.total_published_promos">
+                							<div class="store_tag_text">Promotion</div>
+                						</div>
+                						<div class="store_tag" v-if="!store.total_published_promos && store.is_coming_soon_store">
+                							<div class="store_tag_text">Coming Soon</div>
+                						</div>
+                						<div class="store_tag" v-if="!store.total_published_promos && !store.is_coming_soon_store && store.is_new_store">
+                							<div class="store_tag_text">New Store</div>
+                						</div>
+                						<div class="store_details">
+                						    <div class="store_text"><h2>{{ store.name }}</h2></div>    
+                						</div>
+                            		</router-link>
+                        	    </div>
                             </div>
-                        </div>
-            			<div class="store_tag" v-if="store.total_published_promos">
-							<div class="store_tag_text">Promotion</div>
-						</div>
-						<div class="store_tag" v-if="!store.total_published_promos && store.is_coming_soon_store">
-							<div class="store_tag_text">Coming Soon</div>
-						</div>
-						<div class="store_tag" v-if="!store.total_published_promos && !store.is_coming_soon_store && store.is_new_store">
-							<div class="store_tag_text">New Store</div>
-						</div>
-						<div class="store_details">
-						    <div class="store_text"><h2>{{ store.name }}</h2></div>    
-						</div>
-            		</router-link>
-        	    </div>
-            </div>
-        </transition-group>
-    </div>
+                        </transition-group>
+                    </div>
 				</div>
 			</div>
+			<div class="load_more animated_btn swing_in" v-if="regularPromotions && showMore <= regularPromotions.length" @click ="loadMore()">
+                        <p>Load More</p>
+                    </div>
 		</div>
 	</div>
 </template>
@@ -91,6 +94,8 @@
                     dataloaded: false,
                     storeBanner : null,
                     search_result : null,
+                    showMore: 2,
+                    incrementBy: 2
                 }
             },
             created (){
@@ -103,22 +108,6 @@
                         this.storeBanner = temp_repo.images[0];
                     }
                 });
-            },
-            methods: {
-                loadData: async function() {
-                    try {
-                        let results = await Promise.all([
-                            this.$store.dispatch("getData", "categories"), 
-                            this.$store.dispatch("getData", "repos")
-                        ]);
-                    } catch (e) {
-                        console.log("Error loading data: " + e.message);
-                    }
-                },
-                onOptionSelect(option) {
-                    this.search_result = "";
-                    this.$router.push("/stores/"+option.slug);
-                },
             },
             computed: {
                 ...Vuex.mapGetters([
@@ -187,8 +176,29 @@
                         el.classList.remove("open");
                     }
                     
+                }
+            },
+             methods: {
+                loadData: async function() {
+                    try {
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "categories"), 
+                            this.$store.dispatch("getData", "repos")
+                        ]);
+                    } catch (e) {
+                        console.log("Error loading data: " + e.message);
+                    }
                 },
-                
+                loadMore() {
+                    if (this.showMore <= this.regularPromotions.length) {
+                        var num = this.showMore + this.incrementBy;
+                        this.showMore = num;
+                    }
+                },
+                onOptionSelect(option) {
+                    this.search_result = "";
+                    this.$router.push("/stores/"+option.slug);
+                }
             }
         });
     });
