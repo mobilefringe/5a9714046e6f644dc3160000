@@ -42,7 +42,7 @@
 				<div id="store_list_container">
 				    <!--<store-masonry :filteredStores="filteredStores"></store-masonry>-->
 				    <div v-masonry transition-duration="0.3s" item-selector=".stores-grid-item" horizontal-order="true">
-                        <transition-group name="custom-classes-transition" enter-active-class="animated fadeInUp" leave-active-class="animated fadeOutDown" tag="div">
+                        <transition-group name="custom-classes-transition" enter-active-class="animated fade" leave-active-class="animated fade" tag="div">
                             <div v-masonry-tile  v-for="(store, index) in filteredStores"  v-if="showMore > index" :key="index" class="stores-grid-item">
                         	    <div class="store_logo_container">
                         	        <router-link :to="'/stores/'+ store.slug">
