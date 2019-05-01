@@ -190,7 +190,7 @@
                     }
                 },
                 loadMore() {
-                    if (this.showMore <= this.regularPromotions.length) {
+                    if (this.showMore <= this.filteredStores.length) {
                         var num = this.showMore + this.incrementBy;
                         this.showMore = num;
                     }
