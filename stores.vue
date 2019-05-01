@@ -38,7 +38,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row margin_30">
 				<div id="store_list_container">
 				    <!--<store-masonry :filteredStores="filteredStores"></store-masonry>-->
 				    <div v-masonry transition-duration="0.3s" item-selector=".stores-grid-item" horizontal-order="true">
