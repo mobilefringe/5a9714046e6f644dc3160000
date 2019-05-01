@@ -200,6 +200,7 @@
                 isScrolled () {
                     if (window.pageYOffset > 100) {
                         var button = document.getElementById("load_more");
+                        console.log("button", button)
                         this.isScrolledIntoView(button)
                         
                     }
