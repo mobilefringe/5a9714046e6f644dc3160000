@@ -80,8 +80,9 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue-select", "jquery", "smooth-zoom", "vue!png-map", "vue!search-component", "vue-lazy-load"], function(Vue, Vuex, VueSelect, $, smoothZoom, PNGMapComponent, SearchComponent, VueLazyload) {
+    define(["Vue", "vuex", "vue-select", "jquery", "vue!search-component", "vue-lazy-load", "masonry", "vue-masonry-plugin"], function(Vue, Vuex, VueSelect, $, SearchComponent, VueLazyload, masonry, VueMasonryPlugin) {
         Vue.use(VueLazyload);
+         Vue.use(VueMasonryPlugin.default);
         return Vue.component("stores-component", {
             template: template, // the variable template will be injected
             data: function() {
@@ -198,13 +199,15 @@
                     }
                 },
                 isScrolledIntoView(button) {
-                    var docViewTop = $(window).scrollTop();
-                    var docViewBottom = docViewTop + $(window).height();
-                    var elemTop = $(button).offset().top;
-                    var elemBottom = elemTop + $(button).height();
-                    
-                    if ((elemBottom <= docViewBottom) && (elemTop >= docViewTop)) {
-                        this.loadMore();
+                    if (button) {
+                        var docViewTop = $(window).scrollTop();
+                        var docViewBottom = docViewTop + $(window).height();
+                        var elemTop = $(button).offset().top;
+                        var elemBottom = elemTop + $(button).height();
+
+                        if ((elemBottom <= docViewBottom) && (elemTop >= docViewTop)) {
+                            this.loadMore();
+                        }
                     }
                 },
                 onOptionSelect(option) {
