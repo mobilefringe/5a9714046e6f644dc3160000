@@ -76,7 +76,6 @@
 				</div>
 			</div>
 	        <div id="load_more" v-if="filteredStores && showMore <= filteredStores.length" @click ="loadMore()">Load More</div>
-            </div>
 		</div>
 	</div>
 </template>
