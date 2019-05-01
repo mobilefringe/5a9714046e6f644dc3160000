@@ -94,8 +94,8 @@
                     dataloaded: false,
                     storeBanner : null,
                     search_result : null,
-                    showMore: 2,
-                    incrementBy: 2
+                    showMore: 18,
+                    incrementBy: 18
                 }
             },
             created (){
