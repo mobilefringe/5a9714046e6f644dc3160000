@@ -40,7 +40,6 @@
 			</div>
 			<div class="row margin_30">
 				<div id="store_list_container">
-				    <!--<store-masonry :filteredStores="filteredStores"></store-masonry>-->
 				    <div v-masonry transition-duration="0.3s" item-selector=".stores-grid-item" horizontal-order="true">
                         <transition-group name="custom-classes-transition" enter-active-class="animated fade" leave-active-class="animated fade" tag="div">
                             <div v-masonry-tile  v-for="(store, index) in filteredStores"  v-if="showMore > index" :key="index" class="stores-grid-item">
@@ -81,7 +80,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "vue-select", "jquery", "smooth-zoom", "vue!png-map", "vue!search-component", "vue-lazy-load", "vue!store-masonry"], function(Vue, Vuex, VueSelect, $, smoothZoom, PNGMapComponent, SearchComponent, VueLazyload, StoreMasonry) {
+    define(["Vue", "vuex", "vue-select", "jquery", "smooth-zoom", "vue!png-map", "vue!search-component", "vue-lazy-load"], function(Vue, Vuex, VueSelect, $, smoothZoom, PNGMapComponent, SearchComponent, VueLazyload) {
         Vue.use(VueLazyload);
         return Vue.component("stores-component", {
             template: template, // the variable template will be injected
