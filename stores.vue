@@ -77,7 +77,7 @@
 			</div>
 			<div class="row">
 			    <div class="col-md-12 text-center">
-			        <div class="load_more_stores contact_btn" v-if="filteredStores && showMore <= filteredStores.length" @click ="loadMore()">Load More</div>
+			        <div id="load_more" class="load_more_stores contact_btn" v-if="filteredStores && showMore <= filteredStores.length" @click ="loadMore()">Load More</div>
                 </div>
             </div>
 		</div>
@@ -180,7 +180,7 @@
                     
                 }
             },
-             methods: {
+            methods: {
                 loadData: async function() {
                     try {
                         let results = await Promise.all([
@@ -197,10 +197,33 @@
                         this.showMore = num;
                     }
                 },
+                isScrolled () {
+                    if (window.pageYOffset > 100) {
+                        var button = document.getElementById("load_more");
+                        this.isScrolledIntoView(button)
+                        
+                    }
+                },
+                isScrolledIntoView(button) {
+                    var docViewTop = $(window).scrollTop();
+                    var docViewBottom = docViewTop + $(window).height();
+                    var elemTop = $(button).offset().top;
+                    var elemBottom = elemTop + $(button).height();
+                    
+                    if ((elemBottom <= docViewBottom) && (elemTop >= docViewTop)) {
+                        this.loadMore();
+                    }
+                },
                 onOptionSelect(option) {
                     this.search_result = "";
                     this.$router.push("/stores/"+option.slug);
                 }
+            },
+            beforeMount () {
+                window.addEventListener('scroll', this.isScrolled);
+            },
+            beforeDestroy () {
+                window.removeEventListener('scroll', this.isScrolled);
             }
         });
     });
