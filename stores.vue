@@ -75,7 +75,7 @@
                     </div>
 				</div>
 			</div>
-			<div class="load_more animated_btn swing_in" v-if="regularPromotions && showMore <= regularPromotions.length" @click ="loadMore()">
+			<div class="load_more animated_btn swing_in" v-if="filteredStores && showMore <= filteredStores.length" @click ="loadMore()">
                         <p>Load More</p>
                     </div>
 		</div>
