@@ -192,6 +192,7 @@
                     }
                 },
                 loadMore() {
+                    console.log("click")
                     if (this.showMore <= this.filteredStores.length) {
                         var num = this.showMore + this.incrementBy;
                         this.showMore = num;
