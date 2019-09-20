@@ -2,7 +2,7 @@
     <div v-masonry transition-duration="0.3s" item-selector=".grid-item" >
         <div v-masonry-tile class="item feature_item_container" >
             <div v-for="feature in feature_items" :class="'grid-item ' + feature.masonry_class ">
-                <a v-if="feature.url" href="feature.url">
+                <a v-if="feature.url" :href="feature.url">
                 	<div :class="{ 'gallery-image' : feature.no_hover_class}"> 
                 	    <img :src="feature.image_url" :alt="'click to learn more about ' +feature.name">
         				<div class="figcaption">
