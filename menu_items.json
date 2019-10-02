@@ -96,7 +96,8 @@
             },
             {
                 "name": "header.employment",
-                "href": "/jobs"
+                "href": "/jobs",
+                "external" : true
             },
             {
                 "name": "header.leasing",
