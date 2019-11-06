@@ -66,7 +66,8 @@ define(["Vue", "vuex", "vue-meta", "vue-meta", "vue!today_hours", "vue!search-co
                     meta: {
                         meta_title: "",
                         meta_description: "",
-                        meta_keywords: ""
+                        meta_keywords: "",
+                        meta_image: ""
                     }
                 }
             },
