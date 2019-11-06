@@ -212,10 +212,12 @@ define(["Vue", "vuex", "vue-meta", "vue-meta", "vue!today_hours", "vue!search-co
             metaInfo () {
                 return {
                     title: this.meta.meta_title,
-                    meta: [
-                        {name: 'description', content: this.meta.meta_description},
-                        {name: 'keywords', content: this.meta.meta_keywords}
-                    ] 
+                    meta: {
+                       meta_title: "",
+                       meta_description: "",
+                       meta_keywords: "",
+                       meta_image: ""
+                    }
                 }
             }
         })
