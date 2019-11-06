@@ -36,7 +36,7 @@
 </template>
 
 <script>
-define(["Vue", "vuex", "vue-meta", "vue!today_hours", "vue!search-component", 'vue!vue-slick', 'js-cookie', 'vue-lazy-load', "vue!feature_masonry"], function(Vue, Vuex, Meta, TodayHoursComponent, SearchComponent, slick, Cookies, VueLazyload, featureMasonry) {
+define(["Vue", "vuex", "vue-meta", "vue-meta", "vue!today_hours", "vue!search-component", 'vue!vue-slick', 'js-cookie', 'vue-lazy-load', "vue!feature_masonry"], function(Vue, Vuex, Meta, TodayHoursComponent, SearchComponent, slick, Cookies, VueLazyload, featureMasonry) {
     
     // define(["Vue", "vuex", "vue-meta", "vue!today_hours", "vue!search-component", 'vue!vue-slick', 'js-cookie', 'vue-lazy-load', "vue!masonry_component"], function(Vue, Vuex, Meta, TodayHoursComponent, SearchComponent, slick, Cookies, VueLazyload, VueMasonryComponent) {
         Vue.use(VueLazyload);
@@ -66,7 +66,8 @@ define(["Vue", "vuex", "vue-meta", "vue!today_hours", "vue!search-component", 'v
                     meta: {
                         meta_title: "",
                         meta_description: "",
-                        meta_keywords: ""
+                        meta_keywords: "",
+                        meta_image: ""
                     }
                 }
             },
@@ -210,13 +211,16 @@ define(["Vue", "vuex", "vue-meta", "vue!today_hours", "vue!search-component", 'v
                 }
             },
             metaInfo () {
-                return {
-                    title: this.meta.meta_title,
-                    meta: [
-                        {name: 'description', content: this.meta.meta_description},
-                        {name: 'keywords', content: this.meta.meta_keywords}
-                    ] 
-                }
+               return {
+                  title: this.meta.meta_title,
+                  meta: [
+                     { name: 'description', vmid: 'description', content: this.meta.meta_description },
+                     { name: 'keywords',  vmid: 'keywords', content: this.meta.meta_keywords },
+                     { property: 'og:title', vmid: 'og:title', content: this.meta.meta_title },
+                     { property: 'og:description', vmid: 'og:description', content: this.meta.meta_description },
+                     { property: 'og:image', vmid: 'og:image', content: this.meta.meta_image }
+                  ]
+               }
             }
         })
     })
