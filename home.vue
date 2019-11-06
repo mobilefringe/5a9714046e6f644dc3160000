@@ -5,7 +5,7 @@
 				<slick ref="slick" :options="slickOptions">
 					<div class="" v-for="banner in banners" v-if="banners">
 					    <a :href="banner.url">
-						    <div class="home-banner" :background-image="banner.image_url"></div>
+						    <div class="home-banner" v-lazy:background-image="banner.image_url"></div>
 						</a>
 					</div>
 				</slick>
@@ -24,7 +24,7 @@
 		    <div class="insta-feed-container">
 		        <div v-for="(item, index) in instaFeed" class="insta-container">
                     <a :href="item.link" target="_blank">
-                        <div class="insta-feed-image"  :background-image="item.images.standard_resolution.url">
+                        <div class="insta-feed-image"  v-lazy:background-image="item.images.standard_resolution.url">
                             <p style="display:none;">{{item.caption.text}}</p>
                         </div>
                     </a>
