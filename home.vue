@@ -36,7 +36,7 @@
 </template>
 
 <script>
-define(["Vue", "vuex", "vue-meta", "vue-meta", "vue!today_hours", "vue!search-component", 'vue!vue-slick', 'js-cookie', 'vue-lazy-load', "vue!feature_masonry"], function(Vue, Vuex, Meta, TodayHoursComponent, SearchComponent, slick, Cookies, VueLazyload, featureMasonry) {
+define(["Vue", "vuex", "vue-meta", "vue!today_hours", "vue!search-component", 'vue!vue-slick', 'js-cookie', 'vue-lazy-load', "vue!feature_masonry"], function(Vue, Vuex, Meta, TodayHoursComponent, SearchComponent, slick, Cookies, VueLazyload, featureMasonry) {
     
     // define(["Vue", "vuex", "vue-meta", "vue!today_hours", "vue!search-component", 'vue!vue-slick', 'js-cookie', 'vue-lazy-load', "vue!masonry_component"], function(Vue, Vuex, Meta, TodayHoursComponent, SearchComponent, slick, Cookies, VueLazyload, VueMasonryComponent) {
         Vue.use(VueLazyload);
