@@ -126,7 +126,15 @@
                 },
                 extendedHours () {
                     var extended = _.sortBy(this.getPropertyExtendedHours, function(o) { return o.holiday_date; });
-                    return extended;
+                    var holidays = [];
+                    _.forEach(extended, function(val, key) {
+                        var today = moment().format('X');
+                        var holiday_date = moment(val.holiday_date).format('X');
+                        if (today < holiday_date) {
+                            holidays.push(val);
+                        }
+                    });
+                    return holidays;
                 }
             },
             methods : {
