@@ -19,6 +19,30 @@
                                 <span>{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
                             </div>
                         </div>
+                        
+                        <div class="padding_top_20"></div>
+                        <h3 class="hours_heading text-left">{{$t("hours_page.holiday_hours")}}</h3>
+                        <div v-if="extendedHours.length > 0" class="hours_container">
+                            <div class="hours_div text-left" v-for="hour in extendedHours">
+                                <span>{{ hour.holiday_date | moment("MMM D, YYYY", timezone) }}:</span>
+                                <span v-if="hour.is_closed == true">{{ $t("hours_page.closed") }}</span>
+                                <span v-else>{{ hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone) }}</span>
+                            </div>
+                        </div>
+                        
+                        <!--<div id="holidays_hours_container" class="hours_container">-->
+                        <!--    BCC is open on the following Statutory Holidays 11am – 6pm <br/>-->
+                        <!--    <ul>-->
+                        <!--        <li>New Year’s Day</li>-->
+                        <!--        <li>Family Day</li>-->
+                        <!--        <li>Victoria Day</li>-->
+                        <!--        <li>Canada Day</li>-->
+                        <!--        <li>Labour Day</li>-->
+                        <!--        <li>Thanksgiving Day</li>-->
+                        <!--    </ul>-->
+                            
+                        <!--    *Not all retailers may open during stat holidays. Please verify holiday hours with individual stores.-->
+                        <!--</div>-->
                     </div>
                     <div class="col-sm-6">
                         <h3 v-if="extendedHours.length > 0" class="hours_heading text-left" >{{$t("hours_page.ex_hours")}}</h3>
@@ -32,22 +56,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-12 ">
-                        <div class="padding_top_20"></div>
-                        <h3 class="hours_heading text-left">{{$t("hours_page.holiday_hours")}}</h3>
-                        <div id="holidays_hours_container" class="hours_container">
-                            BCC is open on the following Statutory Holidays 11am – 6pm <br/>
-                            <ul>
-                                <li>New Year’s Day</li>
-                                <li>Family Day</li>
-                                <li>Victoria Day</li>
-                                <li>Canada Day</li>
-                                <li>Labour Day</li>
-                                <li>Thanksgiving Day</li>
-                            </ul>
-                            
-                            *Not all retailers may open during stat holidays. Please verify holiday hours with individual stores.
-                        </div>
+                    <div class="col-sm-12">
+                        
                         
                         <div class="padding_top_20"></div>
                         
@@ -115,7 +125,8 @@
                     return _.sortBy(_.filter(holidayHours, function(o) { return o.is_closed; }), [function(o) { return o.holiday_date; }]);
                 },
                 extendedHours () {
-                    return this.getPropertyExtendedHours;
+                    var extended = _.sortBy(this.getPropertyExtendedHours, function(o) { return o.holiday_date; });
+                    return extended
                 }
             },
             methods : {
