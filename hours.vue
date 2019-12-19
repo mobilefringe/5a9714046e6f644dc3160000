@@ -117,8 +117,18 @@
                     return this.getPropertyHolidayHours;
                 },
                 reducedHolidays () {
-                    var holidayHours = this.holidayHours;
-                    return _.filter(holidayHours, function(o) { return !o.is_closed; });
+                    var holidayHours = _.filter(this.holidayHours, function(o) { return !o.is_closed; });
+                    var extendedHours = this.getPropertyExtendedHours;
+                    var open_holidays = _.concat(holidayHours, extendedHours);
+                    var holidays = [];
+                    _.forEach(open_holidays, function(val, key) {
+                        var today = moment().format('X');
+                        var holiday_date = moment(val.holiday_date).format('X');
+                        if (today < holiday_date) {
+                            holidays.push(val);
+                        }
+                    });
+                    return _.sortBy(holidays, function(o) { return o.holiday_date; });
                 },
                 closeHolidays () {
                     var holidayHours = this.holidayHours;
