@@ -132,7 +132,16 @@
                 },
                 closeHolidays () {
                     var holidayHours = this.holidayHours;
-                    return _.sortBy(_.filter(holidayHours, function(o) { return o.is_closed; }), [function(o) { return o.holiday_date; }]);
+                    var closed_holidays = _.filter(holidayHours, function(o) { return o.is_closed; });
+                    var holidays = [];
+                    _.forEach(closed_holidays, function(val, key) {
+                        var today = moment().format('X');
+                        var holiday_date = moment(val.holiday_date).format('X');
+                        if (today < holiday_date) {
+                            holidays.push(val);
+                        }
+                    });
+                    return _.sortBy(holidays, function(o) { return o.holiday_date; });
                 },
                 extendedHours () {
                     var extended = _.sortBy(this.getPropertyExtendedHours, function(o) { return o.holiday_date; });
