@@ -22,8 +22,8 @@
                         
                         <div class="padding_top_20"></div>
                         <h3 class="hours_heading text-left">{{$t("hours_page.holiday_hours")}}</h3>
-                        <div v-if="extendedHours.length > 0" class="hours_container">
-                            <div class="hours_div text-left" v-for="hour in extendedHours">
+                        <div v-if="reducedHolidays.length > 0" class="hours_container">
+                            <div class="hours_div text-left" v-for="hour in reducedHolidays">
                                 <span>{{ hour.holiday_date | moment("MMM D, YYYY", timezone) }}:</span>
                                 <span v-if="hour.is_closed == true">{{ $t("hours_page.closed") }}</span>
                                 <span v-else>{{ hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone) }}</span>
@@ -126,7 +126,7 @@
                 },
                 extendedHours () {
                     var extended = _.sortBy(this.getPropertyExtendedHours, function(o) { return o.holiday_date; });
-                    return extended
+                    return extended;
                 }
             },
             methods : {
