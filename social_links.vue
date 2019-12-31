@@ -14,5 +14,10 @@
     }
 </style>
 <script>
-define(["Vue","vuex","lightbox"],function(e,t,n){return e.use(n),e.component("social-links",{template:template})});
+    define(["Vue", "vuex", "lightbox"], function(Vue, Vuex, Lightbox) {
+        Vue.use(Lightbox);
+        return Vue.component("social-links", {
+            template: template, // the variable template will be injected,
+        });
+    });
 </script>
