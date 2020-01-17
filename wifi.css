@@ -98,7 +98,7 @@ a.button:hover, a.button:active {
     display: inline-block;
     width: 60px; height: 60px;
     margin-right: 20px;
-    background: url('app_logo.gif') no-repeat;
+    background: url('//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/gif/1578587659000/app_logo.gif') no-repeat;
     background-size: cover;
     border-radius: 10px;
 }
