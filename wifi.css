@@ -1,0 +1,141 @@
+* {
+    font-family: arial;
+}
+body, html {
+    padding: 0; margin: 0;
+    color: #FFFFFF;
+}
+p a:link, p a:visited {
+    color: #FFFFFF;
+}
+
+body#continue, body#terms_of_service {
+    background: #825ec2;
+}
+body#landing {
+    background: #41ae7e;
+}
+body#terms_of_service #content {
+    max-width: 600px;
+}
+body#terms_of_service #body-copy p {
+    text-align: left;
+}
+body#continue .button {
+    margin-bottom: 40px;
+}
+body#landing .button .text {
+    width: calc(100% - 120px);
+}
+#logo {
+    width: 50%;
+    max-width: 210px;
+}
+#body-copy {
+    margin-top: 70px;
+}
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+p {
+    font-size: 1.25em;
+}
+#content {
+    text-align: center;
+    padding: 70px 20px 70px;
+    max-width: 415px;
+    margin: 0 auto;
+}
+footer img {
+    width: 100%;
+}
+a.button {
+    text-decoration: none;
+    background: #FFF;
+    font-weight: 800;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: .75em;
+}
+
+a.button .small {
+    font-size: 1em;
+    text-align: center;
+}
+
+body#continue .button:link, body#continue .button:visited {
+    color: #6434ac;
+    box-shadow: #5f448d 5px 5px 10px;
+}
+body#landing .button:link, body#landing .button:visited {
+    color: #496558;
+    box-shadow: #307f5c 5px 5px 10px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+a.button:hover, a.button:active {
+
+}
+.details_button {
+    display: inline-block;
+    padding: 10px 20px;
+    width: auto;
+    border-radius: .75em;
+    text-decoration: none;
+    justify-content: center;
+    background: rgba(255,255,255,0.25);
+    color: #FFFFFF;
+    font-weight: 800;
+    border: 2px #FFFFFF SOLID;
+}
+
+.app_logo {
+    display: inline-block;
+    width: 60px; height: 60px;
+    margin-right: 20px;
+    background: url('app_logo.gif') no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.desktop_only {
+    display: none;
+}
+.mobile_only {
+    display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    .details_button {
+        width: calc(100% - 40px);
+    }
+    a.button {
+        padding: 20px 15px;
+    }
+    .app_logo {
+        margin: 0 0 5px;
+    }
+    body#landing .button .text {
+        width: auto;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 0.9em;
+    }
+    .mobile_only {
+        display: block;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .desktop_only {
+        display: block;
+    }
+}
