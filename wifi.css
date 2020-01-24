@@ -9,6 +9,13 @@ p a:link, p a:visited {
     color: #FFFFFF;
 }
 
+#landing footer {
+    background-image: url('//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/jpeg/1579710106542/mosiac_footer_landing_lg.jpg');
+}
+#continue footer {
+    background-image: url('mosiac_footer_continue_lg.jpg');
+}
+
 body#continue, body#terms_of_service {
     background: #825ec2;
 }
@@ -51,10 +58,7 @@ footer {
     text-align: center;
     height: 266px;
     width: 100%;
-    background: url('//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/jpeg/1579710106542/mosiac_footer_landing_lg.jpg') repeat-x center;
-}
-#continue footer {
-    background-image: url('mosiac_footer_continue_lg.jpg');
+    background: repeat-x;
 }
 a.button {
     text-decoration: none;
@@ -133,6 +137,14 @@ a.button:hover, a.button:active {
 }
 
 @media only screen and (max-width: 600px) {
+    #landing footer {
+        height: 120px;
+        background-image: url('//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/jpeg/1579710106478/mosiac_footer_landing.jpg');
+    }
+    #continue footer {
+        height: 120px;
+        background-image: url('mosiac_footer_continue.jpg');
+    }
     body {
         font-size: 0.9em;
     }
