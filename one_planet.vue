@@ -10,7 +10,7 @@
                     <h2 class="main_post_heading caps">{{ post.title }}</h2>
                     <p class="post_dates">{{ post.publish_date | moment("MMM DD, YYYY", timezone) }}</p>
                     <div class="post_text" v-html="post.body_short"></div>
-                    <router-link :to="{ name: 'postDetails', params: { id: post.slug }}" class="post_read_more"  :aria="post.title">
+                    <router-link :to="{ name: 'onePlanetDetails', params: { id: post.slug }}" class="post_read_more"  :aria="post.title">
 					   {{ $t("blog_page.read_post") }} <i class="fa fa-angle-right" aria-hidden="true"></i>
 				    </router-link>
 				    <social-sharing :url="shareURL(post.slug)" :title="post.title" :description="post.body_short" :quote="_.truncate(post.body, {'length': 99})" twitter-user="BCCstyle" :media="post.image_url" inline-template >
@@ -35,7 +35,7 @@
                     <h2 class="post_heading caps">{{ post.title }}</h2>
                     <p class="post_dates">{{ post.publish_date | moment("MMM DD, YYYY", timezone) }}</p>
                     <div class="post_text" v-html="post.body_short"></div>
-                    <router-link :to="{ name: 'postDetails', params: { id: post.slug }}" class="post_read_more"  :aria="post.title">
+                    <router-link :to="{ name: 'onePlanetDetails', params: { id: post.slug }}" class="post_read_more"  :aria="post.title">
 					   {{ $t("blog_page.read_post") }} <i class="fa fa-angle-right" aria-hidden="true"></i>
 				    </router-link>
 			        <social-sharing :url="shareURL(post.slug)" :title="post.title" :description="post.body" :quote="_.truncate(post.description, {'length': 99})" twitter-user="BCCstyle" :media="post.image_url" inline-template >
