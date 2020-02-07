@@ -85,6 +85,23 @@ define([], function() {
         //     ]
         // },
         {
+            path: '/one_planet',
+            component: view('default'),
+            children: [
+                {
+                    path: '',
+                    component: view('one_planet'),
+                    name: 'postList'
+                },
+                {
+                    path: ':id',
+                    component: view('one_planet_details'),
+                    name: 'postDetails',
+                    props: true
+                }
+            ]
+        },
+        {
             path: '/map',
             component: view('default'),
             redirect: '/404',
