@@ -68,22 +68,22 @@ define([], function() {
                 }
             ]
         },
-        // {
-        //     path: '/posts',
-        //     component: view('default'),
-        //     children: [{
-        //             path: '',
-        //             component: view('posts'),
-        //             name: 'postList'
-        //         },
-        //         {
-        //             path: ':id',
-        //             component: view('post_details'),
-        //             name: 'postDetails',
-        //             props: true
-        //         }
-        //     ]
-        // },
+        {
+            path: '/posts',
+            component: view('default'),
+            children: [{
+                    path: '',
+                    component: view('posts'),
+                    name: 'postList'
+                },
+                {
+                    path: ':id',
+                    component: view('post_details'),
+                    name: 'postDetails',
+                    props: true
+                }
+            ]
+        },
         {
             path: '/one_planet',
             component: view('default'),
