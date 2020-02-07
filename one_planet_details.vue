@@ -28,7 +28,7 @@
 							</div>
 						</social-sharing>
                         <div class="margin_60 post_text" v-html="currentPost.html_body"></div>
-                        <router-link to="/posts">
+                        <router-link to="/one_planet">
                             <button class="contact_btn">Back to Blog</button>
                         </router-link>
                     </div>
@@ -38,7 +38,7 @@
                         <h3 class="previous_post_title">Previous Posts</h3>
                         <ul v-if="relatedPosts.length > 0">
                             <li v-for="post in relatedPosts">
-                                <router-link :to="{ name: 'postDetails', params: { id: post.slug }}" class="" :aria="post.title">
+                                <router-link :to="{ name: 'onePlanetDetails', params: { id: post.slug }}" class="" :aria="post.title">
 					                <h4>{{ post.title }}</h4>
 				                </router-link>
                             </li>
@@ -122,7 +122,7 @@
                     }
                 },
                 shareURL(slug) {
-                    var share_url = "https://www.bramaleacitycentre.com/posts/" + slug
+                    var share_url = "https://www.bramaleacitycentre.com/one_planet/" + slug
                     return share_url
                 }
             }
