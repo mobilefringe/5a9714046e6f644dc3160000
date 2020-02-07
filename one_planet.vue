@@ -143,7 +143,7 @@
                     }
                 },
                 shareURL(slug) {
-                    var share_url = "https://www.bramaleacitycentre.com/posts/" + slug
+                    var share_url = "https://www.bramaleacitycentre.com/one_planet/" + slug
                     return share_url
                 }
             }
