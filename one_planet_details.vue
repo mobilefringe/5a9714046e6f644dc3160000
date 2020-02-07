@@ -35,7 +35,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="previous_post_container">
-                        <h3 class="previous_post_title">Previous Posts</h3>
+                        <h3 class="previous_post_title">Previous Articles</h3>
                         <ul v-if="relatedPosts.length > 0">
                             <li v-for="post in relatedPosts">
                                 <router-link :to="{ name: 'onePlanetDetails', params: { id: post.slug }}" class="" :aria="post.title">
