@@ -87,7 +87,7 @@
                     'findBlogByName'
                 ]),
                 blogs() {
-                    var blog = this.findBlogByName("Bramalea City Centre").posts;
+                    var blog = this.findBlogByName("One Planet").posts;
                     var vm = this;
                     var temp_blog = [];
                     _.forEach(blog, function(value, key) {
