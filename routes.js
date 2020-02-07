@@ -96,7 +96,7 @@ define([], function() {
                 {
                     path: ':id',
                     component: view('one_planet_details'),
-                    name: 'postDetails',
+                    name: 'onePlanetDetails',
                     props: true
                 }
             ]
