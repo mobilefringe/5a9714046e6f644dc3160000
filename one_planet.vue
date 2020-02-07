@@ -36,7 +36,7 @@
                     <p class="post_dates">{{ post.publish_date | moment("MMM DD, YYYY", timezone) }}</p>
                     <div class="post_text" v-html="post.body_short"></div>
                     <router-link :to="{ name: 'onePlanetDetails', params: { id: post.slug }}" class="post_read_more"  :aria="post.title">
-					   {{ $t("blog_page.read_post") }} <i class="fa fa-angle-right" aria-hidden="true"></i>
+					   Read Full Article <i class="fa fa-angle-right" aria-hidden="true"></i>
 				    </router-link>
 			        <social-sharing :url="shareURL(post.slug)" :title="post.title" :description="post.body" :quote="_.truncate(post.description, {'length': 99})" twitter-user="BCCstyle" :media="post.image_url" inline-template >
 						<div class="post_list_share">
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <button class="contact_btn" v-if="!noMorePosts" @click="handleButton">Load More</button>
-            <p v-if="noPosts">No More Posts</p>
+            <!--<p v-if="noPosts">No More Art</p>-->
         </div>
     </div>
 </template>
