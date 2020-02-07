@@ -43,7 +43,7 @@
 				                </router-link>
                             </li>
                         </ul>
-                        <p v-else>No previous posts</p>
+                        <p v-else>No previous articles.</p>
                     </div>   
                 </div>
             </div>
