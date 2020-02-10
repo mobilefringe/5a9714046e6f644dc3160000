@@ -29,7 +29,7 @@
 						</social-sharing>
                         <div class="margin_60 post_text" v-html="currentPost.html_body"></div>
                         <router-link to="/one_planet">
-                            <button class="contact_btn">Back to One Planet</button>
+                            <button class="contact_btn">Back to OnePlanet</button>
                         </router-link>
                     </div>
                 </div>
