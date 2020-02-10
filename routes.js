@@ -85,12 +85,12 @@ define([], function() {
         //     ]
         // },
         {
-            path: '/one_planet',
+            path: '/oneplanet',
             component: view('default'),
             children: [
                 {
                     path: '',
-                    component: view('one_planet'),
+                    component: view('oneplanet'),
                     name: 'postList'
                 },
                 {
