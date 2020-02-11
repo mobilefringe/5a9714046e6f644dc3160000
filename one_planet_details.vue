@@ -115,7 +115,7 @@
                     }
                 },
                 updateCurrentBlog(id) {
-                    var blogName = "One Planet";
+                    var blogName = "ONEPLANET";
                     this.currentPost = this.findBlogPostBySlug(blogName, id);
                     if (this.currentPost === null || this.currentPost === undefined) {
                         this.$router.replace({ name: '404' });
