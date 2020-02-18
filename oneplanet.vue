@@ -3,11 +3,6 @@
         <!--<div class="margin_60"></div>-->
         <div class="page_header" v-if="promoBanner" v-lazy:background-image="promoBanner.image_url">
 			<div class="site_container">
-				<div class="header_content caps">
-					<h1>{{$t("events_page.events")}}</h1>
-					<h2 style="display:none;">Scroll to view events</h2>
-					<h3 style="display:none;">View all events below</h3>
-				</div>
 			</div>
 		</div>
 		<div class="site_container inside_page_content page_content">
