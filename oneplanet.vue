@@ -73,7 +73,8 @@
                     morePosts: [],
                     morePostsFetched: false,
                     noMorePosts: false,
-                    noPosts: false
+                    noPosts: false.
+                    promoBanner: null,
                 }
             },
             created() {
@@ -81,6 +82,11 @@
                     this.firstPost
                     this.posts
                     this.dataloaded = true;
+                    
+                    var temp_repo = this.findRepoByName('OnePlanet Banner');
+                    if (temp_repo) {
+                        this.promoBanner = temp_repo.images[0];
+                    }
                 });
             },
             computed: {
