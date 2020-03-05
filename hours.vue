@@ -1,5 +1,5 @@
 <template>
-    <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div v-if="dataLoaded"> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content caps">
@@ -75,6 +75,7 @@
             props:['locale'],
             data: function() {
                 return {
+                    dataLoaded: false,
                     pageBanner : null
                 }
             },
@@ -86,6 +87,8 @@
                     } else {
                         this.pageBanner = "";
                     }
+                    
+                    this.dataLoaded = true;
                 });
             },
             computed: {
