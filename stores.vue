@@ -98,9 +98,8 @@
             },
             created (){
                 this.loadData().then(response => {
-                    
                     this.filteredStores = this.allStores;
-                    
+    
                     var temp_repo = this.findRepoByName('Stores Banner');
                     if (temp_repo && temp_repo.images) {
                         this.pageBanner = temp_repo.images[0];
