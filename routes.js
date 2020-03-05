@@ -180,16 +180,6 @@ define([], function() {
             }]
         },
         {
-            path: '/find_us',
-            component: view('default'),
-            redirect: '/',
-            children: [{
-                path: '',
-                component: view('find_us'),
-                name: 'findUs'
-            }]
-        },
-        {
             path: '/community',
             component: view('default'),
             redirect: '/',
