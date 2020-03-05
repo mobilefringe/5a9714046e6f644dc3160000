@@ -1,5 +1,5 @@
 <template>
-	<div id="find_us_container">
+	<div id="find_us_container" v-if="dataLoaded">
 	    <div class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')', marginBottom:'0px'}">
 			<div class="site_container">
 				<div class="header_content">
@@ -26,6 +26,7 @@
             template: template, // the variable template will be injected,
             data: function() {
                 return {
+                    dataLoaded: false,
                     success_subscribe: false,
                     currentPage: null,
                     pageBanner: null
@@ -41,6 +42,7 @@
                     } else {
                         this.pageBanner = "";
                     }
+                    this.dataLoaded = true;
                 });
             },
             computed: {
