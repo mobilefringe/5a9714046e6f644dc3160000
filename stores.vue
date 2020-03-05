@@ -1,6 +1,6 @@
 <template>
 	<div v-if="dataloaded">
-		<div class="page_header" v-if="storeBanner" v-lazy:background-image="storeBanner.image_url">
+		<div class="page_header" v-lazy:background-image="storeBanner.image_url">
 			<div class="site_container">
 				<div class="header_content">
 					<h1>{{$t("stores_page.shopping")}}</h1>
@@ -98,13 +98,17 @@
             },
             created (){
                 this.loadData().then(response => {
-                    this.dataloaded = true;
+                    
                     this.filteredStores = this.allStores;
                     
                     var temp_repo = this.findRepoByName('Stores Banner');
-                    if (temp_repo) {
+                    if (temp_repo && temp_repo.images) {
                         this.storeBanner = temp_repo.images[0];
+                    } else {
+                        this.storeBanner = "";
                     }
+                    
+                    this.dataloaded = true;
                 });
             },
             computed: {
