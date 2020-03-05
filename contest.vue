@@ -179,6 +179,8 @@
             created() {
                 this.loadData(this.id).then(response => {
                     this.currentContest = this.findContestBySlug('bonniedoon-test-contest');
+                    console.log("", this.currentContest)
+                    
                     
                     var temp_repo = this.findRepoByName('Pages Banner');
                     if (temp_repo && temp_repo.images) {
