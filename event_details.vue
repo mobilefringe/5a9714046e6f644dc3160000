@@ -1,6 +1,6 @@
 <template>
 	<div class="event_dets_container" v-if="currentEvent">
-		<div class="page_header" v-if="eventBanner" v-bind:style="{ backgroundImage: 'url(' + eventBanner.image_url + ')' }">
+		<div class="page_header" v-bind:style="{ backgroundImage: 'url(' + eventBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content caps">
 					<h1>{{$t("events_page.events")}}</h1>
@@ -69,10 +69,14 @@
             created(){
                 this.loadData().then(response => {
                     this.updatecurrentEvent(this.id);
+                    
                     var temp_repo = this.findRepoByName('Events Banner');
-                    if(temp_repo) {
-                        this.eventBanner = temp_repo.images[0];
+                    if (temp_repo && temp_repo.images) {
+                        this.pageBanner = temp_repo.images[0];
+                    } else {
+                        this.pageBanner = "";
                     }
+
                     this.events = this.event;
                 });
             },
