@@ -1,6 +1,6 @@
 <template>
     <div id="contact_us_container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
-        <div  v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
+        <div class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content">
 					<h1>Contact Us</h1>
@@ -64,28 +64,6 @@
     </div>
 </template>
 
-<!--<style>-->
-<!--    #contact_us_container .row{-->
-<!--        margin-left:inherit;-->
-<!--    }-->
-<!--    #contact_us_container {-->
-<!--        margin: 20px auto 0;-->
-<!--    }-->
-<!--    #contact_us_container .page_header {-->
-<!--        margin-bottom:20px;-->
-<!--    }-->
-<!--    #contact_us_container .property_address {-->
-<!--        margin-bottom:20px;-->
-<!--    }-->
-<!--    .form-group .form-control-feedback{-->
-<!--        font-size: 12px;-->
-        /*top:60px;*/
-<!--        color: #F44336;-->
-<!--        top: initial;-->
-<!--        bottom: -27px;-->
-<!--    }-->
-<!--</style>-->
-
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vee-validate', 'utility'], function(Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate,Utility) {
         Vue.use(Meta);
@@ -107,10 +85,13 @@
             created(){
                 this.loadData().then(response => {
                     this.currentPage = response[0].data;
+                    
                     var temp_repo = this.findRepoByName('Contact Us Banner');
-                    if(temp_repo) {
+                    if (temp_repo && temp_repo.images) {
                         this.pageBanner = temp_repo.images[0];
-                    } 
+                    } else {
+                        this.pageBanner = "";
+                    }
                 });
             },
             mounted () {
