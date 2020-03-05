@@ -1,7 +1,7 @@
 <template>
 	<div>
         <div v-if="dataLoaded" v-cloak>
-            <div v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
+            <div class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
     			<div class="site_container">
     				<div class="header_content">
     					<h1>Seach Results</h1>
@@ -66,6 +66,7 @@
             template: template, // the variable template will be injected
             data() {
                 return {
+                    pageBanner: "",
                     searchResults: null,
                     searchQuery: null,
                     dataLoaded: true,
