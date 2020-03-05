@@ -1,7 +1,6 @@
 <template>
 	<div class="page_container store_dets_container" v-if="dataLoaded" id="store_dets_container">
-		<div class="page_header" v-if="pageBanner" v-lazy:background-image="pageBanner.image_url">
-			<!--http://via.placeholder.com/1920x300-->
+		<div class="page_header" v-lazy:background-image="pageBanner.image_url">
 			<div class="site_container">
 				<div class="header_content">
 					<h1>{{$t("stores_page.shopping")}}</h1>
@@ -117,13 +116,17 @@
             },
             created (){
                 this.loadData().then(response => {
-                    this.dataLoaded = true;
                     this.updateCurrentStore(this.id);
+                    
                     var temp_repo = this.findRepoByName('Stores Banner');
-                    if(temp_repo) {
+                    if(temp_repo && temp_repo.images) {
                         this.pageBanner = temp_repo.images[0];
+                    } else {
+                        this.pageBanner = "";
                     }
-                    this.pageBanner = this.pageBanner;
+                    
+                    
+                    this.dataLoaded = true;
                 });
             },
             watch: {
