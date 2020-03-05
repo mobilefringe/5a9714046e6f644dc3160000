@@ -1,6 +1,6 @@
 <template>
 	<div v-if="dataloaded">
-		<div class="page_header" v-if="promoBanner" v-lazy:background-image="promoBanner.image_url">
+		<div class="page_header" v-lazy:background-image="promoBanner.image_url">
 			<div class="site_container">
 				<div class="header_content caps">
 					<h1>{{$t("events_page.events")}}</h1>
@@ -142,12 +142,14 @@
             },
             created() {
                 this.loadData().then(response => {
-                    this.dataloaded = true;
-                    
                     var temp_repo = this.findRepoByName('Events Banner');
-                    if (temp_repo) {
+                    if (temp_repo && temp_repo.images) {
                         this.promoBanner = temp_repo.images[0];
+                    } else {
+                        this.promoBanner = "";
                     }
+                    
+                    this.dataloaded = true;
                 });
             },
             computed: {
