@@ -159,16 +159,6 @@ define([], function() {
             }]
         },
         {
-            path: '/newsletter',
-            component: view('default'),
-            children: [{
-                path: '',
-                component: view('newsletter'),
-                name: 'newsletter',
-                props: true
-            }]
-        },
-        {
             path: '/pages',
             component: view('default'),
             redirect: '/',
