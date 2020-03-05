@@ -123,8 +123,6 @@
                         } else {
                             this.pageBanner = { image_url: "" };
                         }
-                        
-                        this.pageBanner = this.pageBanner;
                     });
                 },
                 updateAccessibilityData() {
