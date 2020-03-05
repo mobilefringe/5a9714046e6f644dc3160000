@@ -72,9 +72,9 @@
                     
                     var temp_repo = this.findRepoByName('Events Banner');
                     if (temp_repo && temp_repo.images) {
-                        this.pageBanner = temp_repo.images[0];
+                        this.eventBanner = temp_repo.images[0];
                     } else {
-                        this.pageBanner = "";
+                        this.eventBanner = "";
                     }
 
                     this.events = this.event;
