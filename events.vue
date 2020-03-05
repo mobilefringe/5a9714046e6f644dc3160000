@@ -1,6 +1,6 @@
 <template>
 	<div v-if="dataLoaded">
-		<div class="page_header" v-lazy:background-image="promoBanner.image_url">
+		<div class="page_header" v-bind:style="{ backgroundImage: 'url(' + promoBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content caps">
 					<h1>{{$t("events_page.events")}}</h1>
