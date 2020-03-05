@@ -1,5 +1,5 @@
 <template>
-	<div v-if="dataloaded">
+	<div v-if="dataLoaded">
 		<div class="page_header" v-lazy:background-image="promoBanner.image_url">
 			<div class="site_container">
 				<div class="header_content caps">
