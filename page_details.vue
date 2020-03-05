@@ -1,7 +1,6 @@
 <template>
     <div v-if="currentPage">
-        <div v-if="pageBanner" class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
-			<!--http://via.placeholder.com/1920x300-->
+        <div class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content">
 					<h1 v-if="locale=='en-ca'">{{currentPage.title}}</h1>
@@ -30,9 +29,7 @@
                 <div class="page_body description_text text_left" v-else v-html="currentPage.body_2"></div>
             </div>
         </div>
-        
     </div>
-    <!--Pages Banner-->
 </template>
 <style>
     .page_title {
@@ -85,8 +82,10 @@
             methods: {
                 loadData: async function(id) {
                     try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "/pages/" + id + ".json"}),this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + id + ".json" }),
+                            this.$store.dispatch("getData", "repos")
+                        ]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
