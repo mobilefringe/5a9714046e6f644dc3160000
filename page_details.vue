@@ -93,40 +93,37 @@
                 },
                 updatePageData (id) {
                     this.loadData(id).then(response => {
-                        if(response == null || response == undefined) {
+                        if (response == null || response == undefined) {
                             this.$router.replace('/');
                         }
                         this.currentPage = response[0].data;
+                        
                         var temp_repo = null;
                         //Add custom banners for indivial pages 
-                        if( _.includes(id, 'gift-cards')) {
+                        if ( _.includes(id, 'gift-cards')) {
                             temp_repo = this.findRepoByName('Giftcards Banner');
-                        }
-                        else if ( _.includes(id, 'services')) {
+                        } else if ( _.includes(id, 'services')) {
                             temp_repo = this.findRepoByName('Services Banner');
-                        }
-                        else if( _.includes(id, 'accessibilty')) {
+                        } else if ( _.includes(id, 'accessibilty')) {
                             temp_repo = this.findRepoByName('Accessibility Banner');
-                        }
-                        else if( _.includes(id, 'leasing')) {
+                        } else if ( _.includes(id, 'leasing')) {
                             temp_repo = this.findRepoByName('Leasing Banner');
-                        }
-                        else if( _.includes(id, 'bees-at-the-hive')) {
+                        } else if ( _.includes(id, 'bees-at-the-hive')) {
                             temp_repo = this.findRepoByName('Bees Banner');
-                        }
-                        else if( _.includes(id, 'community-relations')) {
+                        } else if ( _.includes(id, 'community-relations')) {
                             temp_repo = this.findRepoByName('Community Banner');
-                        }
-                        else if( _.includes(id, 'sustainability')) {
+                        } else if ( _.includes(id, 'sustainability')) {
                             temp_repo = this.findRepoByName('Sustainability Banner');
-                        }
-                        else {
+                        } else {
                             temp_repo = this.findRepoByName('Pages Banner');
                         }
                         
-                        if(temp_repo) {
+                        if (temp_repo && temp_repo.images) {
                             this.pageBanner = temp_repo.images[0];
+                        } else {
+                            this.pageBanner = { image_url: "" };
                         }
+                        
                         this.pageBanner = this.pageBanner;
                     });
                 },
