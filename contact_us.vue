@@ -1,5 +1,5 @@
 <template>
-    <div id="contact_us_container"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div v-if="dataLoaded" id="contact_us_container"> <!-- without an outer container div this component template will not render -->
         <div class="page_header" v-if="pageBanner" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content">
@@ -72,6 +72,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: false,
                     form_data : {},
                     formSuccess : false,
                     formError: false,
@@ -92,6 +93,8 @@
                     } else {
                         this.pageBanner = "";
                     }
+                    
+                    this.dataLoaded = true;
                 });
             },
             mounted () {
@@ -139,13 +142,15 @@
                 },
                 loadData: async function() {
                     try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host + "	/pages/bramaleacitycentre-contact-us.json"}),this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "	/pages/bramaleacitycentre-contact-us.json" }),
+                            this.$store.dispatch("getData", "repos")
+                        ]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
-                },
+                }
             }
         });
     });
