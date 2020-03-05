@@ -1,6 +1,6 @@
 <template>
 	<div v-if="dataLoaded">
-		<div class="page_header" v-bind:style="{ backgroundImage: 'url(' + promoBanner.image_url + ')' }">
+		<div class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content caps">
 					<h1>{{$t("events_page.events")}}</h1>
@@ -136,7 +136,7 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    promoBanner: null,
+                    pageBanner: null,
                     paginate: ['events']
                 }
             },
@@ -144,9 +144,9 @@
                 this.loadData().then(response => {
                     var temp_repo = this.findRepoByName('Events Banner');
                     if (temp_repo && temp_repo.images) {
-                        this.promoBanner = temp_repo.images[0];
+                        this.pageBanner = temp_repo.images[0];
                     } else {
-                        this.promoBanner = "";
+                        this.pageBanner = { image_url: "" };
                     }
                     
                     this.dataLoaded = true;
