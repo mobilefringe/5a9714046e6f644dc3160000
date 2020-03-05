@@ -1,5 +1,5 @@
 <template>
-    <div v-if="pageBanner"> <!-- for some reason if you do not put an outer container div this component template will not render -->
+    <div> <!-- for some reason if you do not put an outer container div this component template will not render -->
         <div class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content caps">
@@ -80,9 +80,13 @@
             },
             created() {
                 this.loadData().then(response => {
-                    this.pageBanner = this.findRepoByName('Hours Banner').images[0];
+                    var temp_repo = this.findRepoByName('Hours Banner');
+                    if (temp_repo && temp_repo.images) {
+                        this.pageBanner = temp_repo.images[0];
+                    } else {
+                        this.pageBanner = "";
+                    }
                 });
-                
             },
             computed: {
                 ...Vuex.mapGetters([
