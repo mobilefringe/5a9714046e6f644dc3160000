@@ -1,5 +1,5 @@
 <template>
-	<div class="page_container" id="contact_us_container">
+	<div v-if="dataLoaded" class="page_container" id="contact_us_container">
 		<!-- for some reason if you do not put an outer container div this component template will not render -->
 		<div class="page_header" v-bind:style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
@@ -60,6 +60,7 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: false,
                     pageBanner: null,
                     para1: null,
                     para2: null
@@ -76,6 +77,8 @@
 
                     this.para1 = response[1].data;
                     this.para2 = response[1].data.subpages[0];
+                    
+                    this.dataLoaded = true;
                 });    
             },
             computed: {
