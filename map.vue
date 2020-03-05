@@ -1,7 +1,6 @@
 <template>
-	<div v-if="dataloaded">
-	    <div class="page_header" v-if="pageBanner" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
-			<!--http://via.placeholder.com/1920x300-->
+	<div v-if="dataLoaded">
+	    <div class="page_header" :style="{ backgroundImage: 'url(' + pageBanner.image_url + ')' }">
 			<div class="site_container">
 				<div class="header_content">
 					<h1>{{$t("stores_page.map")}}</h1>
@@ -10,11 +9,8 @@
 		</div>
 		<div class="site_container">
 		    <div class="row">
-		        <div class="col-sm-4">
-		            
-		        </div>
+		        <div class="col-sm-4"></div>
 		        <div class="col-sm-8 floor_switch_container" >
-		        <!--<div></div>-->
 		            <div class="floor_switch" @click="focusUpperLevel" :class="{active: upperActive}">Upper Level</div>
 		            <div class="floor_switch" @click="focusLowerLevel" :class="{active: lowerActive}">Lower Level</div>
 		        </div>
@@ -63,12 +59,13 @@
             template: template, // the variable template will be injected
             data: function() {
                 return {
+                    dataLoaded: false,
                     listMode: "alphabetical",
                     selectedCat: null,
                     selectedAlpha: "All",
                     alphabet: ["All", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
                     filteredStores: null,
-                    dataloaded: false,
+                    
                     mobile_store: false,
                     windowWidth: 0,
                     storeBanner : null,
@@ -79,15 +76,18 @@
             },
             created (){
                 this.loadData().then(response => {
-                    this.dataloaded = true;
+                    var temp_repo = this.findRepoByName('Map Banner');
+                    if (temp_repo && temp_repo.images) {
+                        this.pageBanner = temp_repo.images[0];
+                    } else {
+                        this.pageBanner = "";
+                    }
+                    
                     this.filteredStores = this.allStores;
                     
-                    // this.storeBanner = this.findRepoByName('Stores Banner').images[0];
-                    var temp_repo = this.findRepoByName('Map Banner');
-                    if(temp_repo) {
-                        this.pageBanner = temp_repo.images[0];
-                    }
                     this.$on('updateMap', this.updatePNGMap);
+                    
+                    this.dataLoaded = true;
                 });
             },
             watch: {
