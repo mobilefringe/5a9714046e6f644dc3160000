@@ -135,7 +135,7 @@
             props:['locale'],
             data: function() {
                 return {
-                    dataloaded: false,
+                    dataLoaded: false,
                     promoBanner: null,
                     paginate: ['events']
                 }
@@ -149,7 +149,7 @@
                         this.promoBanner = "";
                     }
                     
-                    this.dataloaded = true;
+                    this.dataLoaded = true;
                 });
             },
             computed: {
