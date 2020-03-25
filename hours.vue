@@ -9,7 +9,9 @@
 			</div>
 		</div>  
         <div class="site_container">
-            
+            <div class="" v-if="currentPage">
+                    <div class="" v-html="currentPage.body"></div>
+            </div> 
         
             <div class="all_hours_container">
                 <div class="row">
