@@ -78,11 +78,13 @@
             data: function() {
                 return {
                     dataLoaded: false,
-                    pageBanner : null
+                    pageBanner : null,
+                    currentPage: null
                 }
             },
             created() {
                 this.loadData().then(response => {
+                    this.currentPage = response[0].data;
                     var temp_repo = this.findRepoByName('Hours Banner');
                     if (temp_repo && temp_repo.images) {
                         this.pageBanner = temp_repo.images[0];
