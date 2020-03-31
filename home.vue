@@ -199,7 +199,7 @@ define(["Vue", "vuex", "vue-meta", "vue!today_hours", "vue!search-component", 'v
                 loadData: async function() {
                     try {
                         // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch("getData", "banners"), this.$store.dispatch("getData", "feature_items"), this.$store.dispatch("getData", "promotions"), this.$store.dispatch("getData", "popups"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host +"/api/v4/bramaleacitycentre/social.json"})]);
+                        let results = await Promise.all([this.$store.dispatch("getData", "banners"), this.$store.dispatch("getData", "feature_items"), this.$store.dispatch("getData", "promotions"), this.$store.dispatch("getData", "popups"), this.$store.dispatch('LOAD_PAGE_DATA', {url: "https://mallmaverick.com/api/v4/bramaleacitycentre/social.json"})]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
