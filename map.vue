@@ -118,7 +118,6 @@
                     'findCategoryById',
                     'findCategoryByName',
                     'findRepoByName'
-
                 ]),
                 allStores() {
                     return this.processedStores;
@@ -135,15 +134,12 @@
                     return _.map(this.processedStores, 'name');
                 },
                 getPNGurl() {
-                    return "https://www.mallmaverick.com" + this.property.map_url;
+                    return "https://assets.mallmaverick.com" + this.property.map_url;
                 },
                 svgMapRef() {
                     return _.filter(this.$children, function(o) {
                         return (o.$el.className == "svg-map")
                     })[0];
-                },
-                getStoreById(){
-                    
                 },
                 filterStores() {
                     letter = this.selectedAlpha;
@@ -186,8 +182,10 @@
             methods: {
                 loadData: async function() {
                     try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch("getData", "categories"), this.$store.dispatch("getData", "repos")]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "categories"), 
+                            this.$store.dispatch("getData", "repos")
+                        ]);
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
@@ -219,10 +217,9 @@
                     this.upperActive = true;
                 }
             },
-            
             beforeDestroy: function() {
                 window.removeEventListener('resize', this.getWindowWidth);
-            },
+            }
         });
     });
 </script>
