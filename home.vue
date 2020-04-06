@@ -128,32 +128,29 @@ define(["Vue", "vuex", "vue-meta", "vue!today_hours", "vue!search-component", 'v
                     return _.orderBy(banners, ['position'], ['asc']);
                 },
                 feature_items () {
-                    // return this.$store.state.feature_items;
                     var features = this.$store.state.feature_items;
                     _.forEach(features, function(value, key) {
-                      
                         if( _.includes([0,5], key) ) {
                             value.masonry_class = "grid-item--height2";
-                        }
-                        else if ( _.includes([7], key) ){
+                        } else if ( _.includes([7], key) ){
                             value.masonry_class = "grid-item--width2";
-                        }
-                        else {
+                        } else {
                             value.masonry_class = " ";
                         }
+                        
                         if(value.name === null || value.name === undefined || value.name.length == 0) {
                             value.no_hover_class = false;
-                        }
-                        else {
+                        } else {
                             value.no_hover_class = true;
                         }
+                        
                         if(value.url ==  null ||value.url == undefined || value.url.length == 0 ) {
                             value.no_link = true;
                         }
+                        
                         if( _.includes(value.url, '//')) {
                             value.do_anchor_tag = true;
-                        }
-                        else {
+                        } else {
                             value.do_anchor_tag = false;
                         }
                     });
@@ -162,31 +159,27 @@ define(["Vue", "vuex", "vue-meta", "vue!today_hours", "vue!search-component", 'v
                 mobile_feature_items () {
                     var mobile_features = this.$store.state.feature_items;
                     _.forEach(mobile_features, function(value, key) {
-                      
                         if( _.includes([0,5], key) ) {
                             value.masonry_class = "grid-item--height2";
-                        }
-                        else if ( _.includes([7], key) ){
+                        } else if ( _.includes([7], key) ){
                             value.masonry_class = "grid-item--width2";
-                        }
-                        else {
+                        } else {
                             value.masonry_class = " ";
                         }
                         
-                        if(key > 7) {
+                        if (key > 7) {
                             value.mobile_order = key + 2;
-                        }
-                        else {
+                        } else {
                             value.mobile_order = key + 1;
                         }
-                        if(key == 8) {
+                        
+                        if (key == 8) {
                             value.mobile_order = 7;
                         }
                         
-                        if( _.includes(value.url, '//')) {
+                        if ( _.includes(value.url, '//')) {
                             value.do_anchor_tag = true;
-                        }
-                        else {
+                        } else {
                             value.do_anchor_tag = false;
                         }
                     });
@@ -197,8 +190,13 @@ define(["Vue", "vuex", "vue-meta", "vue!today_hours", "vue!search-component", 'v
             methods: {
                 loadData: async function() {
                     try {
-                        // avoid making LOAD_META_DATA call for now as it will cause the entire Promise.all to fail since no meta data is set up.
-                        let results = await Promise.all([this.$store.dispatch("getData", "banners"), this.$store.dispatch("getData", "feature_items"), this.$store.dispatch("getData", "promotions"), this.$store.dispatch("getData", "popups"), this.$store.dispatch('LOAD_PAGE_DATA', {url: this.property.mm_host +"/api/v4/bramaleacitycentre/social.json"})]);
+                        let results = await Promise.all([
+                            this.$store.dispatch("getData", "banners"), 
+                            this.$store.dispatch("getData", "feature_items"), 
+                            this.$store.dispatch("getData", "promotions"), 
+                            this.$store.dispatch("getData", "popups"), 
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host +"/api/v4/bramaleacitycentre/social.json" })
+                        ]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
@@ -210,16 +208,16 @@ define(["Vue", "vuex", "vue-meta", "vue!today_hours", "vue!search-component", 'v
                 }
             },
             metaInfo () {
-               return {
-                  title: this.meta.meta_title,
-                  meta: [
-                     { name: 'description', vmid: 'description', content: this.meta.meta_description },
-                     { name: 'keywords',  vmid: 'keywords', content: this.meta.meta_keywords },
-                     { property: 'og:title', vmid: 'og:title', content: this.meta.meta_title },
-                     { property: 'og:description', vmid: 'og:description', content: this.meta.meta_description },
-                     { property: 'og:image', vmid: 'og:image', content: this.meta.meta_image }
-                  ]
-               }
+                return {
+                    title: this.meta.meta_title,
+                    meta: [
+                        { name: 'description', vmid: 'description', content: this.meta.meta_description },
+                        { name: 'keywords',  vmid: 'keywords', content: this.meta.meta_keywords },
+                        { property: 'og:title', vmid: 'og:title', content: this.meta.meta_title },
+                        { property: 'og:description', vmid: 'og:description', content: this.meta.meta_description },
+                        { property: 'og:image', vmid: 'og:image', content: this.meta.meta_image }
+                    ]
+                }
             }
         })
     })
