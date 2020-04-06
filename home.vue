@@ -90,10 +90,9 @@ define(["Vue", "vuex", "vue-meta", "vue!today_hours", "vue!search-component", 'v
                         Cookies.set('popup_viewed', "true");
                         viewed = Cookies.get('popup_viewed');
                         this.show_popup = true;
-                        this.popup.image_url = "//mallmaverick.cdn.speedyrails.net" + this.popup.photo_url;
+                        this.popup.image_url = "//assets.mallmaverick.com" + this.popup.photo_url;
                         document.getElementById('popup_backdrop').style.display = "block";
-                    }
-                    else {
+                    } else {
                         document.getElementById('popup_backdrop').style.display = "none";
                     }
                 },
