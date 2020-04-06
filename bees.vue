@@ -14,7 +14,7 @@
 				    <iframe width="100%" height="500px" src="https://www.youtube.com/embed/KA3dtt0acI0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>	
 				</div>
 				<div class="col-md-6">
-				    <img class="img-responsive" src="https://www.mallmaverick.com/system/site_images/photos/000/041/211/original/image_(1).png?1532099367" alt="">	
+				    <img class="img-responsive" src="https://assets.mallmaverick.com/system/site_images/photos/000/041/211/original/image_(1).png?1532099367" alt="">	
 				</div>
 			</div>
 			<div class="row">
