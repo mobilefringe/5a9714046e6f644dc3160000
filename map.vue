@@ -163,7 +163,6 @@
                     if (category_id == "All") {
                         this.filteredStores = this.allStores;
                     } else {
-
                         var find = this.findCategoryById;
                         var filtered = _.filter(this.allStores, function(o) {
                             return _.indexOf(o.categories, _.toNumber(category_id)) > -1;
@@ -172,12 +171,10 @@
                         this.filteredStores = filtered;
                     }
                     var el = document.getElementById("selectByCat");
-                    if(el) {
+                    if (el) {
                         el.classList.remove("open");
                     }
-                    
-                },
-                
+                }
             },
             methods: {
                 loadData: async function() {
