@@ -48,7 +48,7 @@ require.config({
 });
 
 require(['Vue', 'vuex', 'vue2-filters', 'vue_router', 'routes', 'datastore', 'vue-i18n', 'locales','jquery', 'moment', 'vue-head', "moment-timezone", "vue-moment",'vue-social-sharing','vue-select', "vue!search-component",'vue-simple-spinner','vue!loader.vue','vue!social_links.vue', 'vue!header.vue', 'json!menu_items.json'], function (Vue, Vuex, Vue2Filters, VueRouter, appRoutes, store, VueI18n, messages, $, moment, VueHead, tz, VueMoment,SocialSharing, VueSelect, SearchComponent, Spinner, Loader, SocialLinks, Header, MenuItems) {
-     Vue.use(VueHead)
+    Vue.use(VueHead)
     Vue.use(VueRouter);
     Vue.use(Vue2Filters);
     Vue.use(VueI18n);
