@@ -127,7 +127,6 @@
 
 <script>
     define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-lazy-load", "vue-paginate"], function(Vue, Vuex, moment, tz, VueMoment, VueLazyload, VuePaginate) {
-        Vue.use(Meta);
         Vue.use(VueLazyload);
         Vue.use(VuePaginate);
         return Vue.component("events-component", {
