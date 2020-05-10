@@ -65,8 +65,7 @@
 </template>
 
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "vue-meta", 'vee-validate', 'utility'], function(Vue, Vuex, moment, tz, VueMoment, Meta, VeeValidate,Utility) {
-        Vue.use(Meta);
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", 'vee-validate', 'utility'], function(Vue, Vuex, moment, tz, VueMoment, VeeValidate,Utility) {
         Vue.use(VeeValidate);
         return Vue.component("contact-us-component", {
             template: template, // the variable template will be injected
