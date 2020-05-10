@@ -37,7 +37,6 @@
 
 <script>
 define(["Vue", "vuex", "vue!today_hours", "vue!search-component", 'vue!vue-slick', 'js-cookie', 'vue-lazy-load', "vue!feature_masonry"], function(Vue, Vuex, TodayHoursComponent, SearchComponent, slick, Cookies, VueLazyload, featureMasonry) {
-    
         Vue.use(VueLazyload);
         return Vue.component("home-component", {
             template: template, // the variable template will be injected
@@ -98,6 +97,7 @@ define(["Vue", "vuex", "vue!today_hours", "vue!search-component", 'vue!vue-slick
                     this.instaFeed = _.slice(social_feed, [0], [4]);
                     
                     this.meta = this.findMetaDataByPath(this.$route.path);
+                    this.$emit('updateHead')
                 });
             },
             watch : {
