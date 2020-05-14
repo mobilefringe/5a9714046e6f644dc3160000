@@ -14,13 +14,13 @@
 			        <div class="center" v-if="para1" v-html="para1.body"></div>
 			    </div>
 			</div>
-			<div class="row margin_40">
-			    <div class="col-md-12">
-			        <a href="https://bccfashionicity.com/site/register" target="_blank">
-			            <div class="contact_btn">Join Now</div>
-			        </a>
-			    </div>
-		    </div>
+			<!--<div class="row margin_40">-->
+			<!--    <div class="col-md-12">-->
+			<!--        <a href="https://bccfashionicity.com/site/register" target="_blank">-->
+			<!--            <div class="contact_btn">Join Now</div>-->
+			<!--        </a>-->
+			<!--    </div>-->
+		 <!--   </div>-->
 			<div v-if="para2" class="row margin_40">
 			    <div class="col-md-12">
 			        <div class="center" v-html="para2.body"></div>
