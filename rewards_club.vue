@@ -26,20 +26,20 @@
 			        <div class="center" v-html="para2.body"></div>
 			    </div>
 			</div>
-			<div class="row margin_40">
-			    <div class="col-md-3"></div>
-			    <div class="col-md-3">
-			        <a href="https://play.google.com/store/apps/details?id=ca.wearecircus.bcc" target="_blank">
-			            <img class="rewards_badge" src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1532627380000/googleplay.png" alt="Google Play Store" />
-			        </a>
-			    </div>
-			    <div class="col-md-3">
-			        <a href="https://itunes.apple.com/ca/app/bramalea-city-centre/id1042094590?mt=8" target="_blank">
-			            <img class="rewards_badge" src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1532627498000/applestore.png" alt="Apple App Store" />
-			        </a>    
-			    </div>
-			    <div class="col-md-3"></div>
-			</div>
+			<!--<div class="row margin_40">-->
+			<!--    <div class="col-md-3"></div>-->
+			<!--    <div class="col-md-3">-->
+			<!--        <a href="https://play.google.com/store/apps/details?id=ca.wearecircus.bcc" target="_blank">-->
+			<!--            <img class="rewards_badge" src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1532627380000/googleplay.png" alt="Google Play Store" />-->
+			<!--        </a>-->
+			<!--    </div>-->
+			<!--    <div class="col-md-3">-->
+			<!--        <a href="https://itunes.apple.com/ca/app/bramalea-city-centre/id1042094590?mt=8" target="_blank">-->
+			<!--            <img class="rewards_badge" src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1532627498000/applestore.png" alt="Apple App Store" />-->
+			<!--        </a>    -->
+			<!--    </div>-->
+			<!--    <div class="col-md-3"></div>-->
+			<!--</div>-->
 			<div class="padding_top_40"></div>
 		</div>
 	</div>
