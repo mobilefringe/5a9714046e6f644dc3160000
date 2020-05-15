@@ -34,14 +34,14 @@
     					    <social-links class="inline_block solid_bg"></social-links>
     					</div>
     					<router-link id="signup" to="/rewards_club">{{$t("header.sign_up")}}</router-link>
-    					<a href="https://play.google.com/store/apps/details?id=ca.wearecircus.bcc" target="_blank">
-    					    <p class="accessibility"></p>
-    					    <img class="app_badge" src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1532627380000/googleplay.png" alt="Google Play Store" />
-    					</a>
-    					<a href="https://itunes.apple.com/ca/app/bramalea-city-centre/id1042094590?mt=8" target="_blank">
-    					    <p class="accessibility"></p>
-    					    <img class="app_badge" src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1532627498000/applestore.png" alt="Apple App Store" />
-    					</a>
+    					<!--<a href="https://play.google.com/store/apps/details?id=ca.wearecircus.bcc" target="_blank">-->
+    					<!--    <p class="accessibility"></p>-->
+    					<!--    <img class="app_badge" src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1532627380000/googleplay.png" alt="Google Play Store" />-->
+    					<!--</a>-->
+    					<!--<a href="https://itunes.apple.com/ca/app/bramalea-city-centre/id1042094590?mt=8" target="_blank">-->
+    					<!--    <p class="accessibility"></p>-->
+    					<!--    <img class="app_badge" src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1532627498000/applestore.png" alt="Apple App Store" />-->
+    					<!--</a>-->
     				</div>
     				<div class="mobile_search_icon inline_block" @click="showMobileSearch = !showMobileSearch"><i class="fa fa-search"></i>
     				</div>
