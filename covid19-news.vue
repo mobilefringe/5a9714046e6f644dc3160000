@@ -72,7 +72,7 @@
             beforeRouteUpdate(to, from, next) {
                 this.loadData().then(response => {
                     this.currentPage = response[0].data;
-                    var temp_repo = this.findRepoByName('Services Banner');
+                    var temp_repo = this.findRepoByName('Pages Banner');
                     if (temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
