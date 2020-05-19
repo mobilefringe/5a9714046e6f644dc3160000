@@ -69,32 +69,31 @@
                 }
             },
             props:['locale'],
-            beforeRouteUpdate(to, from, next) {
+            // beforeRouteUpdate(to, from, next) {
+            //     this.loadData().then(response => {
+            //         this.currentPage = response[0].data;
+            //         console.log('curr', this.currentPage)
+            //         var temp_repo = this.findRepoByName('Pages Banner');
+            //         if (temp_repo) {
+            //             this.pageBanner = temp_repo.images[0];
+            //         } else {
+            //             this.pageBanner = { image_url: "" };
+            //         }
+            //         this.pageBanner = this.pageBanner;
+            //     });
+            //     next();
+            // },
+            created() {
                 this.loadData().then(response => {
                     this.currentPage = response[0].data;
-                    console.log('curr', this.currentPage)
                     var temp_repo = this.findRepoByName('Pages Banner');
-                    if (temp_repo) {
+                    if (temp_repo && temp_repo.images) {
                         this.pageBanner = temp_repo.images[0];
                     } else {
                         this.pageBanner = { image_url: "" };
                     }
-                    this.pageBanner = this.pageBanner;
+                    this.dataloaded = true;
                 });
-                next();
-            },
-            created(){
-                this.loadData().then(response => {
-                    this.currentPage = response[0].data;
-                    var temp_repo = this.findRepoByName('Pages Banner');
-                    if(temp_repo) {
-                        this.pageBanner = temp_repo.images[0];
-                    } else {
-                        this.pageBanner = { image_url: "" };
-                    }
-                    this.pageBanner = this.pageBanner;
-                });
-
             },
             watch: {
                 currentPage () {
