@@ -76,6 +76,8 @@
                     var temp_repo = this.findRepoByName('Pages Banner');
                     if (temp_repo) {
                         this.pageBanner = temp_repo.images[0];
+                    } else {
+                        this.pageBanner = { image_url: "" };
                     }
                     this.pageBanner = this.pageBanner;
                 });
@@ -87,9 +89,12 @@
                     var temp_repo = this.findRepoByName('Pages Banner');
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
+                    } else {
+                        this.pageBanner = { image_url: "" };
                     }
                     this.pageBanner = this.pageBanner;
                 });
+
             },
             watch: {
                 currentPage () {
