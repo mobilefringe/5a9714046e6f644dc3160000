@@ -50,6 +50,7 @@
       },
       computed: {
         findMetaDataByPath () {
+                console.log("Mithun - default : " + this.$store.getters.findMetaDataByPath);
           return this.$store.getters.findMetaDataByPath;
         }
       }
