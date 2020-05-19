@@ -68,7 +68,7 @@
                     services : []
                 }
             },
-            props:['id', 'locale'],
+            props:['locale'],
             beforeRouteUpdate(to, from, next) {
                 this.loadData().then(response => {
                     this.currentPage = response[0].data;
