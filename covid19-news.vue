@@ -83,7 +83,7 @@
             created(){
                 this.loadData().then(response => {
                     this.currentPage = response[0].data;
-                    var temp_repo = this.findRepoByName('Services Banner');
+                    var temp_repo = this.findRepoByName('Pages Banner');
                     if(temp_repo) {
                         this.pageBanner = temp_repo.images[0];
                     }
@@ -118,7 +118,7 @@
                 loadData: async function() {
                     try {
                         let results = await Promise.all([
-                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/pinecentre-services-available.json" }),
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/bramaleacitycentre-covid-19.json" }),
                             this.$store.dispatch("getData", "repos")
                         ]);
                         return results;
