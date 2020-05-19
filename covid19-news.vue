@@ -31,6 +31,7 @@
         </div>
     </div>
 </template>
+
 <style>
     .page_title {
         /*border-top:1px solid #aea99e;*/
@@ -49,27 +50,57 @@
         max-width: 100%;
     }
 </style>
+
 <script>
-    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment"], function(Vue, Vuex, moment, tz, VueMoment) {
-        return Vue.component("page-details-component", {
+    define(["Vue", "vuex", "moment", "moment-timezone", "vue-moment", "bootstrap-vue"], function(Vue, Vuex, moment, tz, VueMoment, BootstrapVue) {
+        Vue.use(BootstrapVue);
+        return Vue.component("services-component", {
             template: template, // the variable template will be injected,
             data: function() {
                 return {
                     success_subscribe: false,
                     currentPage: null,
                     pageBanner : null,
-                    accessibilityData : null
+                    services : []
                 }
             },
             props:['id', 'locale'],
             beforeRouteUpdate(to, from, next) {
+                this.loadData().then(response => {
+                    this.currentPage = response[0].data;
+                    var temp_repo = this.findRepoByName('Services Banner');
+                    if (temp_repo) {
+                        this.pageBanner = temp_repo.images[0];
+                    }
+                    this.pageBanner = this.pageBanner;
+                });
                 next();
-                this.updatePageData(to.params.id);
             },
             created(){
-               this.updatePageData(this.id);
-               if(this.id == "bramaleacitycentre-accessibilty" ){
-                   this.updateAccessibilityData();
+                this.loadData().then(response => {
+                    this.currentPage = response[0].data;
+                    var temp_repo = this.findRepoByName('Services Banner');
+                    if(temp_repo) {
+                        this.pageBanner = temp_repo.images[0];
+                    }
+                    this.pageBanner = this.pageBanner;
+                });
+            },
+            watch: {
+                currentPage () {
+                    var temp_service = [];
+                    _.forEach(this.currentPage.subpages, function(val, key) {
+                        var temp_val = {};
+                        temp_val.title = val.title;
+                        temp_val.text  = val.body;
+                        temp_val.is_visible = false;
+                        if (key == 0) {
+                          temp_val.is_visible = true;
+                        }
+                        temp_val.id = "accord_"+ (key+1);
+                        temp_service.push(temp_val);
+                    });
+                    this.services = temp_service;
                }
             },
             computed: {
@@ -80,63 +111,16 @@
                 ])
             },
             methods: {
-                loadData: async function(id) {
+                loadData: async function() {
                     try {
                         let results = await Promise.all([
-                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/" + id + ".json" }),
+                            this.$store.dispatch('LOAD_PAGE_DATA', { url: this.property.mm_host + "/pages/pinecentre-services-available.json" }),
                             this.$store.dispatch("getData", "repos")
                         ]);
                         return results;
                     } catch (e) {
                         console.log("Error loading data: " + e.message);
                     }
-                },
-                updatePageData (id) {
-                    this.loadData(id).then(response => {
-                        if (response == null || response == undefined) {
-                            this.$router.replace('/');
-                        }
-                        this.currentPage = response[0].data;
-                        
-                        var temp_repo = null;
-                        //Add custom banners for indivial pages 
-                        if ( _.includes(id, 'gift-cards')) {
-                            temp_repo = this.findRepoByName('Giftcards Banner');
-                        } else if ( _.includes(id, 'services')) {
-                            temp_repo = this.findRepoByName('Services Banner');
-                        } else if ( _.includes(id, 'accessibilty')) {
-                            temp_repo = this.findRepoByName('Accessibility Banner');
-                        } else if ( _.includes(id, 'leasing')) {
-                            temp_repo = this.findRepoByName('Leasing Banner');
-                        } else if ( _.includes(id, 'bees-at-the-hive')) {
-                            temp_repo = this.findRepoByName('Bees Banner');
-                        } else if ( _.includes(id, 'community-relations')) {
-                            temp_repo = this.findRepoByName('Community Banner');
-                        } else if ( _.includes(id, 'sustainability')) {
-                            temp_repo = this.findRepoByName('Sustainability Banner');
-                        } else {
-                            temp_repo = this.findRepoByName('Pages Banner');
-                        }
-                        
-                        if (temp_repo && temp_repo.images) {
-                            this.pageBanner = temp_repo.images[0];
-                        } else {
-                            this.pageBanner = { image_url: "" };
-                        }
-                    });
-                },
-                updateAccessibilityData() {
-                    var vm = this;
-                    url = "//acc.speeker.co/get_display_templates?site_id=1";
-                    $.getJSON(url).done(function(data){
-                        var acc_data = data;
-                        acc_data.map(item => {
-                            item.notice_text_approved = _.replace(item.notice_text_approved, '<br/><br/>', '<br/>');
-                        });
-                        
-                        vm.accessibilityData =  _.sortBy(acc_data, [function(o) { return o.service_completed_date; }]).reverse();
-                        console.log("accessibilityData",vm.accessibilityData)
-                    });
                 }
             }
         });
