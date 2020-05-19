@@ -10,25 +10,29 @@
 				</div>
 			</div>
 		</div>
-		<div class="site_container inside_page_content page_content">
+		<div class="site_container inside_page_content">
             <div class="margin_side_20" >
-                <div class="row event_container"  v-if="accessibilityData"  v-for="promo in accessibilityData">
-					<div class="col-sm-12 col-md-12 event_dets_container">
-						<h4 class="event_name caps">{{promo.notice_title}}</h4>
-						<div class="event_thick_line"></div>
-						<p class="event_dates">{{promo.service_completed_date | moment("MMMM D, YYYY", timezone)}}</p>
-						<p class="event_desc" v-html="promo.notice_text_approved"></p>
-						
-					</div>
-					<div class="col-sm-12">
-						<hr>
-					</div>
-				</div>
-                <div v-if="accessibilityData" style="padding-top:20px;"></div> 
                 <div class="page_body description_text text_left" v-if="locale=='en-ca'" v-html="currentPage.body"></div>
                 <div class="page_body description_text text_left" v-else v-html="currentPage.body_2"></div>
             </div>
+            <div role="tablist" class="accordion margin_side_20" v-if="services.length > 0">
+                <b-card no-body class="mb-1" v-for = "service in services">
+                    <b-card-header header-tag="header" class="p-1" role="tab">
+                        <b-btn block @click="service.is_visible = !service.is_visible" :class="service.is_visible ? 'collapsed' : null" :aria-controls="service.id" :aria-expanded="service.is_visible ? 'true' : 'false'">
+                            <i v-if="service.is_visible"  class="fa fa-caret-down"></i>
+                            <i v-else  class="fa fa-caret-right"></i>
+                            {{service.title}}
+                        </b-btn>
+                    </b-card-header>
+                    <b-collapse v-model="service.is_visible" :id="service.id" :visible="service.is_visible" :accordion="service.id" role="tabpanel" class="accordion_body">
+                        <b-card-body>
+                            <p class="card-text" v-html="service.text"></p>
+                        </b-card-body>
+                    </b-collapse>
+                </b-card>
+            </div>
         </div>
+        <div style="padding:20px 0;"></div>
     </div>
 </template>
 
