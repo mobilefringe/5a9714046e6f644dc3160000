@@ -51,7 +51,6 @@ define(["Vue", "vuex", "vue!today_hours", "vue!search-component", 'vue!vue-slick
                   }
                 },
                 meta: function () {
-                    console.log("Mithun - home : " + this.meta.meta_title);
                   return [
                      { name: 'description', id: 'description', content: this.meta.meta_description },
                      { name: 'keywords',  id: 'keywords', content: this.meta.meta_keywords },
