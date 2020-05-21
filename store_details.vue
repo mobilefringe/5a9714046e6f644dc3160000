@@ -28,22 +28,22 @@
 						<h4 class="event_store_name caps" v-else>{{currentStore.name_2}}</h4>
 						<h4 v-if="currentStore.phone" class="store_dets_title"> <a :href="'tel:'+currentStore.phone">{{currentStore.phone}}</a></h4>
 						<h4 v-if="currentStore.website" class="store_dets_title"> <a :href="'//'+currentStore.website" target="_blank">{{$t("stores_page.store_website")}}</a></h4>
-						<h4 v-if="storeHours.length > 0 " class="store_dets_title">{{$t("stores_page.store_hours")}}</h4>
-						<ul class="store_hours_list">
-							<li v-if="storeHours" v-for="hour in storeHours" class="col-xs-12">
-							    <span class="col-xs-5 text-left">{{hour.day_of_week | moment("dddd", timezone)}}</span>
-								<span v-if="hour.is_closed" class="col-xs-7 text-left">Closed</span>
-								<span v-else class="col-xs-7 text-right">{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>
-							</li>
-        				    <div class="col-xs-12 gift_card_promo" v-if="currentStore.has_giftcard">
-        					    <router-link to="/gift_cards">
-        					        <p class="col-xs-5 gift_card text-left">This store accepts BCC gift cards</p>
-        						    <div class="col-xs-7 gift_card_image text-right">
-            						    <img class="bitmap" src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1553632445000/CardICON@2x.png" />
-        						    </div>
-        					    </router-link>
-        				    </div>
-						</ul>
+						<!--<h4 v-if="storeHours.length > 0 " class="store_dets_title">{{$t("stores_page.store_hours")}}</h4>-->
+						<!--<ul class="store_hours_list">-->
+						<!--	<li v-if="storeHours" v-for="hour in storeHours" class="col-xs-12">-->
+						<!--	    <span class="col-xs-5 text-left">{{hour.day_of_week | moment("dddd", timezone)}}</span>-->
+						<!--		<span v-if="hour.is_closed" class="col-xs-7 text-left">Closed</span>-->
+						<!--		<span v-else class="col-xs-7 text-right">{{hour.open_time | moment("h:mm A", timezone)}} - {{hour.close_time | moment("h:mm A", timezone)}}</span>-->
+						<!--	</li>-->
+      <!--  				    <div class="col-xs-12 gift_card_promo" v-if="currentStore.has_giftcard">-->
+      <!--  					    <router-link to="/gift_cards">-->
+      <!--  					        <p class="col-xs-5 gift_card text-left">This store accepts BCC gift cards</p>-->
+      <!--  						    <div class="col-xs-7 gift_card_image text-right">-->
+      <!--      						    <img class="bitmap" src="//codecloud.cdn.speedyrails.net/sites/5c0581a36e6f643f53050000/image/png/1553632445000/CardICON@2x.png" />-->
+      <!--  						    </div>-->
+      <!--  					    </router-link>-->
+      <!--  				    </div>-->
+						<!--</ul>-->
 				    </div>
 				</div>
 				<hr class="green_hr visible_phone">
