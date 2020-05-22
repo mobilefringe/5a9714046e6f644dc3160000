@@ -14,6 +14,7 @@
     					</div>
     				</div>
     				<div class="col-sm-8 hidden_phone text-right">
+    				    <router-link id="covid_btn" to="/">{{$t("header.covid_updates")}}</router-link>
     					<div class="header_social">
     					<transition name="custom-classes-transition" enter-active-class="animated slideInRight" leave-active-class="animated slideOutRight">
         					<div id="search_component_wrapper" class="inline_block" v-if="showSearch">
